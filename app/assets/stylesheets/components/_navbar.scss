@@ -1,6 +1,10 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #91ce9c;
+  height: 70px;
+  font-size: 20px;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,5 +12,24 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  height: 120px;
+  width: 120px;
+}
+
+.nav-item {
+  padding: 0 8px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  margin-top: 16px;
+  a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+
+// Navbar for landing page styling below
+
+.login {
+  border-radius: 10px;
+  width: 120px;
 }
