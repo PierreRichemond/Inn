@@ -1,3 +1,20 @@
 .room_card{
   border-top: 10px solid #91ce9c;
 }
+
+.home_card{
+  border: 1px solid #91ce9c;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0 ,0.2);
+  background-color: white;
+  padding: 2em;
+  margin: 2em;
+}
+h1{
+  text-decoration: underline;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.4);
+    text-shadow: 0px 0px 1px rgba(0, 0, 0 ,0.4);
+}
+h2{
+  text-decoration: underline;
+}
