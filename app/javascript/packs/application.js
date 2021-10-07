@@ -9,6 +9,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
+import { initMapbox } from '../plugins/init_mapbox';
 
 Rails.start()
 Turbolinks.start()
@@ -39,4 +40,5 @@ document.addEventListener('turbolinks:load', () => {
     nav: true,
     navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"]
   })
+  initMapbox();
 });

@@ -1,5 +1,7 @@
 Room.delete_all
   puts "Rooms destroyed"
+Activity.delete_all
+  puts "activities destroyed"
 
 room1 = Room.create(name: "Gîte Ronsard",
                   ppl: "165 m² – couchage : 6 adultes + 3 enfants",
