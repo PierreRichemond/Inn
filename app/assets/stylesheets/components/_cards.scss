@@ -18,3 +18,23 @@ h1{
 h2{
   text-decoration: underline;
 }
+
+.activity-container {
+  margin: 2em;
+  a {
+    color: rgba(0, 0, 0, 0.6);
+  &:hover {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+  }
+  }
+}
+.activity-card {
+  margin-bottom: 0.5em;
+  border-radius: 5px;
+  background: white;
+  &:hover {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  }
+}
