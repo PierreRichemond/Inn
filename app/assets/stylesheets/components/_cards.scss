@@ -45,3 +45,17 @@ h2{
   object-fit: cover;
   margin-right: 2em;
 }
+
+
+
+.card-link {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+    top: 0;
+  bottom: 0;
+  width: 100%;
+  cursor: grab;
+}

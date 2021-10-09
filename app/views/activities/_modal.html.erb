@@ -1,0 +1,24 @@
+<!-- Modal -->
+<a href="modal" class="card-link" data-toggle="modal" data-target="#.bd-example-modal-lg<%= activity.id %>">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <h2 class = 'text-center'><%= activity.name %></h2>
+        <div class="d-flex">
+          <%= image_tag activity.image, class: 'activity-img' %>
+          <div>
+            <% if activity.price != '' %>
+              <p>Prix:<%= activity.price %>€.</p>
+            <% end %>
+            <% if activity.phone != '' %>
+              <p><%= activity.phone %></p>
+            <% end %>
+            <% if activity.distance != '' %>
+              <p>A <%= activity.distance %> du gîte.</p>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
