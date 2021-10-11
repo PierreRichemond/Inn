@@ -549,7 +549,7 @@ L’entreprise a donc tout naturellement développé une activité de traiteur d
                               description: "Restaurant français convivial",
                               phone: "02 47 56 10 34",
                               url: "",
-                              address: "53 Rue Nationale 37380 Monnaie, France",
+                              address: "53 Rue Nationale, 37380 Monnaie, France",
                               price: "12 ~ ",
                               distance: "4km",
                               tag_list: "Restauration"
@@ -616,7 +616,7 @@ L’entreprise a donc tout naturellement développé une activité de traiteur d
                               description: "Pizza traditionnelle à emporter",
                               phone: "02 47 29 95 31",
                               url: "http://www.restaurant-la-cave-com/",
-                              address: "41 Rue Nationale 37380 Monnaie, France",
+                              address: "41 Rue Nationale, 37380 Monnaie, France",
                               price: " ~ ",
                               distance: "4km",
                               tag_list: "Restauration"
@@ -629,7 +629,7 @@ L’entreprise a donc tout naturellement développé une activité de traiteur d
                               description: "Burger, tacos, sandwiches, couscous à emporter sur reservation",
                               phone: "02 47 59 90 48",
                               url: "http://www.restaurant-la-cave-com/",
-                              address: "32 Rue Nationale 37380 Monnaie, France",
+                              address: "32 Rue Nationale, 37380 Monnaie, France",
                               price: " ~ ",
                               distance: "4km",
                               tag_list: "Restauration"
@@ -749,3 +749,5 @@ L’entreprise a donc tout naturellement développé une activité de traiteur d
     commerce6.image.attach(io: File.open(Rails.root.join("app/assets/images/cafe.jpg")),
     filename: "cafe.jpg")
    # --------------------------------------------------------
+
+    puts " #{Activity.count} activities were created"
