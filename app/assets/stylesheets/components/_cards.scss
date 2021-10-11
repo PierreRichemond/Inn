@@ -21,13 +21,13 @@ h2{
 
 .activity-container {
   margin: 2em;
-  a {
-    color: rgba(0, 0, 0, 0.6);
-  &:hover {
-    color: rgba(0, 0, 0, 1);
-    text-decoration: none;
-  }
-  }
+  // a {
+  //   color: rgba(0, 0, 0, 0.6);
+  // &:hover {
+  //   color: rgba(0, 0, 0, 1);
+  //   text-decoration: none;
+  // }
+  // }
 }
 .activity-card {
   margin-bottom: 0.5em;
@@ -58,4 +58,27 @@ h2{
   bottom: 0;
   width: 100%;
   cursor: grab;
+}
+
+.modal-size{
+  height: 70%;
+  width: 70%;
+}
+.modal-img{
+  object-fit: fill;
+  height: 17em;
+  margin: 20px;
+}
+
+.modal-body p{
+  font-weight: bold;
+  font-size: 20px;
+}
+#modal-description{
+  font-weight: 400;
+  justify-content: center;
+}
+
+.modal-title{
+  text-align: center;
 }

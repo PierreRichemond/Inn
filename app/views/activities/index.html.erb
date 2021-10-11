@@ -2,24 +2,10 @@
   <div class="row">
     <div class="col-12 col-md-4 col-lg-4">
       <% @activities.each do |activity| %>
-        <div class="activity-card">
-          <h2 class = 'text-center'><%= activity.name %></h2>
-          <div class="d-flex">
-            <%= image_tag activity.image, class: 'activity-img' %>
-            <div>
-              <% if activity.price != '' %>
-                <p>Prix:<%= activity.price %>€.</p>
-              <% end %>
-              <% if activity.phone != '' %>
-                <p><%= activity.phone %></p>
-              <% end %>
-              <% if activity.distance != '' %>
-                <p>A <%= activity.distance %> du gîte.</p>
-              <% end %>
-            </div>
-          </div>
-          <%= render 'modal.html.erb', activity: activity %>
-        </div>
+        <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModalCenter-<%= activity.id %>">
+          <%= render 'activity-card', activity: activity %>
+        </a>
+        <%= render "modal", activity: activity %>
       <% end %>
     </div>
     <div class="col-12 col-md-8 col-lg-8">
