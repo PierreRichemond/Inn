@@ -1,6 +1,11 @@
 class ActivitiesController < ApplicationController
   def index
-    @activities = Activity.all
+    @activities =
+    if params[:tag].present?
+      Activity.tagged_with(params[:tag])
+    else
+      Activity.all
+    end
 
     @markers = @activities.geocoded.map do |activity|
       {
@@ -13,5 +18,11 @@ class ActivitiesController < ApplicationController
   end
 
   def show
+  end
+
+  private
+
+  def activity_params
+    params.require(:activity).permit(:name, tag_list: [])
   end
 end
