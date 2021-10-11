@@ -1,4 +1,7 @@
 <div class="activity-container">
+  <% Activity::TAGS.each do |tag| %>
+    <%= link_to tag, activities_path(tag: tag), class: "btn btn-primary tag-btn" %>
+  <% end %>
   <div class="row">
     <div class="col-12 col-md-4 col-lg-4">
       <% @activities.each do |activity| %>

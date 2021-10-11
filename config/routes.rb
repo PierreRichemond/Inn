@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   resources :rooms, only: [:index]
   resources :activities, only: [:index, :show]
+  get '/tagged', to: "activities#tagged", as: :tagged
 end

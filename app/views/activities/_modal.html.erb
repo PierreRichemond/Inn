@@ -11,7 +11,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <%= link_to activity.url, target: "_blank" do %>
+        <%= link_to activity.url do %>
           <h2 class='modal-title'><%= activity.name %></h2>
         <% end %>
         <% if activity.description != '' %>

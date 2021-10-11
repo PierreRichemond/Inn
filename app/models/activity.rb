@@ -2,4 +2,7 @@ class Activity < ApplicationRecord
   has_one_attached :image
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+  acts_as_taggable_on :tags
+
+  TAGS = ["Culture", "Restauration", "Commerce", "Loisir", "Vignobles", "Traiteur", "Station service"]
 end
