@@ -161,8 +161,8 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/leclosvalie
                               distance: "41km"
                             )
 
-    langeais.image.attach(io: File.open(Rails.root.join("app/assets/images/Chaumont.jpg")),
-    filename: "Chaumont.jpg")
+    langeais.image.attach(io: File.open(Rails.root.join("app/assets/images/langeais.jpg")),
+    filename: "langeais.jpg")
 
     villandry = Activity.create(name: "Château de Villandry",
                               description: "Il s’agit du dernier des grands châteaux de la Loire érigés pendant la Renaissance. Son architecture et ses jardins remarquables font de ce monument l’un des fleurons du patrimoine mondial.",

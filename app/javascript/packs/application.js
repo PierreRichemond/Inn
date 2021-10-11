@@ -23,12 +23,13 @@ ActiveStorage.start()
 
 // External imports
 import "bootstrap";
-$('#myModal').modal(options)
+
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
+  initMapbox();
   $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 10,
@@ -41,6 +42,6 @@ document.addEventListener('turbolinks:load', () => {
     nav: true,
     navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"]
   })
-  initMapbox();
+
 
 });
