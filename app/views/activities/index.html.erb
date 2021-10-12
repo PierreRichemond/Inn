@@ -1,7 +1,15 @@
+  
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(http://gite-des-coudrieres.fr/wp-content/uploads/2017/08/banniere-alentour.png);">
+  <div class="container">
+    <h1 class= "text-center">Les activitées autour du gîte, que ce soit en familles ou entre amis, il y en à pour tout les goûts!</h1>
+  </div>
+</div>
 <div class="activity-container">
-  <% Activity::TAGS.each do |tag| %>
-    <%= link_to tag, activities_path(tag: tag), class: "btn btn-primary tag-btn" %>
-  <% end %>
+  <div class= "text-center m-5" >
+    <% Activity::TAGS.each do |tag| %>
+      <%= link_to tag, activities_path(tag: tag), class: "btn-lg btn-primary tag-btn" %>
+    <% end %>
+  </div>
   <div class="row">
     <div class="col-12 col-md-4 col-lg-4">
       <% @activities.each do |activity| %>
