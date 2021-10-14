@@ -15,15 +15,6 @@ class ActivitiesController < ApplicationController
         # image_url: helpers.asset_url(activity.image.filename)
       }
     end
-
-    respond_to do |format|
-      if params[:query].present?
-        format.js { render partial: 'search_result.js.erb' }
-      else
-        format.html
-        format.js
-      end
-    end
   end
 
   def show
