@@ -23,6 +23,6 @@ class ActivitiesController < ApplicationController
   private
 
   def activity_params
-    params.require(:activity).permit(:image, :name, tag_list: [] )
+    params.require(:activity).permit(:name, tag_list: [])
   end
 end
