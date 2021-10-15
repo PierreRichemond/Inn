@@ -35,7 +35,7 @@ room2 = Room.create(name: "Gîte Rabelais",
                   detailz: "
                    Dortoir de 50 m²: 4 lits.
                    - 1 salle de douche.")
-                    room2.images.attach(io: File.open(Rails.root.join("app/assets/images/favicon1.png")),
+room2.images.attach(io: File.open(Rails.root.join("app/assets/images/favicon1.png")),
     filename: "favicon1.png")
 room2.images.attach(io: File.open(Rails.root.join("app/assets/images/gite_de_qualite.png")),
     filename: "gite_de_qualite.png")
@@ -62,11 +62,14 @@ room3 = Room.create(name: "L’ensemble du Clos Vallière",
                   puts "#{Room.count} rooms were created"
 
 room3.images.attach(io: File.open(Rails.root.join("app/assets/images/favicon1.png")),
-    filename: "favicon1.png")
+    filename: "favicon1.png",
+  content_type: 'image/png')
 room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite_de_qualite.png")),
-    filename: "gite_de_qualite.png")
+    filename: "gite_de_qualite.png",
+  content_type: 'image/png')
 room3.images.attach(io: File.open(Rails.root.join("app/assets/images/leclosvaliere.png")),
-    filename: "leclosvaliere.png")
+    filename: "leclosvaliere.png",
+  content_type: 'image/png')
 
     amboise = Activity.create(name: "Château d’Amboise",
                               description: "Rattaché à la couronne en 1434, ce monument emblématique et ses jardins paysagers offrent un des plus remarquables panoramas sur la vallée de la Loire. Pour visiter le château, plusieurs parcours sont proposés aux visiteurs. Chacun d’entre eux porte un regard singulier son rayonnement politique et artistique européen à la Renaissance, les moments intimes de la vie des souverains, la vie quotidienne et les coulisses de la Cour. En 1516, Léonard de Vinci fut invité par François 1er à Amboise où il finira ses jours trois années plus tard. Pendant trois ans, pour célébrer le 500e anniversaire de sa présence, le château d’Amboise lui consacrera plusieurs événements.",
