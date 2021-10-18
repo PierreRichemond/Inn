@@ -15,6 +15,7 @@ class ActivitiesController < ApplicationController
         # image_url: helpers.asset_url(activity.image.filename)
       }
     end
+    # flash[:notice] = t("welcome")
   end
 
   def show
@@ -23,6 +24,6 @@ class ActivitiesController < ApplicationController
   private
 
   def activity_params
-    params.require(:activity).permit(:name, tag_list: [])
+    params.require(:activity).permit(:name, :locale, tag_list: [])
   end
 end
