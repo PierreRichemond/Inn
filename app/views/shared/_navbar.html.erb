@@ -2,23 +2,20 @@
   <%= link_to "/", class: "navbar-brand" do %>
     <%= image_tag 'leclosvaliere.png', style: "width:14em;"  %>
   <% end %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <%= link_to "/rooms" ,"data-turbolinks":"false" do %>
+        <%= link_to "/rooms" do %>
           <p class="pb-0 mb-0">Nos chambres</p>
         <% end %>
       </li>
       <li class="nav-item">
-        <%= link_to "/activities" ,"data-turbolinks":"false" do %>
+        <%= link_to "/activities" do %>
           <p class="pb-0 mb-0">Activitées</p>
         <% end %>
       </li>
     </ul>
-    <%# <div><%= link_to("English", "#{APP_CONFIG[:english_website_url]}#{request.env['PATH_INFO']}") %>
-    <%# <div><%= link_to("French", "#{APP_CONFIG[:french_website_url]}#{request.env['PATH_INFO']}") %>
+    <%# <%= link_to("English", "#{APP_CONFIG[:english_website_url]}#{request.env['PATH_INFO']}") %>
+    <%# <%= link_to("French", "#{APP_CONFIG[:french_website_url]}#{request.env['PATH_INFO']}") %>
   </div>
 </div>

@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-around;
-  background: #91ce9c;
+  background: #7fdb73;
   height: 120px;
   font-size: 20px;
   align-items: center;
@@ -18,13 +18,17 @@
 
 .nav-item {
   padding: 0 8px;
-  font-size: 16px;
+  font-size: 24px;
   margin-top: 16px;
   a{
     color: black;
+    font-size: 24px;
   }
   a:hover {
     color: rgba(0, 0, 0, 0.6);
+  }
+  p{
+    font-size: 24px;
   }
 }
 
