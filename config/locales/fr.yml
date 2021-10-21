@@ -1,4 +1,15 @@
 fr:
+    date:
+        abbr_day_names: [Dim, Lun, Mar, Mer, Jeu, Ven, Sam]
+        month_names: [~, Jan, Fév, Mar, Avr, Mai, Jun, Jul, Août, Sep, Oct, Nov, Déc]
+        day_names: [Dimanche, Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi]
+        formats:
+            day_month: "%b %d"
+            default: "%Y-%m-%d"
+            hour: "%H:%M"
+            long: "%A %d %B %Y"
+            long_month: "%d %B %Y"
+            month_abbr: "%d %b %Y"
     banner_h1: "Bienvenue au Clos Valliere"
     banner_p1: "Reservez dès maintenant!"
     banner_p2: "Profitez du plein air de la Touraine."

@@ -34,6 +34,7 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'geocoder'
 gem 'cloudinary', '~> 1.16.0'
+gem "simple_calendar", "~> 2.4"
 
 group :development, :test do
   gem 'pry-byebug'

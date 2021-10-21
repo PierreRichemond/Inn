@@ -5,4 +5,7 @@ class RoomsController < ApplicationController
 
   def show
   end
+
+  def booking
+  end
 end
