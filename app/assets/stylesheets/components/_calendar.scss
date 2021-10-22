@@ -5,3 +5,25 @@
 .headers{
   align-content: center;
 }
+
+.room-table1{
+  position: sticky;
+  top: 1em;
+}
+
+.room-table2{
+  position: sticky;
+  top: 30em;
+}
+
+.calendar-header{
+  background-color: rgb(224, 250, 224);
+}
+td{
+  vertical-align: middle !important;
+  text-align: center;
+}
+th{
+  vertical-align: middle !important;
+  text-align: center;
+}
