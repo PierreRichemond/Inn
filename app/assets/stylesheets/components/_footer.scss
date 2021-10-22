@@ -1,41 +1,42 @@
 .footer {
-  background: #91ce9c;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0px 10px;
-  color: white;
   width: 100%;
   position: absolute;
   bottom: 0;
-}
-.footer-links {
-  display: flex;
-  align-items: center;
-}
-.footer-links a {
-  color: black;
-  opacity: 0.15;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 2px;
-  line-height: 80%;
-}
-.footer-links a:hover {
-  opacity: 1;
-  color: blue;
-}
-.footer .fa-heart {
-  color: #D23333;
-}
 
-// .social-media a {
-//   padding: 4px;
-// }
+}
 
 .footer-container {
 
   height: 150px;
   /* Height of the footer*/
-  background: #7fdb73;
+  background-color: rgba(92, 209, 46, 0.6);
+  position: relative;
+  p{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 3px rgba(240, 240, 240, 0.5);
+    margin-bottom: 0;
+  }
+  h6{
+    font-size: 24px;
+    color: rgb(110, 110, 110);
+    text-shadow: 1px 1px 3px rgba(240, 240, 240, 0.5);
+  }
+
+}
+
+.footer-container:before {
+
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: asset-url('palm-leaf.png');
+  z-index: -1;
 }
