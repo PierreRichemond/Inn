@@ -2,19 +2,24 @@
   <h1 class= 'text-center py-3'>Our Rooms</h1>
   <% @rooms.each do |room| %>
     <div class ="room_card">
+      <div class="text">
+        <h2 class= "text-center underlined"><%= room.name %></h2>
+        <h3 class= "text-center underline"><%= room.price %>€</h3>
+        <h3 class= "text-center underline"><%= room.ppl %></h3>
+        <p><%= room.description %></p>
+        <p><span style="font-size:20px;">Rez-de-chaussée:</span> <%= room.details %></p>
+        <p><span style="font-size:20px;">Etage:</span> <%= room.detailz %></p>
+      </div>
       <div class="row">
-        <div class="col-12 col-lg-6 owl-carousel owl-theme">
+        <div class="col-12 col-lg-8 owl-carousel owl-theme">
           <% room.images.each do |image| %>
             <div><%= cl_image_tag image.key%></div>
           <% end %>
         </div>
-        <div class="col-12 col-lg-6 text-justify my-3">
-          <h2 class= "text-center underlined"><%= room.name %></h2>
-          <h3 class= "text-center underline"><%= room.price %>€</h3>
-          <h3 class= "text-center underline"><%= room.ppl %></h3>
-          <p><%= room.description %></p>
-          <p><span style="font-size:20px;">Rez-de-chaussée:</span> <%= room.details %></p>
-          <p><span style="font-size:20px;">Etage:</span> <%= room.detailz %></p>
+        <div class="col-12 col-lg-4 text-justify my-3">
+          <%= month_calendar do |date| %>
+            <%= date %>
+          <% end %>
         </div>
       </div>
     </div>
