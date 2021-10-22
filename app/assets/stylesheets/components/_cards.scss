@@ -1,5 +1,6 @@
 .room_card{
   border-top: 10px solid #91ce9c;
+  padding-top: 2em;
 }
 
 .home_card{
@@ -14,9 +15,6 @@ h1{
     font-weight: 700;
     color: rgba(0, 0, 0, 0.4);
     text-shadow: 0px 0px 1px rgba(0, 0, 0 ,0.4);
-}
-h2{
-  text-decoration: underline;
 }
 
 .activity-container {
@@ -58,27 +56,4 @@ h2{
   bottom: 0;
   width: 100%;
   cursor: grab;
-}
-
-.modal-size{
-  height: 70%;
-  width: 70%;
-}
-.modal-img{
-  object-fit: fill;
-  height: 17em;
-  margin: 20px;
-}
-
-.modal-body p{
-  font-weight: bold;
-  font-size: 20px;
-}
-#modal-description{
-  font-weight: 400;
-  justify-content: center;
-}
-
-.modal-title{
-  text-align: center;
 }

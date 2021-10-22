@@ -30,12 +30,27 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+    sept-oct2021: "August 30th - November 14th"
+    winter2021: "November 15th - December 17th"
+    christmas: "Closed From December 28th to January 1st"
+    january2021: "January on week-ends only"
+    feb-mar2021: "February - March"
+    april-june2021: "April - May - June"
+    renting-detail: 'Bookings for at least 2 nights'
+    discount: 'Discounts:'
+    discounts_html: '-20% on the 5th and 6th night <br> -25% on the whole week (7nights) <br> -30% from the 8th night.'
     banner_h1: "Welcome to Le Clos Valliere"
     banner_p1: "Book right now!"
     banner_p2: "Enjoy the french country."
     activities:
         index:
             header: 'Activities around the cottage, whether with families or friends, there is something for everyone!'
+
+    rooms:
+        index:
+            header: "Rooms"
+            floor1: "1st floor"
+            floor2: "2nd floor"
     pages:
         home:
             h1: "Measures concerning the Covid-19"
