@@ -1,7 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "/", class: "navbar-brand" do %>
-    <%= image_tag 'leclosvaliere.png', style: "width:11em;"  %>
-  <% end %>
+  <%= image_tag 'leclosvaliere.png', style: "width:15em;"  %>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
@@ -20,11 +18,6 @@
         <% end %>
       </li>
       <li class="nav-item">
-        <%= link_to "/booking" do %>
-          <p class="pb-0 mb-0">Reservez</p>
-        <% end %>
-      </li>
-      <li class="nav-item">
         <%= link_to "/contact" do %>
           <p class="pb-0 mb-0">Contact</p>
         <% end %>
@@ -36,7 +29,5 @@
         🇬🇧
       <% end %>
     </ul>
-    <%# <%= link_to("English", "#{APP_CONFIG[:english_website_url]}#{request.env['PATH_INFO']}") %>
-    <%# <%= link_to("French", "#{APP_CONFIG[:french_website_url]}#{request.env['PATH_INFO']}") %>
   </div>
 </div>

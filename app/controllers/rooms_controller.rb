@@ -3,9 +3,4 @@ class RoomsController < ApplicationController
     @rooms = Room.all
   end
 
-  def show
-  end
-
-  def booking
-  end
 end
