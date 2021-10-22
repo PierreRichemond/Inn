@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :rooms, only: [:index]
     resources :activities, only: [:index, :show]
     get '/tagged', to: "activities#tagged", as: :tagged
-    get '/contact', to: "pages#contact"
+    get '/contact', to: "contact_forms#new", as: :contact
+    post '/contact', to: 'contact_forms#create'
   end
 end

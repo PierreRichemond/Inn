@@ -30,6 +30,21 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+    mail_form:
+        models:
+            contact_form: "Your site contact form"
+        attributes:
+            contact_form:
+                name: "Name"
+                email: "E-mail"
+                telephone: "Telephone number"
+                message: "Message"
+        request:
+            title: "Technical information about the user"
+            remote_ip: "IP Address"
+            user_agent: "Browser"
+    table-header: 'Rate'
+    table-subheader: '(in euro per night)'
     sept-oct2021: "August 30th - November 14th"
     winter2021: "November 15th - December 17th"
     christmas: "Closed From December 28th to January 1st"
