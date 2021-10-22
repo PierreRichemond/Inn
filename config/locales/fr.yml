@@ -1,10 +1,20 @@
 fr:
+    sept-oct2021: "30 Aôut - 14 Novembre"
+    winter2021: "15 Novembre - 17 Décembre"
+    christmas: "Fermé du 28 Décembre au 13 Janvier"
+    january2021: "Janvier week-end uniquement"
+    feb-mar2021: "Fevrier - Mars"
+    april-june2021: "Avril - Mai - Juin"
+    renting-detail: 'Location pour 2 nuits minimum'
+    discount: 'Réductions:'
+    discounts_html: '-20% sur la 5ème et 6ème nuit <br> -25% sur une semaine complète (7nuits) <br> -30% à partir de la 8ème nuit.'
     date:
         abbr_day_names: [Dim, Lun, Mar, Mer, Jeu, Ven, Sam]
         month_names: [~, Jan, Fév, Mar, Avr, Mai, Jun, Jul, Août, Sep, Oct, Nov, Déc]
         day_names: [Dimanche, Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi]
         formats:
-            day_month: "%b %d"
+            day: '%d'
+            day_month: "%d"
             default: "%Y-%m-%d"
             hour: "%H:%M"
             long: "%A %d %B %Y"
@@ -16,6 +26,11 @@ fr:
     activities:
         index:
             header: 'Les activitées autour du gîte, que ce soit en familles ou entre amis, il y en à pour tout les goûts!'
+    rooms:
+        index:
+            header: "Nos chambres"
+            floor1: "Rez-de-chaussée"
+            floor2: "Etage"
     pages:
         home:
             h1: "Mesures concernant le Covid-19"

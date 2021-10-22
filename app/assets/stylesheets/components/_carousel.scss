@@ -1,6 +1,8 @@
 .owl-carousel {
   display: flex;
-  padding: 50px 0px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: fit-content;
 
   .owl-prev {
     position: absolute;
@@ -18,7 +20,7 @@
   }
   .owl-item img {
     object-fit: cover;
-    height: 350px;
+    height: 30em;
     justify-content: center;
     align-items: center;
   }
