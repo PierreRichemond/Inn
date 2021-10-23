@@ -11,6 +11,13 @@
 @import "calendar";
 @import "rooms";
 @import "modal";
+@import "activity_list_card";
+
+h1{
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.4);
+  text-shadow: 0px 0px 1px rgba(0, 0, 0 ,0.4);
+  font-family: $title-font;
 
 p{
   font-size: 18px;

@@ -2,7 +2,7 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: nowrap;
-  background-color: rgba(92, 209, 46, 0.6);
+  background-color: rgba(70, 161, 34, 0.6);
   position: relative;
 }
 
@@ -24,7 +24,7 @@
 
 .nav-item {
   padding: 0 8px;
-  margin-top: 3.7%;
+  margin-top: 2%;
   a{
     font-size: 20px;
     color: rgb(255, 255, 255);
@@ -39,7 +39,6 @@
 li {
   display: inline-block;
   position: relative;
-  padding-bottom: 3px;
   margin-right: 10px;
 }
 li:last-child {
@@ -66,4 +65,12 @@ background: rgb(92, 92, 92);
 .login {
   border-radius: 10px;
   width: 120px;
+}
+
+.lang-icon {
+  margin: 14px 8px 0;
+  font-size: 20px;
+  &:hover {
+    text-decoration: none;
+  }
 }

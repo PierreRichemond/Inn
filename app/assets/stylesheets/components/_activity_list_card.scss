@@ -1,0 +1,32 @@
+.our_activities {
+  margin: 0 3em 3em 3em;
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2em;
+}
+
+.grid-row-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  // grid-column-gap: em;
+}
+
+.activity_list_card {
+  width: 250px;
+  img {
+    display:flex;
+    margin: auto;
+  }
+  p {
+    text-align: center;
+  }
+}

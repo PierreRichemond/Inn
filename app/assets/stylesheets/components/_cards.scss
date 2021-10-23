@@ -1,3 +1,51 @@
+.modified_container {
+  background-color: #91ce9c;
+}
+
+.modified_container1 {
+  padding: 2em;
+  p {
+    font-family: $card-body;
+    font-size: 20px;
+  }
+  h2 {
+    font-family: $card-body;
+    font-size: 40px;
+  }
+}
+
+.covid_card {
+  border: 1px solid #91ce9c;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0 ,0.2);
+  border-radius: 20px;
+  padding: 1em;
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin:auto;
+  p {
+    margin-left: 1.7em;
+    font-size: 13px;
+  }
+}
+
+.why_us_card {
+  padding: 1em;
+  h2 {
+    text-align: center;
+    font-family: $card-body;
+    font-size: 40px;
+  }
+  p {
+    font-family: $card-body;
+    margin: auto;
+    font-size: 20px;
+    padding-bottom: 2em;
+  }
+  img {
+    margin: auto;
+    height: 250px;
+    object-fit: cover;
+  }
 .room_card{
   border-top: 10px solid #91ce9c;
   padding-top: 2em;
@@ -10,28 +58,22 @@
   padding: 2em;
   margin: 2em;
 }
-h1{
-  text-decoration: underline;
-    font-weight: 700;
-    color: rgba(0, 0, 0, 0.4);
-    text-shadow: 0px 0px 1px rgba(0, 0, 0 ,0.4);
-}
 
 .activity-container {
   margin: 2em;
   // a {
-  //   color: rgba(0, 0, 0, 0.6);
-  // &:hover {
-  //   color: rgba(0, 0, 0, 1);
-  //   text-decoration: none;
-  // }
-  // }
-}
-.activity-card {
-  margin-bottom: 0.5em;
-  border-radius: 5px;
-  background: white;
-  padding: 10px;
+    //   color: rgba(0, 0, 0, 0.6);
+    // &:hover {
+      //   color: rgba(0, 0, 0, 1);
+      //   text-decoration: none;
+      // }
+      // }
+    }
+    .activity-card {
+      margin-bottom: 0.5em;
+      border-radius: 5px;
+      background: white;
+      padding: 10px;
   &:hover {
     border: 1px solid rgba(0, 0, 0, 0.3);
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
@@ -44,16 +86,37 @@ h1{
   margin-right: 2em;
 }
 
-
-
 .card-link {
   text-decoration: none;
   color: black;
   &:hover {
     color: rgba(0, 0, 0, 0.6);
   }
-    top: 0;
+  top: 0;
   bottom: 0;
   width: 100%;
   cursor: grab;
+}
+
+.modal-size{
+  height: 70%;
+  width: 70%;
+}
+.modal-img{
+  object-fit: fill;
+  height: 17em;
+  margin: 20px;
+}
+
+.modal-body p{
+  font-weight: bold;
+  font-size: 20px;
+}
+#modal-description{
+  font-weight: 400;
+  justify-content: center;
+}
+
+.modal-title{
+  text-align: center;
 }
