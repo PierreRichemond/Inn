@@ -1,43 +1,49 @@
   <%= render 'banner.html.erb'%>
-<div class="container">
-  <div class="home_card">
-    <h2 class= "text-center py-3"><%= t(".h1") %></h2>
-    <p class = 'text-center'><%= t(".content1_html") %></p>
-  </div>
-  <div class="home_card">
-    <h2 class= "text-center py-3"><%= t(".h2") %></h2>
-    <div class= 'd-flex'>
-      <%= image_tag "favicon1.png", class: 'mr-3' %>
-      <p class = 'text-justify'><%= t(".content2_html") %></p>
+  <div class="modified_container">
+    <div class="container d-flex" style="padding-top: 1em;">
+      <div class="covid_card">
+        <h5><i class="fas fa-info-circle"></i> <%= t(".h1") %></h5>
+        <p style="margin-left: 1.7em;"><%= t(".content1_html") %></p>
+      </div>
+    </div>
+    <div class="why_us_card">
+      <h2><%= t(".h2") %></h2>
+      <div class= 'row'>
+        <div class="col-sm-12 col-xl-6 d-flex">
+          <%= image_tag "favicon1.png" %>
+        </div>
+        <div class="col-sm-12 col-xl-6">
+          <p><%= t(".content2_html") %></p>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="home_card">
-    <h2 class= "text-center py-3"><%= t(".h3") %></h2>
-    <div class= 'd-flex'>
-      <p class = 'text-justify'><%= t(".content3_html") %></p>
-      <%= image_tag "favicon1.png", class: 'mr-3' %>
+  <div class="modified_container1">
+    <div class="our_activities">
+      <h2><%= t(".h3") %></h2>
+      <p><%= t(".content3_html") %></p>
+      <%= render "activities/activity_list" %>
     </div>
   </div>
-  <div class="home_card">
-    <h2 class= "text-center py-3"><%= t(".h4") %></h2>
-    <h5 class= "text-justify py-3"><%= t(".request") %></h5>
-    <div class= 'd-flex'>
-      <%= image_tag "favicon1.png", class: 'mr-3' %>
-      <p class = 'text-justify'> <%= t(".content4_html") %></p>
+    <div>
+      <h2 class= "text-center py-3"><%= t(".h4") %></h2>
+      <h5 class= "text-justify py-3"><%= t(".request") %></h5>
+      <div class= 'd-flex'>
+        <%= image_tag "favicon1.png", class: 'mr-3' %>
+        <p class = 'text-justify'> <%= t(".content4_html") %></p>
+      </div>
     </div>
-  </div>
-  <div class="home_card">
-    <h2 class= "text-center py-3"><%= t(".h5") %></h2>
-    <div class= 'd-flex'>
-      <p class = 'text-justify'> <%= t(".content5_html") %></p>
-      <%= image_tag "favicon1.png", class: 'mr-3' %>
+    <div>
+      <h2 class= "text-center py-3"><%= t(".h5") %></h2>
+      <div class= 'd-flex'>
+        <p class = 'text-justify'> <%= t(".content5_html") %></p>
+        <%= image_tag "favicon1.png", class: 'mr-3' %>
+      </div>
     </div>
-  </div>
-  <div class="home_card">
-    <h2 class= "text-center py-3"><%= t(".h6") %></h2>
-    <div class= 'd-flex'>
-      <%= image_tag "favicon1.png", class: 'mr-3' %>
-      <p class = 'text-justify'><%= t(".content6_html") %></p>
+    <div>
+      <h2 class= "text-center py-3"><%= t(".h6") %></h2>
+      <div class= 'd-flex'>
+        <%= image_tag "favicon1.png", class: 'mr-3' %>
+        <p class = 'text-justify'><%= t(".content6_html") %></p>
+      </div>
     </div>
-  </div>
-</div>

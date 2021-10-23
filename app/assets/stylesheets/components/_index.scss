@@ -9,7 +9,11 @@
 @import "banner";
 @import "button";
 @import "calendar";
+@import "activity_list_card";
 
-p{
-  font-size: 16px;
+h1{
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.4);
+  text-shadow: 0px 0px 1px rgba(0, 0, 0 ,0.4);
+  font-family: $title-font;
 }
