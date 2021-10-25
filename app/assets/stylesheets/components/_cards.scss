@@ -46,6 +46,7 @@
     height: 250px;
     object-fit: cover;
   }
+}
 .room_card{
   border-top: 10px solid #91ce9c;
   padding-top: 2em;
@@ -61,15 +62,8 @@
 
 .activity-container {
   margin: 2em;
-  // a {
-    //   color: rgba(0, 0, 0, 0.6);
-    // &:hover {
-      //   color: rgba(0, 0, 0, 1);
-      //   text-decoration: none;
-      // }
-      // }
-    }
-    .activity-card {
+}
+.activity-card {
       margin-bottom: 0.5em;
       border-radius: 5px;
       background: white;

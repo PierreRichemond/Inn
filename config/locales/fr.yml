@@ -63,13 +63,7 @@ fr:
             content2_html: "Au cœur de la Touraine, le Clos Vallière est une ancienne ferme rénovée où la qualité se conjugue avec convivialité. L' ouverture du gîte en 2019 marque la fin de six années de travaux et le prolongement d'une belle aventure familiale.
         Sans dénaturer l’esprit de cette maison de caractère, entre murs de pierre et boiserie, la décoration toute en délicatesse offre une ambiance moderne et chaleureuse. Marquée, elle est à notre image, tonique, colorée, authentique, chaleureuse et soignée. Nous avons à cœur de recevoir nos hôtes et partager avec vous notre passion de rencontres et d’échanges en toute convivialité.
         Dotée d’un grand extérieur, après une journée de découvertes, vous profiterez le soir venu du soleil couchant sur le jardin et l'étang arboré."
-            content3_html: "La touraine offre une multitude d'activitées! <br>
-        Autour du Clos Valliere, decouvrez les vignobles tourangeaux, les chateaux de la renaissance et du moyen-âge. <br>
-        Faites un tour en montgolfière ou une balade a cheval. <br>
-        Rien de tel qu'une apres midi de pêche à la proprieté pour se detendre. <br>
-        Pour les enfants, nous avont des velos et des jeux d'exterieur. <br>
-        Nous avons egalement une salle de jeux en interieur pour les petits comme pour les grands enfants. <br>
-        Ping-pong, jeux de societé, flechettes et encore plus à découvrir. <br>"
+            content3_html: "La touraine offre une multitude d'activitées!"
             content4_html: "Internet Wifi (sans fil, Maison uniquement, non accessible depuis le jardin).<br>
         Salle de reception.<br>
         Chambre avec couverture et oreiller supplementaire si besoin<br>
@@ -86,3 +80,11 @@ fr:
         Pharmacie à Monnaie sur la route principale(4km).<br>
         Station essence au supermarché de Monnaie(4km).<br>
         Restaurant Français(1km).<br>"
+    activities:
+        activity_list:
+            vineyard_html: "Decouvrez les vignobles tourangeaux, les chateaux de la renaissance et du moyen-âge."
+            rides_html: "Faites un tour en montgolfière ou une balade a cheval."
+            fishing_html: "Rien de tel qu'une apres midi de pêche à la proprieté pour se detendre."
+            children_activities_html: "Pour les enfants, nous avont des velos et des jeux d'exterieur."
+            indoor_activities_html: "Une salle de jeux en interieur pour les petits comme pour les grands.
+        Ping-pong, jeux de societé, flechettes et encore plus à découvrir."
