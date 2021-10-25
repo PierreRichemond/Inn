@@ -1,9 +1,9 @@
-<h1 class="form-h1">Elegant Contact Form</h1>
+<h1 class="form-h1"><%= t(".header") %></h1>
 <form class="cf">
   <div class=" cf">
-    <input type="text" id="input-name" placeholder="Name">
-    <input type="email" id="input-email" placeholder="Email address">
-    <input type="text" id="input-subject" placeholder="Subject">
+    <input type="text" id="input-name" placeholder=<%= t(".name") %>>
+    <input type="email" id="input-email" placeholder=<%= t(".email") %>>
+    <input type="text" id="input-subject" placeholder=<%= t(".subject") %>>
   </div>
   <div class=" cf">
     <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>

@@ -8,7 +8,7 @@ $red: #e74c3c;
 .form-h1 {
    text-align: center;
    color: #a8a8a8;
-   padding-top: 2em;
+   margin-bottom: 0;
 }
 
 form {
@@ -37,7 +37,7 @@ form {
      color: grey;
      background: $green;
      cursor: pointer;
-      -webkit-transition: 1s;
+    -webkit-transition: 1s;
 
     &:hover {
        box-shadow: 0 1px 1px 1px rgba(#aaa, 0.6);
@@ -47,6 +47,10 @@ form {
 
   textarea {
       height: 126px;
+  }
+  .cf{
+    margin: 0;
+
   }
 }
 

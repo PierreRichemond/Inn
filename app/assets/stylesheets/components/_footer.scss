@@ -40,3 +40,10 @@
   background-image: asset-url('palm-leaf.png');
   z-index: -1;
 }
+
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}

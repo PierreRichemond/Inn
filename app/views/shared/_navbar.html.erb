@@ -4,22 +4,22 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <%= link_to "/" do %>
-          <p class="pb-0 mb-0">Acceuil</p>
+          <p class="pb-0 mb-0"><%= t("nav_home") %></p>
         <% end %>
       </li>
       <li class="nav-item">
         <%= link_to "/rooms" do %>
-          <p class="pb-0 mb-0">Nos chambres</p>
+          <p class="pb-0 mb-0"><%= t("nav_room") %></p>
         <% end %>
       </li>
       <li class="nav-item">
         <%= link_to "/activities" do %>
-          <p class="pb-0 mb-0">Activitées</p>
+          <p class="pb-0 mb-0"><%= t("nav_activities") %></p>
         <% end %>
       </li>
       <li class="nav-item">
         <%= link_to "/contact" do %>
-          <p class="pb-0 mb-0">Contact</p>
+          <p class="pb-0 mb-0"><%= t("nav_contact") %></p>
         <% end %>
       </li>
       <%= link_to url_for(locale: :fr), class: "lang-icon" do %>
