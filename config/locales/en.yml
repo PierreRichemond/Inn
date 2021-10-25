@@ -1,48 +1,4 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-    # <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-    mail_form:
-        models:
-            contact_form: "Your site contact form"
-        attributes:
-            contact_form:
-                name: "Name"
-                email: "E-mail"
-                telephone: "Telephone number"
-                message: "Message"
-        request:
-            title: "Technical information about the user"
-            remote_ip: "IP Address"
-            user_agent: "Browser"
     table-header: 'Rate'
     table-subheader: '(in euro per night)'
     sept-oct2021: "August 30th - November 14th"
@@ -57,15 +13,24 @@ en:
     banner_h1: "Welcome to Le Clos Valliere"
     banner_p1: "Book right now and"
     banner_p2: "Enjoy the country of France!"
-    activities:
-        index:
-            header: 'Activities around the cottage, whether with families or friends, there is something for everyone!'
-
+    nav_home: "Home"
+    nav_room: "Our rooms"
+    nav_activities: "Surrendings"
+    nav_contact: "Contact"
     rooms:
         index:
             header: "Rooms"
             floor1: "1st floor"
             floor2: "2nd floor"
+    contact_forms:
+        new:
+            header: 'Contact Form'
+            name: "Name"
+            email: "Email address"
+            subject: "Subject"
+
+
+
     pages:
         home:
             h1: "Measures concerning Covid-19"
@@ -101,6 +66,8 @@ en:
          Petrol station at the Monnaie supermarket (4km). <br>
          French Restaurant (1km). <br> "
     activities:
+        index:
+            header: 'Activities around the cottage, whether with families or friends, there is something for everyone!'
         activity_list:
             vineyard_html: "Discover the Touraine vineyards, Renaissance and Middle Ages castles."
             rides_html: "Take a hot air balloon ride or go horseback riding."
