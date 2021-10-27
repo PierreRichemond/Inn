@@ -1,21 +1,21 @@
 fr:
-    table-header: 'Tarif'
-    table-subheader: '(en euro par nuit)'
+    table-header: "Tarif"
+    table-subheader: "(en euro par nuit)"
     sept-oct2021: "30 Aôut - 14 Novembre"
     winter2021: "15 Novembre - 17 Décembre"
     christmas: "Fermé du 28 Décembre au 13 Janvier"
     january2021: "Janvier week-end uniquement"
     feb-mar2021: "Fevrier - Mars"
     april-june2021: "Avril - Mai - Juin"
-    renting-detail: 'Location pour 2 nuits minimum'
-    discount: 'Réductions:'
-    discounts_html: '-20% sur la 5ème et 6ème nuit <br> -25% sur une semaine complète (7nuits) <br> -30% à partir de la 8ème nuit.'
+    renting-detail: "Location pour 2 nuits minimum"
+    discount: "Réductions:"
+    discounts_html: "-20% sur la 5ème et 6ème nuit <br> -25% sur une semaine complète (7nuits) <br> -30% à partir de la 8ème nuit."
     date:
         abbr_day_names: [Dim, Lun, Mar, Mer, Jeu, Ven, Sam]
         month_names: [~, Jan, Fév, Mar, Avr, Mai, Jun, Jul, Août, Sep, Oct, Nov, Déc]
         day_names: [Dimanche, Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi]
         formats:
-            day: '%d'
+            day: "%d"
             day_month: "%d"
             default: "%Y-%m-%d"
             hour: "%H:%M"
@@ -26,6 +26,13 @@ fr:
     nav_room: "Nos chambres"
     nav_activities: "Aux alentours"
     nav_contact: "Contact"
+    kitchen: "Cuisine tout equipé, avec lave vaisselle et refrigirateur."
+    hall: "Grand espace pour faire la fête."
+    wifi: "Wifi Internet (sans fil, intérieur uniquement)."
+    blankets: "Chambre avec couverture et oreiller supplementaire si besoin."
+    baby_bed: "Lits parapluit sur demande pour bébé(mois de 2ans, jusqu'à 13kg)."
+    parking: "Parking jusqu'à 15 voitures."
+    help: "Aide à l'organisation du sejour et des activitées si besoin."
     banner_h1: "Bienvenue au Clos Valliere"
     banner_p1: "Reservez dès maintenant!"
     banner_p2: "Profitez du plein air de la Touraine."
@@ -34,6 +41,9 @@ fr:
             header: "Nos chambres"
             floor1: "Rez-de-chaussée"
             floor2: "Etage"
+            h4: "Equipement"
+            content4_html: "Tous ce dont vous avez besoin!"
+            request: "Nous attendons de nos client un respect vis à vis du materiel, en effet il est arrivé d'avoir certain de nos équipements qui ont Disparu apres le depart de client précédent. Ce n'est pas seulement un manque de respect pour l'auberge mais aussi concernant les clients suivant qui n'aurons pas la même prestation."
     contact_forms:
         new:
             header: 'Formulaire de contact'
@@ -45,10 +55,6 @@ fr:
             h1: "Mesures concernant le Covid-19"
             h2: "Pourquoi nous?"
             h3: "Les activitées que nous proposons"
-            h4: "Equipement"
-            h5: "Services complementaires gratuits"
-            h6: "Information complémentaires"
-            request: "Nous attendons de nos client un respect vis à vis du materiel, en effet il est arrivé d'avoir certain de nos équipements qui ont Disparu apres le depart de client précédent. Ce n'est pas seulement un manque de respect pour l'auberge mais aussi concernant les clients suivant qui n'aurons pas la même prestation."
             content1_html: "Conformément à la loi en vigueur, les clients sont tous imposés de presenter leur passport à l'arrivé. <br> Malheureusement, tout client n'ayant pas de passeport ou ayant un passport non en règle ne
           pourra pas séjourner au clos Valliere. <br>
           Le remboursement dans ces derniers n'est pas
@@ -58,22 +64,6 @@ fr:
         Sans dénaturer l’esprit de cette maison de caractère, entre murs de pierre et boiserie, la décoration toute en délicatesse offre une ambiance moderne et chaleureuse. Marquée, elle est à notre image, tonique, colorée, authentique, chaleureuse et soignée. Nous avons à cœur de recevoir nos hôtes et partager avec vous notre passion de rencontres et d’échanges en toute convivialité.
         Dotée d’un grand extérieur, après une journée de découvertes, vous profiterez le soir venu du soleil couchant sur le jardin et l'étang arboré."
             content3_html: "La touraine offre une multitude d'activitées!"
-            content4_html: "Internet Wifi (sans fil, Maison uniquement, non accessible depuis le jardin).<br>
-        Salle de reception.<br>
-        Chambre avec couverture et oreiller supplementaire si besoin<br>
-        Cuisine tout equipé, avec lave vaisselle et refrigirateur.<br>
-        Equipenent bébé dont lits parapluit pour bébé(mois de 2ans, jusqu'à 13kg).<br>
-        Une remise avec machine à laver et materiel de nettoyage.<br>
-        Salle de bain avec les essenciels de toilette avec serviettes incluse. "
-            content5_html: "Lits parapluit pour bébé(mois de 2ans, jusqu'à 13kg).<br>
-        Parking jusqu'à 15 voitures.<br>
-        Aide à l'organisation du sejour et des activitées si besoin.<br>"
-            content6_html: "Supermarché à Monnaie(4km).<br>
-        Office du tourisme à Tours(18km).<br>
-        Centre commerciale à Tours nord(15km).<br>
-        Pharmacie à Monnaie sur la route principale(4km).<br>
-        Station essence au supermarché de Monnaie(4km).<br>
-        Restaurant Français(1km).<br>"
     activities:
         index:
             header: 'Les activitées autour du gîte, que ce soit en familles ou entre amis, il y en à pour tout les goûts!'

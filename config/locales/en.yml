@@ -17,29 +17,32 @@ en:
     nav_room: "Our rooms"
     nav_activities: "Surrendings"
     nav_contact: "Contact"
+    kitchen: 'Kitchen fully equiped'
+    hall: 'Enough space to party'
+    wifi: 'Wifi Internet (wireless, House only, not accessible from the garden).'
+    blankets: 'Bedroom with extra blanket and pillow if needed.'
+    baby_bed: 'Baby beds (months of 2 years old, up to 13kg, ask for it in advance).'
+    parking: 'Parking for up to 15 cars.'
+    help: 'Help with the organization of the stay and the activities if necessary.'
     rooms:
         index:
             header: "Rooms"
             floor1: "1st floor"
             floor2: "2nd floor"
+            h4: "Equipment"
+            content4_html: 'All the equipment you need!'
+            request: "We expect our customers to respect the material, indeed it has happened to have some of our equipment that Disappeared after the departure of a previous customer. It is not only a lack of respect for the hostel but also concerning the following customers who will not have the same service."
     contact_forms:
         new:
             header: 'Contact Form'
             name: "Name"
             email: "Email address"
             subject: "Subject"
-
-
-
     pages:
         home:
             h1: "Measures concerning Covid-19"
             h2: "Why us?"
             h3: "Activities we offer"
-            h4: "Equipment"
-            h5: "Free additional services"
-            h6: "Complementary information"
-            request: "We expect our customers to respect the material, indeed it has happened to have some of our equipment that Disappeared after the departure of a previous customer. It is not only a lack of respect for the hostel but also concerning the following customers who will not have the same service."
             content1_html: "In accordance with the law, customers are all required to present their passport on arrival. Unfortunately, any customer who does not have a passport or has an unregistered passport
            will not be able to stay at Clos Valliere.
            Reimbursement in these cases are not
@@ -49,22 +52,6 @@ en:
          Without altering the spirit of this house of character, between stone walls and woodwork, the delicate decoration offers a modern and warm atmosphere. Marked, it is in our image, invigorating, colorful, authentic, warm and neat. We are committed to welcoming our guests and sharing with you our passion for friendly meetings and exchanges.
          With a large exterior, after a day of exploring, in the evening you will enjoy the sun setting over the garden and the tree-lined pond. "
             content3_html: "Touraine offers a multitude of activities!"
-            content4_html: "Wifi Internet (wireless, House only, not accessible from the garden). <br>
-         Reception room. <br>
-         Bedroom with extra blanket and pillow if needed <br>
-         Fully equipped kitchen, with dishwasher and refrigerator. <br>
-         Baby equipment including baby cots (2 years old, up to 13kg). <br>
-         A shed with washing machine and cleaning equipment. <br>
-         Bathroom with toiletries with towels included. "
-            content5_html: "Baby beds (months of 2 years old, up to 13kg). <br>
-         Parking for up to 15 cars. <br>
-         Help with the organization of the stay and the activities if necessary. <br> "
-            content6_html: "Supermarket in Monnaie (4km). <br>
-         Tourist office in Tours (18km). <br>
-         Shopping center in Tours Nord (15km). <br>
-         Pharmacy in Monnaie on the main road (4km). <br>
-         Petrol station at the Monnaie supermarket (4km). <br>
-         French Restaurant (1km). <br> "
     activities:
         index:
             header: 'Activities around the cottage, whether with families or friends, there is something for everyone!'
