@@ -1,17 +1,6 @@
 <div class="activity-card">
-  <h2 class = 'text-center'><%= activity.name %></h2>
+  <h2 class = 'activity-name text-center'><%= activity.name %></h2>
   <div class="d-flex">
     <%= image_tag activity.image, class: 'activity-img' %>
-    <div>
-      <% if activity.price != '' %>
-        <p>Prix:<%= activity.price %>€.</p>
-      <% end %>
-      <% if activity.phone != '' %>
-        <p><%= activity.phone %></p>
-      <% end %>
-      <% if activity.distance != '' %>
-        <p>A <%= activity.distance %> du gîte.</p>
-      <% end %>
-    </div>
   </div>
 </div>

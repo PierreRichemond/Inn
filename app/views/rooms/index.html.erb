@@ -11,16 +11,14 @@
             <p><span style="font-size:20px;"><%= t(".floor1") %>:</span> <%= room.details %></p>
             <p><span style="font-size:20px;"><%= t(".floor2") %>:</span> <%= room.detailz %></p>
           </div>
-          <div class="row">
-            <div class="col-12 col-lg-8  owl-carousel owl-theme">
+          <div class="row ">
+            <div class="col-12 col-md-6 col-lg-8  owl-carousel owl-theme">
               <% room.images.each do |image| %>
                 <div><%= cl_image_tag image.key%></div>
               <% end %>
             </div>
-            <div class="col-12 col-lg-3 offset-1 text-justify my-3">
-              <%= month_calendar(number_of_months: 2) do |date| %>
-                <%= date.day %>
-              <% end %>
+            <div id="calendars">
+              <%= render partial: "calendar" %>
             </div>
           </div>
         </div>
@@ -28,6 +26,6 @@
     <% end %>
   </div>
   <div class="col-12 col-lg-3">
-    <%= render "table" %>
+    <%= render partial: "table" %>
   </div>
 </div>
