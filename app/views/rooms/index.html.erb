@@ -8,16 +8,16 @@
             <h3 class= "text-center"><%= room.price %>€</h3>
             <h3 class= "text-center"><%= room.ppl %></h3>
             <p><%= room.description %></p>
-            <p><span style="font-size:20px;"><%= t(".floor1") %>:</span> <%= room.details %></p>
-            <p><span style="font-size:20px;"><%= t(".floor2") %>:</span> <%= room.detailz %></p>
+            <p><span style="font-size:30px;"><%= t(".floor1") %>:</span> <%= room.details %></p>
+            <p><span style="font-size:30px;"><%= t(".floor2") %>:</span> <%= room.detailz %></p>
           </div>
           <div class="row ">
-            <div class="col-12 col-md-6 col-lg-8  owl-carousel owl-theme">
+            <div class="col-12 col-md-6 col-lg-7  owl-carousel owl-theme">
               <% room.images.each do |image| %>
                 <div><%= cl_image_tag image.key%></div>
               <% end %>
             </div>
-            <div id="calendars-<%= room.name %>">
+            <div class="col-12 col-md-6 col-lg-5" id="calendars-<%= room.name %>">
               <%= render partial: "calendar" %>
             </div>
           </div>
@@ -32,7 +32,7 @@
 <div class="modified_container1">
   <div class="our_activities">
     <h2><%= t(".h4") %></h2>
-    <h5><%= t(".request") %></h5>
+    <h3 class='text-center'><%= t(".request_html") %></h3>
     <p><%= t(".content4_html") %></p>
     <%= render "rooms/equipment_list" %>
   </div>
