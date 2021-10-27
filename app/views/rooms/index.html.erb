@@ -17,7 +17,7 @@
                 <div><%= cl_image_tag image.key%></div>
               <% end %>
             </div>
-            <div id="calendars">
+            <div id="calendars-<%= room.name %>">
               <%= render partial: "calendar" %>
             </div>
           </div>
@@ -27,5 +27,13 @@
   </div>
   <div class="col-12 col-lg-3">
     <%= render partial: "table" %>
+  </div>
+</div>
+<div class="modified_container1">
+  <div class="our_activities">
+    <h2><%= t(".h4") %></h2>
+    <h5><%= t(".request") %></h5>
+    <p><%= t(".content4_html") %></p>
+    <%= render "rooms/equipment_list" %>
   </div>
 </div>
