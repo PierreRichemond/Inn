@@ -31,7 +31,7 @@ en:
             floor2: "2nd floor"
             h4: "Equipment"
             content4_html: 'All the equipment you need!'
-            request: "We expect our customers to respect the material, indeed it has happened to have some of our equipment that Disappeared after the departure of a previous customer. It is not only a lack of respect for the hostel but also concerning the following customers who will not have the same service."
+            request_html: "We expect our customers to respect the material, indeed it has happened to have some of our equipment that Disappeared after the departure of a previous customer. <br>It is not only a lack of respect for the hostel but also concerning the following customers who will not have the same service."
     contact_forms:
         new:
             header: 'Contact Form'

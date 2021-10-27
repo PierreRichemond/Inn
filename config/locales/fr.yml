@@ -43,7 +43,7 @@ fr:
             floor2: "Etage"
             h4: "Equipement"
             content4_html: "Tous ce dont vous avez besoin!"
-            request: "Nous attendons de nos client un respect vis à vis du materiel, en effet il est arrivé d'avoir certain de nos équipements qui ont Disparu apres le depart de client précédent. Ce n'est pas seulement un manque de respect pour l'auberge mais aussi concernant les clients suivant qui n'aurons pas la même prestation."
+            request_html: "Nous attendons de nos client un respect vis à vis du materiel, en effet il est arrivé d'avoir certain de nos équipements qui ont Disparu apres le depart de client précédent. <br>Ce n'est pas seulement un manque de respect pour l'auberge mais aussi concernant les clients suivant qui n'aurons pas la même prestation."
     contact_forms:
         new:
             header: 'Formulaire de contact'
