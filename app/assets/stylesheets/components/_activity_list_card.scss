@@ -40,3 +40,15 @@
     text-align: center;
   }
 }
+
+.equipment-list-card {
+  width: 250px;
+  img {
+    display: flex;
+    margin: auto;
+  }
+  p {
+    text-align: center;
+    height: 60px;
+  }
+}
