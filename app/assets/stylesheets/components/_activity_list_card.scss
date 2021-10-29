@@ -8,27 +8,12 @@
   }
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 2em;
-}
-.grid1 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 2em;
+.equipment {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.grid1-row-two {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  // grid-column-gap: em;
-}
-.grid-row-two {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  // grid-column-gap: em;
-}
+
 
 .activity_list_card {
   width: 250px;
@@ -42,13 +27,17 @@
 }
 
 .equipment-list-card {
-  width: 250px;
+  width: 270px;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
   img {
     display: flex;
-    margin: auto;
+    align-items: center;
+    justify-content: center;
   }
   p {
-    text-align: center;
-    height: 60px;
+margin-bottom: 0;
   }
 }
