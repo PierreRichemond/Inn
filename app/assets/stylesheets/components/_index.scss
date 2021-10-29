@@ -43,12 +43,13 @@ p{
     display: grid;
     grid-template-columns:  1fr;
   }
+    .activities {
+    display: grid;
+     grid-template-columns: 1fr;
+  }
   .navbar-lewagon{
     display: grid;
     grid-template-columns:  1fr;
-  }
-  .gone{
-width: fit-content;
   }
   .nav-item{
     text-align: center;
@@ -61,14 +62,15 @@ width: fit-content;
     display: grid;
      grid-template-columns: 1fr 1fr;
   }
+  .activities {
+    display: grid;
+     grid-template-columns: 1fr;
+  }
   .navbar-lewagon{
     display: grid;
     grid-template-columns:  1fr;
   }
 
-    .container{
-    width: 300px;
-  }
 }
 
 // Medium devices (tablets, 768px and up)
@@ -77,13 +79,15 @@ width: fit-content;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  .activities {
+    display: grid;
+     grid-template-columns: 1fr;
+  }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .container {
-    width: 720px;
-  }
+
 }
 
 // Extra large devices (large desktops, 1200px and up)
