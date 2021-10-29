@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= image_tag 'leclosvaliere.png', style: "width:15em;"  %>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <%= image_tag 'leclosvaliere.png', style: "width:15em;", class:'gone'%>
+  <div class="navbar-links">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <%= link_to "/" do %>
@@ -22,10 +22,10 @@
           <p class="pb-0 mb-0"><%= t("nav_contact") %></p>
         <% end %>
       </li>
-      <%= link_to url_for(locale: :fr), class: "lang-icon" do %>
+      <%= link_to url_for(locale: :fr), class: "lang-icon nav-item" do %>
         🇫🇷
       <% end %>
-      <%= link_to url_for(locale: :en), class: "lang-icon" do %>
+      <%= link_to url_for(locale: :en), class: "lang-icon nav-item" do %>
         🇬🇧
       <% end %>
     </ul>

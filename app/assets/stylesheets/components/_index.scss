@@ -43,6 +43,16 @@ p{
     display: grid;
     grid-template-columns:  1fr;
   }
+  .navbar-lewagon{
+    display: grid;
+    grid-template-columns:  1fr;
+  }
+  .gone{
+width: fit-content;
+  }
+  .nav-item{
+    text-align: center;
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -50,6 +60,10 @@ p{
   .equipment {
     display: grid;
      grid-template-columns: 1fr 1fr;
+  }
+  .navbar-lewagon{
+    display: grid;
+    grid-template-columns:  1fr;
   }
 
     .container{
