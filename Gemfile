@@ -36,6 +36,7 @@ gem 'geocoder'
 gem 'cloudinary', '~> 1.16.0'
 gem "simple_calendar", "~> 2.4"
 gem 'mail_form'
+gem 'mail'
 
 
 group :development, :test do
