@@ -28,55 +28,74 @@ room1.images.attach(io: File.open(Rails.root.join("app/assets/images/leclosvalie
                  - Corridor with separate shower room and wc.")
 
 
-# room2 = Room.create(name: "Gîte Rabelais",
-#                   ppl: "155m² – couchage : 10/12 personnes",
-#                   price: 230,
-#                   description: "Plutôt moderne, le gite Rabelais s’accorde parfaitement avec vos soirées festives. Une belle salle de réception avec sa mezzanine et sa grande table vous permettront d’accueillir facilement une trentaine de convives.",
-#                   details: "
-#                     Une suite parentale avec salle de bain.
-#                     - Une chambre double.
-#                     - Salle de douche et wc dans le couloir.
-#                     - Salle de réception avec cuisine équipée à l’américaine.
-#                     - Mezzanine.",
-#                   detailz: "
-#                    Dortoir de 50 m²: 4 lits.
-#                    - 1 salle de douche.")
-# room2.images.attach(io: File.open(Rails.root.join("app/assets/images/favicon1.png")),
-#     filename: "favicon1.png")
-# room2.images.attach(io: File.open(Rails.root.join("app/assets/images/gite_de_qualite.png")),
-#     filename: "gite_de_qualite.png")
-# room2.images.attach(io: File.open(Rails.root.join("app/assets/images/leclosvaliere.png")),
-#     filename: "leclosvaliere.png")
+room2 = Room.create(name: "Gîte Rabelais",
+                  price: 230)
+room2.images.attach(io: File.open(Rails.root.join("app/assets/images/favicon1.png")),
+    filename: "favicon1.png")
+room2.images.attach(io: File.open(Rails.root.join("app/assets/images/gite_de_qualite.png")),
+    filename: "gite_de_qualite.png")
+room2.images.attach(io: File.open(Rails.root.join("app/assets/images/leclosvaliere.png")),
+    filename: "leclosvaliere.png")
 
-# room3 = Room.create(name: "L’ensemble du Clos Vallière",
-#                   ppl: "320 m² - couchage : 18/20 personnes",
-#                   price: 400,
-#                   description: "Profitez de l’ensemble de cette demeure tourangelle et de ses avantages. Un mariage ? Un enterrement de vie de garçon/jeune fille ? Un séminaire ou une rencontre professionnelle ? Plus de 300 m² d’espaces de vie, vous permettront d’accueillir un grand nombre de convives.",
-#                   details: "
-#                 Grand salon / salle à manger.
-#                 - Cuisines à l'ancienne, sellier, 2wc.
-#                 - Une suite parentale avec salle de bain.
-#                 - Une chambre double avec salle de douche.
-#                 - Salle de réception avec cuisine équipée à l’américaine.
-#                 - Mezzanine.",
-#                 detailz: "
-#                   Une grande suite parentale avec salle de bain : 2 adultes + 3 lits enfants.
-#                 - Deux chambres doubles.
-#                 - 2 Salle de douche, 2wc.
-#                 - Dortoir de 50 m²: 4 lits.")
 
-#                   puts "#{Room.count} rooms were created"
+  room2.set_ppl('fr', "155m² – couchage : 10/12 personnes")
+  room2.set_ppl('en', "165 m² - bed: 10/12 people")
+  room2.set_description('fr', "Plutôt moderne, le gite Rabelais s’accorde parfaitement avec vos soirées festives. Une belle salle de réception avec sa mezzanine et sa grande table vous permettront d’accueillir facilement une trentaine de convives.")
+  room2.set_description('en', "Rather modern, the Rabelais cottage goes perfectly with your festive evenings. A beautiful reception room with its mezzanine and large table will easily accommodate around thirty guests.")
+  room2.set_details('fr', " Une suite parentale avec salle de bain.
+                    - Une chambre double.
+                    - Salle de douche et wc dans le couloir.
+                    - Salle de réception avec cuisine équipée à l’américaine.
+                    - Mezzanine.")
+  room2.set_details('en', "A parental suite with bathroom.
+                     - A double room.
+                     - Shower room and wc in the hallway.
+                     - Reception room with American style kitchen.
+                     - Mezzanine.")
+  room2.set_detailz('fr', "Dortoir de 50 m²: 4 lits.
+                   - 1 salle de douche.")
+  room2.set_detailz('en', "50 m² dormitory: 4 beds.
+                    - 1 shower room.")
 
-# room3.images.attach(io: File.open(Rails.root.join("app/assets/images/favicon1.png")),
-#     filename: "favicon1.png",
-#   content_type: 'image/png')
-# room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite_de_qualite.png")),
-#     filename: "gite_de_qualite.png",
-#   content_type: 'image/png')
-# room3.images.attach(io: File.open(Rails.root.join("app/assets/images/leclosvaliere.png")),
-#     filename: "leclosvaliere.png",
-#   content_type: 'image/png')
+room3 = Room.create(name: "Clos Vallière",
+                  price: 400)
 
+  room3.set_ppl('fr', "320 m² - couchage : 18/20 personnes")
+  room3.set_ppl('en', "320 m² - bed : 18/20 people")
+  room3.set_description('fr', "Profitez de l’ensemble de cette demeure tourangelle et de ses avantages. Un mariage ? Un enterrement de vie de garçon/jeune fille ? Un séminaire ou une rencontre professionnelle ? Plus de 300 m² d’espaces de vie, vous permettront d’accueillir un grand nombre de convives.")
+  room3.set_description('en', "Enjoy all of this Touraine residence and its advantages. A marriage ? A bachelorette party? A seminar or a professional meeting? More than 300 m² of living space, will allow you to accommodate a large number of guests.")
+  room3.set_details('fr', "  Grand salon / salle à manger.
+                - Cuisines à l'ancienne, sellier, 2wc.
+                - Une suite parentale avec salle de bain.
+                - Une chambre double avec salle de douche.
+                - Salle de réception avec cuisine équipée à l’américaine.
+                - Mezzanine.")
+  room3.set_details('en', "Large living / dining room.
+                 - Old-fashioned kitchens, saddler, 2wc.
+                 - A parental suite with bathroom.
+                 - A double bedroom with shower room.
+                 - Reception room with American style kitchen.
+                 - Mezzanine.")
+  room3.set_detailz('fr', " Une grande suite parentale avec salle de bain : 2 adultes + 3 lits enfants.
+                - Deux chambres doubles.
+                - 2 Salle de douche, 2wc.
+                - Dortoir de 50 m²: 4 lits.")
+  room3.set_detailz('en', "A large parental suite with bathroom: 2 adults + 3 children's beds.
+                 - Two double bedrooms.
+                 - 2 Shower room, 2 toilets.
+                 - Dormitory of 50 m²: 4 beds.")
+
+  room3.images.attach(io: File.open(Rails.root.join("app/assets/images/favicon1.png")),
+  filename: "favicon1.png",
+  content_type: 'image/png')
+  room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite_de_qualite.png")),
+  filename: "gite_de_qualite.png",
+  content_type: 'image/png')
+  room3.images.attach(io: File.open(Rails.root.join("app/assets/images/leclosvaliere.png")),
+  filename: "leclosvaliere.png",
+  content_type: 'image/png')
+
+  puts "#{Room.count} rooms were created"
 #     amboise = Activity.create(name: "Château d’Amboise",
 #                               description: "Rattaché à la couronne en 1434, ce monument emblématique et ses jardins paysagers offrent un des plus remarquables panoramas sur la vallée de la Loire. Pour visiter le château, plusieurs parcours sont proposés aux visiteurs. Chacun d’entre eux porte un regard singulier son rayonnement politique et artistique européen à la Renaissance, les moments intimes de la vie des souverains, la vie quotidienne et les coulisses de la Cour. En 1516, Léonard de Vinci fut invité par François 1er à Amboise où il finira ses jours trois années plus tard. Pendant trois ans, pour célébrer le 500e anniversaire de sa présence, le château d’Amboise lui consacrera plusieurs événements.",
 #                               phone: "02 47 57 00 98",
