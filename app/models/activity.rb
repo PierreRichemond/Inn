@@ -9,22 +9,22 @@ end
 
 
 
-create_table "activities" do
-    t.string image
-    t.integer price
-    t.integer location
-  end
+# create_table "activities" do
+#     t.string image
+#     t.integer price
+#     t.integer location
+#   end
 
-  create_table "activities_translations" do
-    t.string "locale"
-    t.string "text"
-    t.string "field_name"
-    t.integer "activity_id"
-  end
+#   create_table "activities_translations" do
+#     t.string "locale"
+#     t.string "text"
+#     t.string "field_name"
+#     t.integer "activity_id"
+#   end
 
-  "fr-Fr" "Mon Titre" "title" 1
-  "fr-Fr" "Ma description" "description" 1
-  "fr-Fr" "Mes Exemples" "examples" 1
+#   "fr-Fr" "Mon Titre" "title" 1
+#   "fr-Fr" "Ma description" "description" 1
+#   "fr-Fr" "Mes Exemples" "examples" 1
 
   class Activity < Model
     has_many :activities_translations

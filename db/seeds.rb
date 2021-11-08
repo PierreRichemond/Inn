@@ -4,22 +4,28 @@ Activity.delete_all
   puts "activities destroyed"
 
 room1 = Room.create(name: "Gîte Ronsard",
-                  ppl: "165 m² – couchage : 6 adultes + 3 enfants",
-                  price: 210,
-                  description: "Idéal pour vos retrouvailles en famille et entre amis, le gite Ronsard vous invite au repos. Un grand salon de 60 m², sa cheminée et son cachet à l’ancienne vous permettront de profiter du calme de la campagne.",
-                  details: "
-                Grand salon / salle à manger.
-                - Cuisine, sellier, wc.",
-                  detailz:"
-                Une grande suite parentale avec salle de bain : 2 adultes + 3 lits enfants.
-                - Deux chambres doubles.
-                - Couloir avec salle de douche et wc séparés.")
+                  price: 210)
 room1.images.attach(io: File.open(Rails.root.join("app/assets/images/favicon1.png")),
     filename: "favicon1.png")
 room1.images.attach(io: File.open(Rails.root.join("app/assets/images/gite_de_qualite.png")),
     filename: "gite_de_qualite.png")
 room1.images.attach(io: File.open(Rails.root.join("app/assets/images/leclosvaliere.png")),
     filename: "leclosvaliere.png")
+
+  room1.set_ppl('fr-FR', "165 m² – couchage : 6 adultes + 3 enfants")
+  room1.set_ppl('en-GB', "165 m² - bed: 6 adults + 3 children")
+  room1.set_description('fr-FR', "Idéal pour vos retrouvailles en famille et entre amis, le gite Ronsard vous invite au repos. Un grand salon de 60 m², sa cheminée et son cachet à l’ancienne vous permettront de profiter du calme de la campagne.")
+  room1.set_description('en-GB', "Ideal for your reunion with family and friends, the Ronsard gîte invites you to rest. A large living room of 60 m², it's fireplace and its old style will allow you to enjoy the peace of the countryside.")
+  room1.set_details('fr-FR', "Grand salon / salle à manger.
+                - Cuisine, sellier, wc.")
+  room1.set_details('en-GB', "Large living / dining room.
+                 - Kitchen, saddler, wc")
+  room1.set_detailz('fr-FR', "Une grande suite parentale avec salle de bain : 2 adultes + 3 lits enfants.
+                - Deux chambres doubles.
+                - Couloir avec salle de douche et wc séparés.")
+  room1.set_detailz('en-GB', "A large parental suite with bathroom: 2 adults + 3 children's beds.
+                 - Two double bedrooms.
+                 - Corridor with separate shower room and wc.")
 
 
 room2 = Room.create(name: "Gîte Rabelais",
