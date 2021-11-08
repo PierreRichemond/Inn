@@ -6,10 +6,10 @@
           <div class="text">
             <h2 class= "text-center"><%= room.name %></h2>
             <h3 class= "text-center"><%= room.price %>€</h3>
-            <h3 class= "text-center"><%= room.ppl %></h3>
-            <p><%= room.description %></p>
-            <p><span style="font-size:30px;"><%= t(".floor1") %>:</span> <%= room.details %></p>
-            <p><span style="font-size:30px;"><%= t(".floor2") %>:</span> <%= room.detailz %></p>
+            <h3 class= "text-center"><%= room.ppl(locale) %></h3>
+            <p><%= room.description(locale) %></p>
+            <p><span style="font-size:30px;"><%= t(".floor1") %>:</span> <%= room.details(locale) %></p>
+            <p><span style="font-size:30px;"><%= t(".floor2") %>:</span> <%= room.detailz(locale) %></p>
           </div>
           <div class="row ">
             <div class="col-12 col-md-6 col-lg-7  owl-carousel owl-theme">
