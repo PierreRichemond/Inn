@@ -1,0 +1,2 @@
+class ActivitiesTranslation < ApplicationRecord
+end
