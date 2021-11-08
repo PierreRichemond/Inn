@@ -110,319 +110,383 @@ room3 = Room.create(name: "Clos Vallière",
     filename: "Amboise.jpg")
 
   amboise.set_name('fr', "Château d’Amboise")
-  amboise.set_name('en', "Amboise Castle")
+  amboise.set_name('en', "Amboise castle")
   amboise.set_description('fr', "Rattaché à la couronne en 1434, ce monument emblématique et ses jardins paysagers offrent un des plus remarquables panoramas sur la vallée de la Loire. Pour visiter le château, plusieurs parcours sont proposés aux visiteurs. Chacun d’entre eux porte un regard singulier son rayonnement politique et artistique européen à la Renaissance, les moments intimes de la vie des souverains, la vie quotidienne et les coulisses de la Cour. En 1516, Léonard de Vinci fut invité par François 1er à Amboise où il finira ses jours trois années plus tard. Pendant trois ans, pour célébrer le 500e anniversaire de sa présence, le château d’Amboise lui consacrera plusieurs événements.")
   amboise.set_description('en', "Attached to the crown in 1434, this emblematic monument and its landscaped gardens offer one of the most remarkable panoramas over the Loire Valley. To visit the castle, several routes are offered to visitors. Each of them takes a unique look at their European political and artistic influence during the Renaissance, the intimate moments in the life of sovereigns, daily life and behind the scenes at the Court. In 1516, Leonardo da Vinci was invited by François 1er to Amboise where he will end his days three years later. For three years, to celebrate the 500th anniversary of its presence, the Château d'Amboise will dedicate several events to it.")
-#     luce = Activity.create(name: "Le Château du Clos Lucé",
-#                               description: "L’épopée de cette demeure de briques roses et de pierres de tuffeau, bâtie sur des fondations gallo-romaines, commence sous le règne de Louis XI, en 1471. Offert par le Roi à son favori Étienne le Loup, un ancien marmiton anobli, le château du Cloux à Amboise était entouré de fortifications. Le lieu est acheté par Charles VIII et devient alors la résidence de plaisance des rois de France. Le Roi transforme la forteresse médiévale en château d’agrément et fait construire un oratoire, pur joyau de l’architecture gothique, pour son épouse la reine Anne de Bretagne. Le jeune duc d’Angoulême, futur François Ier, y séjourne régulièrement. Devenu ensuite Clos-Lucé, il fut le lieu de résidence de Léonard de Vinci au cours des trois dernières années de sa vie.",
-#                               phone: "02 47 57 00 73",
-#                               url: "www.vinci-closluce.com",
-#                               address: "2 Rue du Clos Lucé, 37400 Amboise, France",
-#                               price: "17.5",
-#                               distance: "27km",
-#                               tag_list: "Culture"
-#                             )
-
-#     luce.image.attach(io: File.open(Rails.root.join("app/assets/images/ClosLuce.jpg")),
-#     filename: "ClosLuce.jpg")
 
 
-#     chambord = Activity.create(name: "Domaine National de Chambord",
-#                               description: "Le château de Chambord est l’une des plus singulières constructions que le siècle de la Renaissance ait laissé. L’architecture est un savant mélange entre les éléments traditionnels de l’architecture médiévale française et ceux empruntés à la Renaissance italienne. Même si les quatre tours massives qui flanquent le donjon rappellent les forteresses médiévales, la conception du château et les éléments innovants qui le composent sont uniques. Le plan centré du donjon, l’emplacement de l’escalier à double révolution, la clarté géométrique des façades et leur ornementation, la symétrie des bâtiments, la présence de voûtes à caissons au deuxième étage font la singularité du monument.",
-#                               phone: "02 54 50 40 00",
-#                               url: "https://www.chambord.org/",
-#                               address: "Château, 41250 Chambord, France",
-#                               price: "14.5",
-#                               distance: "60km",
-#                               tag_list: "Culture"
-#                             )
+  luce = Activity.create(     phone: "02 47 57 00 73",
+                              url: "www.vinci-closluce.com",
+                              address: "2 Rue du Clos Lucé, 37400 Amboise, France",
+                              price: "17.5",
+                              distance: "27km",
+                              tag_list: "Culture"
+                            )
 
-#     chambord.image.attach(io: File.open(Rails.root.join("app/assets/images/Chambord.jpg")),
-#     filename: "Chambord.jpg")
-
-#     ronsard = Activity.create(name: "Prieuré Saint-Cosme, demeure de Ronsard",
-#                               description: "Le prieuré Saint-Cosme était considéré par les chanoines du 12e siècle comme « un paradis sur terre permettant d’atteindre plus facilement le vrai paradis ». Ronsard (1524- 1585) en fut le prieur durant les vingt dernières années de sa vie. Situé à La Riche, tout près de Tours, ce lieu a achevé sa métamorphose début 2015 après plusieurs années de travaux. Propriétés du Conseil général d’Indre-et-Loire depuis 1951, les jardins du prieuré ont été entièrement repensé avec une scénographie autour de l’univers du poète.",
-#                               phone: "02 47 37 32 70",
-#                               url: "www.prieure-ronsard.fr",
-#                               address: "37520 La Riche, France",
-#                               price: "6",
-#                               distance: "21km",
-#                               tag_list: "Culture"
-#                             )
-
-#     ronsard.image.attach(io: File.open(Rails.root.join("app/assets/images/prieure.jpg")),
-#     filename: "prieure.jpg")
+    luce.image.attach(io: File.open(Rails.root.join("app/assets/images/ClosLuce.jpg")),
+    filename: "ClosLuce.jpg")
+  luce.set_name('fr', "Le Château du Clos Lucé")
+  luce.set_name('en', "Clos Lucé caslte")
+  luce.set_description('fr', "L’épopée de cette demeure de briques roses et de pierres de tuffeau, bâtie sur des fondations gallo-romaines, commence sous le règne de Louis XI, en 1471. Offert par le Roi à son favori Étienne le Loup, un ancien marmiton anobli, le château du Cloux à Amboise était entouré de fortifications. Le lieu est acheté par Charles VIII et devient alors la résidence de plaisance des rois de France. Le Roi transforme la forteresse médiévale en château d’agrément et fait construire un oratoire, pur joyau de l’architecture gothique, pour son épouse la reine Anne de Bretagne. Le jeune duc d’Angoulême, futur François Ier, y séjourne régulièrement. Devenu ensuite Clos-Lucé, il fut le lieu de résidence de Léonard de Vinci au cours des trois dernières années de sa vie.")
+  luce.set_description('en', "The epic of this residence of pink bricks and tufa stones, built on Gallo-Roman foundations, begins under the reign of Louis XI, in 1471. Offered by the King to his favorite Étienne le Loup, a former ennobled cook, the Château du Cloux in Amboise was surrounded by fortifications. The place is bought by Charles VIII and then becomes the pleasure residence of the kings of France. The King transformed the medieval fortress into a pleasure castle and built an oratory, a pure jewel of Gothic architecture, for his wife, Queen Anne of Brittany. The young Duke of Angoulême, the future François I, stayed there regularly. Then became Clos-Lucé, it was the place of residence of Leonardo da Vinci during the last three years of his life.")
 
 
-#     chenonceau = Activity.create(name: "Château de Chenonceau",
-#                               description: "Administré et protégé par des femmes qui ont pour la plupart marqué l’Histoire, Chenonceau est connu comme le « Château des Dames ». De Katherine Briçonnet à Catherine de Médicis, cette empreinte féminine est présente de son architecture jusqu’à ses jardins.",
-#                               phone: "08 20 20 90 90",
-#                               url: "www.chenonceau.com",
-#                               address: "37150 Chenonceaux, France",
-#                               price: "15",
-#                               distance: "37km",
-#                               tag_list: "Culture"
-#                             )
 
-#     chenonceau.image.attach(io: File.open(Rails.root.join("app/assets/images/Chenonceau.jpg")),
-#     filename: "Chenonceau.jpg")
+    chambord = Activity.create(phone: "02 54 50 40 00",
+                              url: "https://www.chambord.org/",
+                              address: "Château, 41250 Chambord, France",
+                              price: "14.5",
+                              distance: "60km",
+                              tag_list: "Culture"
+                            )
 
-#     azay = Activity.create(name: "Château d’Azay-le-Rideau",
-#                               description: "Bâti sur une île au milieu de l’Indre sous le règne de François Ier, ce monument est le résultat d’une subtile alliance de traditions françaises et de décors innovants venus d’Italie. Depuis 2017, vous pouvez découvrir un château magnifié après trois ans de restauration.",
-#                               phone: "02 47 45 42 04",
-#                               url: "www.azay-le-rideau.fr",
-#                               address: "Rue de Pineau, 37190 Azay-le-Rideau, France",
-#                               price: "11.5",
-#                               distance: "44km",
-#                               tag_list: "Culture"
-#                             )
+    chambord.image.attach(io: File.open(Rails.root.join("app/assets/images/Chambord.jpg")),
+    filename: "Chambord.jpg")
 
-#     azay.image.attach(io: File.open(Rails.root.join("app/assets/images/Azay.jpg")),
-#     filename: "Azay.jpg")
+  chambord.set_name('fr', "Domaine National de Chambord")
+  chambord.set_name('en', "National Domain of Chambord")
+  chambord.set_description('fr', "Le château de Chambord est l’une des plus singulières constructions que le siècle de la Renaissance ait laissé. L’architecture est un savant mélange entre les éléments traditionnels de l’architecture médiévale française et ceux empruntés à la Renaissance italienne. Même si les quatre tours massives qui flanquent le donjon rappellent les forteresses médiévales, la conception du château et les éléments innovants qui le composent sont uniques. Le plan centré du donjon, l’emplacement de l’escalier à double révolution, la clarté géométrique des façades et leur ornementation, la symétrie des bâtiments, la présence de voûtes à caissons au deuxième étage font la singularité du monument.")
+  chambord.set_description('en', "The Château de Chambord is one of the most unique constructions that the Renaissance century has left. The architecture is a clever blend of traditional elements of French medieval architecture and those borrowed from the Italian Renaissance. Even though the four massive towers that flank the keep are reminiscent of medieval fortresses, the design of the castle and the innovative elements that compose it are unique. The central plan of the keep, the location of the double-spiral staircase, the geometric clarity of the facades and their ornamentation, the symmetry of the buildings, the presence of coffered vaults on the second floor make the monument unique.")
 
-#     chaumont = Activity.create(name: "Château de Chaumont-sur-Loire",
-#                               description: "Propriété de la Région Centre-Val de Loire depuis 2007, le Domaine de Chaumont-sur-Loire est un véritable bijou de l’architecture Renaissance qui flotte au-dessus de la Loire entre Blois et Amboise. Au-delà d’une histoire très riche, le château est devenu un lieu de passage incontournable pour les amateurs d’art contemporain et de jardins paysagers. Chaque année, une nouvelle saison artistique prend place.",
-#                               phone: "02 54 20 99 22",
-#                               url: "www.domaine-chaumont.fr",
-#                               address: "41150 Chaumont-sur-Loire, France",
-#                               price: "14 ~ 19",
-#                               distance: "35km",
-#                               tag_list: "Culture"
-#                             )
+    ronsard = Activity.create(phone: "02 47 37 32 70",
+                              url: "www.prieure-ronsard.fr",
+                              address: "37520 La Riche, France",
+                              price: "6",
+                              distance: "21km",
+                              tag_list: "Culture"
+                            )
 
-#     chaumont.image.attach(io: File.open(Rails.root.join("app/assets/images/Chaumont.jpg")),
-#     filename: "Chaumont.jpg")
+    ronsard.image.attach(io: File.open(Rails.root.join("app/assets/images/prieure.jpg")),
+    filename: "prieure.jpg")
 
-#     langeais = Activity.create(name: "Château de Langeais",
-#                               description: "Avec son pont-levis en état de marche, son chemin de ronde, ses mâchicoulis et ses imposantes tours, le château de Langeais offre vers l’extérieur l’apparence d’un site défensif, tandis que la façade intérieure annonce la Renaissance. Vous y découvrirez la vie quotidienne d’un grand seigneur à la fin du Moyen Âge au travers d’une scénographie vivante qui restitue l’atmosphère et l’organisation d’une grande résidence seigneuriale.",
-#                               phone: "02 47 96 72 60",
-#                               url: "www.chateau-de-langeais.com",
-#                               address: "Place Pierre de Brosse, 37130 Langeais, France",
-#                               price: "11",
-#                               distance: "41km",
-#                               tag_list: "Culture"
-#                             )
-
-#     langeais.image.attach(io: File.open(Rails.root.join("app/assets/images/langeais.jpg")),
-#     filename: "langeais.jpg")
-
-#     villandry = Activity.create(name: "Château de Villandry",
-#                               description: "Il s’agit du dernier des grands châteaux de la Loire érigés pendant la Renaissance. Son architecture et ses jardins remarquables font de ce monument l’un des fleurons du patrimoine mondial.",
-#                               phone: "02 47 50 02 09",
-#                               url: "www.chateauvillandry.fr",
-#                               address: "3 Rue Principale, 37510 Villandry, France",
-#                               price: "12",
-#                               distance: "34km",
-#                               tag_list: "Culture"
-#                             )
-
-#     villandry.image.attach(io: File.open(Rails.root.join("app/assets/images/villandry.jpg")),
-#     filename: "villandry.jpg")
+  ronsard.set_name('fr', "Prieuré Saint-Cosme, demeure de Ronsard")
+  ronsard.set_name('en', "Priory of Saint-Cosme, home of Ronsard")
+  ronsard.set_description('fr', "Le prieuré Saint-Cosme était considéré par les chanoines du 12e siècle comme « un paradis sur terre permettant d’atteindre plus facilement le vrai paradis ». Ronsard (1524- 1585) en fut le prieur durant les vingt dernières années de sa vie. Situé à La Riche, tout près de Tours, ce lieu a achevé sa métamorphose début 2015 après plusieurs années de travaux. Propriétés du Conseil général d’Indre-et-Loire depuis 1951, les jardins du prieuré ont été entièrement repensé avec une scénographie autour de l’univers du poète.")
+  ronsard.set_description('en', "The priory of Saint-Cosme was considered by the canons of the 12th century as 'a paradise on earth making it easier to reach true paradise'. Ronsard (1524-1585) was its prior during the last twenty years of his life. Located in La Riche, very close to Tours, this place completed its metamorphosis in early 2015 after several years of work. Owned by the General Council of Indre-et-Loire since 1951, the priory gardens have been completely redesigned with a scenography around the universe of the poet.")
 
 
-#   rabelais = Activity.create(name: "Musée Rabelais, Maison de la Devinière",
-#     description: "Il s’agit du dernier des grands châteaux de la Loire érigés pendant la Renaissance. Son architecture et ses jardins remarquables font de ce monument l’un des fleurons du patrimoine mondial.",
-#     phone: "02 47 95 91 18",
-#     url: "www.musee-rabelais.fr",
-#     address: "Musee Rabelais, 4 Rue de la Devinière, 37500 Seuilly, France",
-#     price: "6",
-#     distance: "70km",
-#     tag_list: "Culture"
-#   )
+    chenonceau = Activity.create(phone: "08 20 20 90 90",
+                              url: "www.chenonceau.com",
+                              address: "37150 Chenonceaux, France",
+                              price: "15",
+                              distance: "37km",
+                              tag_list: "Culture"
+                            )
 
-#   rabelais.image.attach(io: File.open(Rails.root.join("app/assets/images/Rabelais.jpg")),
-#   filename: "Rabelais.jpg")
+    chenonceau.image.attach(io: File.open(Rails.root.join("app/assets/images/Chenonceau.jpg")),
+    filename: "Chenonceau.jpg")
 
-#   chinon = Activity.create(name: "Forteresse Royale de Chinon",
-#     description: "Surplombant la ville, la forteresse construite par les Comtes d’Anjou et notamment les Plantagenêt évoque l’époque où l’Histoire de la France et celle de l’Angleterre étaient intimement mêlées. En 1429, elle est le théâtre de la rencontre historique entre Jeanne d’Arc et le Dauphin, futur Charles VII.",
-#     phone: "02 47 93 13 45",
-#     url: "www.forteressechinon.fr",
-#     address: "2 Rue du Château, 37500 Chinon, France",
-#     price: "9",
-#     distance: "63km",
-#     tag_list: "Culture"
-#   )
+  chenonceau.set_name('fr', "Château de Chenonceau")
+  chenonceau.set_name('en', "Chenonceau castle")
+  chenonceau.set_description('fr', "Administré et protégé par des femmes qui ont pour la plupart marqué l’Histoire, Chenonceau est connu comme le « Château des Dames ». De Katherine Briçonnet à Catherine de Médicis, cette empreinte féminine est présente de son architecture jusqu’à ses jardins.")
+  chenonceau.set_description('en', "Administered and protected by women, most of whom have left their mark on history, Chenonceau is known as the 'Château des Dames'. From Katherine Briçonnet to Catherine de Medici, this feminine imprint is present from her architecture to her gardens.")
 
-#   chinon.image.attach(io: File.open(Rails.root.join("app/assets/images/Chinon.jpg")),
-#   filename: "Chinon.jpg")
+    azay = Activity.create(phone: "02 47 45 42 04",
+                              url: "www.azay-le-rideau.fr",
+                              address: "Rue de Pineau, 37190 Azay-le-Rideau, France",
+                              price: "11.5",
+                              distance: "44km",
+                              tag_list: "Culture"
+                            )
+
+    azay.image.attach(io: File.open(Rails.root.join("app/assets/images/Azay.jpg")),
+    filename: "Azay.jpg")
+
+  azay.set_name('fr', "Château d’Azay-le-Rideau")
+  azay.set_name('en', "Azay-le-Rideau castle")
+  azay.set_description('fr', "Bâti sur une île au milieu de l’Indre sous le règne de François Ier, ce monument est le résultat d’une subtile alliance de traditions françaises et de décors innovants venus d’Italie. Depuis 2017, vous pouvez découvrir un château magnifié après trois ans de restauration.")
+  azay.set_description('en', "Built on an island in the middle of the Indre during the reign of François I, this monument is the result of a subtle alliance of French traditions and innovative decorations from Italy. Since 2017, you can discover a castle magnified after three years of restoration.")
+
+    chaumont = Activity.create(phone: "02 54 20 99 22",
+                              url: "www.domaine-chaumont.fr",
+                              address: "41150 Chaumont-sur-Loire, France",
+                              price: "14 ~ 19",
+                              distance: "35km",
+                              tag_list: "Culture"
+                            )
+
+    chaumont.image.attach(io: File.open(Rails.root.join("app/assets/images/Chaumont.jpg")),
+    filename: "Chaumont.jpg")
 
 
-#   cuir = Activity.create(name: "Musée du cuir et de la tannerie",
-#     description: "",
-#     phone: "02 47 56 03 59",
-#     url: "http://www.museeducuir.org/",
-#     address: "105 rue de la republique, 37110 Château-Renault, France",
-#     price: "",
-#     distance: "10km",
-#     tag_list: "Culture"
-#   )
+  chaumont.set_name('fr', "Château de Chaumont-sur-Loire")
+  chaumont.set_name('en', "Chaumont-sur-Loire castle")
+  chaumont.set_description('fr', "Propriété de la Région Centre-Val de Loire depuis 2007, le Domaine de Chaumont-sur-Loire est un véritable bijou de l’architecture Renaissance qui flotte au-dessus de la Loire entre Blois et Amboise. Au-delà d’une histoire très riche, le château est devenu un lieu de passage incontournable pour les amateurs d’art contemporain et de jardins paysagers. Chaque année, une nouvelle saison artistique prend place.")
+  chaumont.set_description('en', "Property of the Center-Val de Loire Region since 2007, the Domaine de Chaumont-sur-Loire is a real gem of Renaissance architecture that floats above the Loire between Blois and Amboise. Beyond a very rich history, the castle has become an essential stopover for lovers of contemporary art and landscaped gardens. Each year, a new artistic season takes place.")
 
-#   cuir.image.attach(io: File.open(Rails.root.join("app/assets/images/cuir.jpg")),
-#   filename: "cuir.jpg")
+    langeais = Activity.create(phone: "02 47 96 72 60",
+                              url: "www.chateau-de-langeais.com",
+                              address: "Place Pierre de Brosse, 37130 Langeais, France",
+                              price: "11",
+                              distance: "41km",
+                              tag_list: "Culture"
+                            )
+
+    langeais.image.attach(io: File.open(Rails.root.join("app/assets/images/langeais.jpg")),
+    filename: "langeais.jpg")
+
+  langeais.set_name('fr', "Château de Langeais")
+  langeais.set_name('en', "Langeais castle")
+  langeais.set_description('fr', "Avec son pont-levis en état de marche, son chemin de ronde, ses mâchicoulis et ses imposantes tours, le château de Langeais offre vers l’extérieur l’apparence d’un site défensif, tandis que la façade intérieure annonce la Renaissance. Vous y découvrirez la vie quotidienne d’un grand seigneur à la fin du Moyen Âge au travers d’une scénographie vivante qui restitue l’atmosphère et l’organisation d’une grande résidence seigneuriale.")
+  langeais.set_description('en', "With its drawbridge in working order, its rampart walk, its machicolations and its imposing towers, the Château de Langeais offers the appearance of a defensive site on the outside, while the interior facade announces the Renaissance. You will discover the daily life of a great lord at the end of the Middle Ages through a living scenography that recreates the atmosphere and organization of a large stately residence.")
+
+
+    villandry = Activity.create(phone: "02 47 50 02 09",
+                              url: "www.chateauvillandry.fr",
+                              address: "3 Rue Principale, 37510 Villandry, France",
+                              price: "12",
+                              distance: "34km",
+                              tag_list: "Culture"
+                            )
+
+    villandry.image.attach(io: File.open(Rails.root.join("app/assets/images/villandry.jpg")),
+    filename: "villandry.jpg")
+
+  villandry.set_name('fr', "Château de Villandry")
+  villandry.set_name('en', "Villandry castle")
+  villandry.set_description('fr', "Il s’agit du dernier des grands châteaux de la Loire érigés pendant la Renaissance. Son architecture et ses jardins remarquables font de ce monument l’un des fleurons du patrimoine mondial.")
+  villandry.set_description('en', "This is the last of the great Loire châteaux erected during the Renaissance. Its remarkable architecture and gardens make this monument one of the flagships of the world heritage.")
+
+
+  rabelais = Activity.create(phone: "02 47 95 91 18",
+    url: "www.musee-rabelais.fr",
+    address: "Musee Rabelais, 4 Rue de la Devinière, 37500 Seuilly, France",
+    price: "6",
+    distance: "70km",
+    tag_list: "Culture"
+  )
+
+  rabelais.image.attach(io: File.open(Rails.root.join("app/assets/images/Rabelais.jpg")),
+  filename: "Rabelais.jpg")
+
+
+  rabelais.set_name('fr', "Musée Rabelais, Maison de la Devinière")
+  rabelais.set_name('en', "Rabelais museum, Maison de la Devinière")
+  rabelais.set_description('fr', "Rabelais a fait de sa maison et du paysage environnant le cadre naturel des aventures de ses géants (Gargantua et Pantagruel). Le musée retrace les grands moments de la vie de l'écrivain et éclaire le visiteur sur les idées révolutionnaires de la Renaissance.")
+  rabelais.set_description('en', "Rabelais has made his house and the surrounding landscape the natural setting for the adventures of his giants (Gargantua and Pantagruel). The museum retraces the highlights of the life of the writer and illuminates the visitor about the revolutionary ideas of the Renaissance.")
+
+
+  chinon = Activity.create(phone: "02 47 93 13 45",
+    url: "www.forteressechinon.fr",
+    address: "2 Rue du Château, 37500 Chinon, France",
+    price: "9",
+    distance: "63km",
+    tag_list: "Culture"
+  )
+
+  chinon.image.attach(io: File.open(Rails.root.join("app/assets/images/Chinon.jpg")),
+  filename: "Chinon.jpg")
+
+  chinon.set_name('fr', "Forteresse Royale de Chinon")
+  chinon.set_name('en', "Royal Fortress of Chinon")
+  chinon.set_description('fr', "Surplombant la ville, la forteresse construite par les Comtes d’Anjou et notamment les Plantagenêt évoque l’époque où l’Histoire de la France et celle de l’Angleterre étaient intimement mêlées. En 1429, elle est le théâtre de la rencontre historique entre Jeanne d’Arc et le Dauphin, futur Charles VII.")
+  chinon.set_description('en', "Overlooking the city, the fortress built by the Counts of Anjou and in particular the Plantagenets evokes the time when the history of France and that of England were closely intertwined. In 1429, it was the scene of the historic meeting between Joan of Arc and the Dauphin, the future Charles VII.")
+
+
+  cuir = Activity.create(phone: "02 47 56 03 59",
+    url: "http://www.museeducuir.org/",
+    address: "105 rue de la republique, 37110 Château-Renault, France",
+    price: "",
+    distance: "10km",
+    tag_list: "Culture"
+  )
+
+  cuir.image.attach(io: File.open(Rails.root.join("app/assets/images/cuir.jpg")),
+  filename: "cuir.jpg")
+
+  cuir.set_name('fr', "Musée du cuir et de la tannerie")
+  cuir.set_name('en', "Leather and tannery museum")
+  cuir.set_description('fr', "")
+  cuir.set_description('en', "")
 
 
 #       # ------------------------------------------------loisir
 
 
-#       aquarium = Activity.create(name: "Grand aquarium de Touraine",
-#                                 description: "Des torrents des montagnes françaises aux mers lointaines, le Grand Aquarium de Touraine est le plus grand aquarium d’eau douce d’Europe. Découvrez tous ces écosystèmes à travers 63 aquariums et ses 2 millions de litres d’eau !",
-#                                 phone: "02 47 23 44 57",
-#                                 url: "www.grandaquariumdetouraine.com",
-#                                 address: "37400 Lussault-Sur-Loire, France",
-#                                 price: "28",
-#                                 distance: "27km",
-#                                 tag_list: "Loisir"
-#                               )
+      aquarium = Activity.create(phone: "02 47 23 44 57",
+                                url: "www.grandaquariumdetouraine.com",
+                                address: "37400 Lussault-Sur-Loire, France",
+                                price: "28",
+                                distance: "27km",
+                                tag_list: "Loisir"
+                              )
 
-#       aquarium.image.attach(io: File.open(Rails.root.join("app/assets/images/Aquarium.jpg")),
-#       filename: "Aquarium.jpg")
+      aquarium.image.attach(io: File.open(Rails.root.join("app/assets/images/Aquarium.jpg")),
+      filename: "Aquarium.jpg")
 
-#       zoo = Activity.create(name: "Zoo de Beauval",
-#                                 description: "Sur plus de 40 hectares, le ZooParc de Beauval regroupe 10.000 animaux de 600 espèces différentes, dont les très rares pandas géants, uniques en France. À travers son association « Beauval Nature », le ZooParc participe activement à la préservation de la biodiversité, en soutenant plus de 40 programmes de conservation et de recherche dans le monde.",
-#                                 phone: "02 54 75 50 00",
-#                                 url: "www.zoobeauval.com",
-#                                 address: "41110 Saint-Aignan, France",
-#                                 price: "27 ~ 32",
-#                                 distance: "60km",
-#                                 tag_list: "Loisir"
-#                               )
+  aquarium.set_name('fr', "Grand aquarium de Touraine")
+  aquarium.set_name('en', "Great aquarium of Touraine")
+  aquarium.set_description('fr', "Des torrents des montagnes françaises aux mers lointaines, le Grand Aquarium de Touraine est le plus grand aquarium d’eau douce d’Europe. Découvrez tous ces écosystèmes à travers 63 aquariums et ses 2 millions de litres d’eau!")
+  aquarium.set_description('en', "From the torrents of the French mountains to distant seas, the Grand Aquarium de Touraine is the largest freshwater aquarium in Europe. Discover all these ecosystems through 63 aquariums and its 2 million liters of water!")
 
-#       zoo.image.attach(io: File.open(Rails.root.join("app/assets/images/Beauval.jpg")),
-#       filename: "Beauval.jpg")
+        zoo = Activity.create(  phone: "02 54 75 50 00",
+                                url: "www.zoobeauval.com",
+                                address: "41110 Saint-Aignan, France",
+                                price: "27 ~ 32",
+                                distance: "60km",
+                                tag_list: "Loisir"
+                              )
 
-#       safari = Activity.create(name: "Safari Train - la réserve de Beaumarchais",
-#                                 description: "Au cœur du Val de Loire, à deux pas d’Amboise et de Chenonceaux, vivez un moment de détente et d'aventure en embarquant à bord du Safari Train, pour une étonnante traversée d'un parc d’élevage à la rencontre des grands gibiers.",
-#                                 phone: "02 47 56 22 30",
-#                                 url: "www.reserve-de-beaumarchais.com",
-#                                 address: "37110 Autrèche, France",
-#                                 price: "8.5",
-#                                 distance: "16km",
-#                                 tag_list: "Loisir"
-#                               )
+      zoo.image.attach(io: File.open(Rails.root.join("app/assets/images/Beauval.jpg")),
+      filename: "Beauval.jpg")
 
-#       safari.image.attach(io: File.open(Rails.root.join("app/assets/images/Safari.jpg")),
-#       filename: "Safari.jpg")
-
-#       mongolfiere = Activity.create(name: "Un vol en Montgolfière ?",
-#                                 description: "Survolez les châteaux du val de Loire en montgolfière et découvrez notre patrimoine culturel d’un point de vue sans pareil. De nombreuses entreprises vous proposent des circuits de trois heures environ et forcément dépendants du vent. À réserver en avance. Confirmation la veille au soir en général. En cas de mauvaise météo, les séances de vol sont le plus souvent repoussées sans frais.",
-#                                 phone: "06 07 41 09 78",
-#                                 url: "www.balloonrevolution.com",
-#                                 address: "7 Rue de l'ile d'Or, 37400 Amboise",
-#                                 price: "189 ~ 899",
-#                                 distance: "27km",
-#                                 tag_list: "Loisir"
-#                                   )
-
-#   mongolfiere.image.attach(io: File.open(Rails.root.join("app/assets/images/Mongolfiere.jpg")),
-#   filename: "Mongolfiere.jpg")
+  zoo.set_name('fr', "Zoo de Beauval")
+  zoo.set_name('en', "Zoo of Beauval")
+  zoo.set_description('fr', "Sur plus de 40 hectares, le ZooParc de Beauval regroupe 10.000 animaux de 600 espèces différentes, dont les très rares pandas géants, uniques en France. À travers son association « Beauval Nature », le ZooParc participe activement à la préservation de la biodiversité, en soutenant plus de 40 programmes de conservation et de recherche dans le monde.")
+  zoo.set_description('en', "On more than 40 hectares, the Beauval ZooParc brings together 10,000 animals of 600 different species, including the very rare giant pandas, unique in France. Through its “Beauval Nature” association, the ZooParc actively participates in the preservation of biodiversity, by supporting more than 40 conservation and research programs around the world.")
 
 
-#     lulu = Activity.create(name: "Lulu parc",
-#                                 description: "Dans son cadre naturel et ombragé du Val de Loire, Lulu Parc est un parc de loisirs en plein air pour enfants de tous âges, dès 1 an.
+      safari = Activity.create( phone: "02 47 56 22 30",
+                                url: "www.reserve-de-beaumarchais.com",
+                                address: "37110 Autrèche, France",
+                                price: "8.5",
+                                distance: "16km",
+                                tag_list: "Loisir"
+                              )
 
-# En été, les toboggans deviennent aquatiques pour encore plus de sensations et de fraîcheur ! L'ensemble des attractions est à votre disposition à volonté toute la journée (voitures électriques en suppl. uniquement). Pour plus de sécurité, Lulu Parc propose des jeux adaptés à la taille et à l'âge des enfants. Une quinzaine de jeux est aussi accessible aux parents et accompagnateurs pour s'amuser en famille ! Pour seulement 6€, les adultes peuvent s'amuser avec leurs enfants sur plusieurs jeux gonflables, trampolines, balançoires géantes, kartings à pédales, téléphérique, jeux d'adresse, pyramide de cordes et petit train.",
-#                                 phone: "02 47 52 58 40",
-#                                 url: "https://www.luluparc.eu/",
-#                                 address: "Quai de la Loire, 37210 ROCHECORBON France",
-#                                 price: "7 ~ ",
-#                                 distance: "30km",
-#                                 tag_list: "Loisir"
-#                                   )
+      safari.image.attach(io: File.open(Rails.root.join("app/assets/images/Safari.jpg")),
+      filename: "Safari.jpg")
 
-#     lulu.image.attach(io: File.open(Rails.root.join("app/assets/images/lulu.jpg")),
-#     filename: "lulu.jpg")
+  safari.set_name('fr', "Safari Train - la réserve de Beaumarchais")
+  safari.set_name('en', "Safari Train - Beaumarchais Reserve")
+  safari.set_description('fr', "Au cœur du Val de Loire, à deux pas d’Amboise et de Chenonceaux, vivez un moment de détente et d'aventure en embarquant à bord du Safari Train, pour une étonnante traversée d'un parc d’élevage à la rencontre des grands gibiers.")
+  safari.set_description('en', "In the heart of the Loire Valley, a stone's throw from Amboise and Chenonceaux, experience a moment of relaxation and adventure by boarding the Safari Train, for an astonishing crossing of a breeding park to meet the great game.")
 
-#     golf = Activity.create(name: "Golf Bluegreen",
-#                                 description: "Dans son cadre naturel et ombragé du Val de Loire, golf Parc est un parc de loisirs en plein air pour enfants de tous âges, dès 1 an.
+      mongolfiere = Activity.create(phone: "06 07 41 09 78",
+                                url: "www.balloonrevolution.com",
+                                address: "7 Rue de l'ile d'Or, 37400 Amboise",
+                                price: "189 ~ 899",
+                                distance: "27km",
+                                tag_list: "Loisir"
+                                  )
 
-# En été, les toboggans deviennent aquatiques pour encore plus de sensations et de fraîcheur ! L'ensemble des attractions est à votre disposition à volonté toute la journée (voitures électriques en suppl. uniquement). Pour plus de sécurité, golf Parc propose des jeux adaptés à la taille et à l'âge des enfants. Une quinzaine de jeux est aussi accessible aux parents et accompagnateurs pour s'amuser en famille ! Pour seulement 6€, les adultes peuvent s'amuser avec leurs enfants sur plusieurs jeux gonflables, trampolines, balançoires géantes, kartings à pédales, téléphérique, jeux d'adresse, pyramide de cordes et petit train.",
-#                                 phone: "02 47 56 77 38",
-#                                 url: "https://bluegreen.fr/tours-ardree/",
-#                                 address: "37360 Saint-Antoine-du-Rocher, France",
-#                                 price: "23 ~ ",
-#                                 distance: "30km",
-#                                 tag_list: "Loisir"
-#                                   )
+  mongolfiere.image.attach(io: File.open(Rails.root.join("app/assets/images/Mongolfiere.jpg")),
+  filename: "Mongolfiere.jpg")
 
-#     golf.image.attach(io: File.open(Rails.root.join("app/assets/images/bluegreen.jpg")),
-#     filename: "bluegreen.jpg")
+  mongolfiere.set_name('fr', "Un vol en Montgolfière?")
+  mongolfiere.set_name('en', "A flight in Montgolfière?")
+  mongolfiere.set_description('fr', "Survolez les châteaux du val de Loire en montgolfière et découvrez notre patrimoine culturel d’un point de vue sans pareil. De nombreuses entreprises vous proposent des circuits de trois heures environ et forcément dépendants du vent. À réserver en avance. Confirmation la veille au soir en général. En cas de mauvaise météo, les séances de vol sont le plus souvent repoussées sans frais.")
+  mongolfiere.set_description('en', "Fly over the castles of the Loire Valley in a hot air balloon and discover our cultural heritage from an unparalleled perspective. Many companies offer tours of around three hours and necessarily depending on the wind. Book in advance. Confirmation the night before in general. In the event of bad weather, flight sessions are most often postponed free of charge.")
 
-#         sport = Activity.create(name: "Sport & Bien",
-#                                 description: "Multitude de sport et gadget à essayer, n'hésitez pas à y jeter un oeil, c'est à côté!",
-#                                 phone: "06 08 48 14 63",
-#                                 url: "http://www.parc-loisir-tours.com/",
-#                                 address: "La Fontaine 37380 Monnaie, France",
-#                                 price: "23 ~ ",
-#                                 distance: "2km",
-#                                 tag_list: "Loisir"
-#                                   )
+    lulu = Activity.create(phone: "02 47 52 58 40",
+                                url: "https://www.luluparc.eu/",
+                                address: "Quai de la Loire, 37210 ROCHECORBON France",
+                                price: "7 ~ ",
+                                distance: "30km",
+                                tag_list: "Loisir"
+                                  )
 
-#     sport.image.attach(io: File.open(Rails.root.join("app/assets/images/sport.jpg")),
-#     filename: "sport.jpg")
+    lulu.image.attach(io: File.open(Rails.root.join("app/assets/images/lulu.jpg")),
+    filename: "lulu.jpg")
 
+  lulu.set_name('fr', "Lulu parc")
+  lulu.set_name('en', "Lulu parc")
+  lulu.set_description('fr', "Dans son cadre naturel et ombragé du Val de Loire, Lulu Parc est un parc de loisirs en plein air pour enfants de tous âges, dès 1 an. En été, les toboggans deviennent aquatiques pour encore plus de sensations et de fraîcheur ! L'ensemble des attractions est à votre disposition à volonté toute la journée (voitures électriques en suppl. uniquement). Pour plus de sécurité, Lulu Parc propose des jeux adaptés à la taille et à l'âge des enfants. Une quinzaine de jeux est aussi accessible aux parents et accompagnateurs pour s'amuser en famille ! Pour seulement 6€, les adultes peuvent s'amuser avec leurs enfants sur plusieurs jeux gonflables, trampolines, balançoires géantes, kartings à pédales, téléphérique, jeux d'adresse, pyramide de cordes et petit train.")
+  lulu.set_description('en', "In its natural and shaded setting in the Loire Valley, Lulu Parc is an outdoor leisure park for children of all ages, from 1 year old. In summer, the slides become aquatic for even more sensations and freshness! All the attractions are at your disposal all day long (electric cars extra only). For more safety, Lulu Parc offers games adapted to the size and age of children. About fifteen games are also available to parents and accompanying adults for family fun! For only € 6, adults can have fun with their children on several inflatable games, trampolines, giant swings, go-karts, cable car, games of skill, pyramid of ropes and small train.")
 
-#     canoe = Activity.create(name: "Tours et Canoë",
-#                                 description: "Tours & Canoë organise votre randonnée en canoë sur la Loire. Demandez-nous, on s’occupe de tout !
-# Le lieu de rendez-vous est à notre base de Vouvray où se fait l’inscription et la préparation à la randonnée.
-# Le départ de toutes les randonnées se fait à Chaumont sur Loire.
-# La randonnée canoë sur la Loire est accessible à tous (à partir de 6 ans, savoir nager). La difficulté est de niveau 1-2 avec quelques passages un peu plus mouvementés sous les ponts.",
-#                                 phone: "06 08 62 95 15",
-#                                 url: "http://www.tours-canoe.fr/en/welcome/",
-#                                 address: "La Frillière 37210, Vouvray, France",
-#                                 price: " ~ ",
-#                                 distance: "10km",
-#                                 tag_list: "Loisir"
-#                                   )
+    golf = Activity.create(phone: "02 47 56 77 38",
+                                url: "https://bluegreen.fr/tours-ardree/",
+                                address: "37360 Saint-Antoine-du-Rocher, France",
+                                price: "23 ~ ",
+                                distance: "30km",
+                                tag_list: "Loisir"
+                                  )
 
-#     canoe.image.attach(io: File.open(Rails.root.join("app/assets/images/canoe.jpg")),
-#     filename: "canoe.jpg")
+    golf.image.attach(io: File.open(Rails.root.join("app/assets/images/bluegreen.jpg")),
+    filename: "bluegreen.jpg")
 
-#         quad = Activity.create(name: "VitiQuad",
-#                                 description: "RANDONNÉES GUIDÉES EN QUAD DANS LE VIGNOBLE DU VOUVRAY. OUVERT TOUTE L’ANNÉE SUR RÉSERVATION DU LUNDI AU SAMEDI
-# Vous découvrirez, au guidon de nos quads, les vallées et coteaux de notre belle Touraine et vous parcourrez, de l’intérieur, ce trésor d’histoires et de terroirs.",
-#                                 phone: "06 71 63 12 61",
-#                                 url: "http://www.vitiquad37.com/",
-#                                 address: "27 rue des Locquets 37210 Parçay-Meslay, France",
-#                                 price: " ~ ",
-#                                 distance: "10km",
-#                                 tag_list: "Loisir"
-#                                   )
+  golf.set_name('fr', "Golf Bluegreen")
+  golf.set_name('en', "Golf Bluegreen")
+  golf.set_description('fr', "Dans son cadre naturel et ombragé du Val de Loire, golf Parc est un parc de loisirs en plein air pour enfants de tous âges, dès 1 an. En été, les toboggans deviennent aquatiques pour encore plus de sensations et de fraîcheur ! L'ensemble des attractions est à votre disposition à volonté toute la journée (voitures électriques en suppl. uniquement). Pour plus de sécurité, golf Parc propose des jeux adaptés à la taille et à l'âge des enfants. Une quinzaine de jeux est aussi accessible aux parents et accompagnateurs pour s'amuser en famille ! Pour seulement 6€, les adultes peuvent s'amuser avec leurs enfants sur plusieurs jeux gonflables, trampolines, balançoires géantes, kartings à pédales, téléphérique, jeux d'adresse, pyramide de cordes et petit train.")
+  golf.set_description('en', "In its natural and shaded setting in the Loire Valley, golf Parc is an outdoor leisure park for children of all ages, from 1 year old. In summer, the slides become aquatic for even more sensations and freshness! All the attractions are at your disposal all day long (electric cars extra only). For greater safety, golf Parc offers games adapted to the size and age of the children. About fifteen games are also available to parents and accompanying adults for family fun! For only € 6, adults can have fun with their children on several inflatable games, trampolines, giant swings, go-karts, cable car, games of skill, pyramid of ropes and small train.")
 
-#     quad.image.attach(io: File.open(Rails.root.join("app/assets/images/quad.jpg")),
-#     filename: "quad.jpg")
+        sport = Activity.create(phone: "06 08 48 14 63",
+                                url: "http://www.parc-loisir-tours.com/",
+                                address: "La Fontaine 37380 Monnaie, France",
+                                price: "23 ~ ",
+                                distance: "2km",
+                                tag_list: "Loisir"
+                                  )
 
+    sport.image.attach(io: File.open(Rails.root.join("app/assets/images/sport.jpg")),
+    filename: "sport.jpg")
 
-#     bowl = Activity.create(name: "skybowl",
-#                                 description: "Bowling, Billard, Arcades",
-#                                 phone: "02 47 40 03 00",
-#                                 url: "http://www.skybowl.fr/",
-#                                 address: "Rue Jean Monnet 37390 Notre-Dame-d'Oé, France",
-#                                 price: " ~ ",
-#                                 distance: "10km",
-#                                 tag_list: "Loisir"
-#                                   )
+  sport.set_name('fr', "Sport & Bien")
+  sport.set_name('en', "Sport & Bien")
+  sport.set_description('fr', "Multitude de sport et gadget à essayer, n'hésitez pas à y jeter un oeil, c'est à côté!")
+  sport.set_description('en', "Multitude of sports and gadgets to try, do not hesitate to take a look, it's close by!")
 
-#     bowl.image.attach(io: File.open(Rails.root.join("app/assets/images/bowl.jpg")),
-#     filename: "bowl.jpg")
+    canoe = Activity.create(phone: "06 08 62 95 15",
+                                url: "http://www.tours-canoe.fr/en/welcome/",
+                                address: "La Frillière 37210, Vouvray, France",
+                                price: " ~ ",
+                                distance: "10km",
+                                tag_list: "Loisir"
+                                  )
 
+    canoe.image.attach(io: File.open(Rails.root.join("app/assets/images/canoe.jpg")),
+    filename: "canoe.jpg")
 
-#     rando = Activity.create(name: "Randonnée",
-#                                 description: "randoing, Billard, Arcades",
-#                                 phone: "02 47 40 25 26",
-#                                 url: "http://www.cdrp37.fr/",
-#                                 address: "rue de l'Aviation - 37210 Parçay-Meslay, France",
-#                                 price: " ~ ",
-#                                 distance: "",
-#                                 tag_list: "Loisir"
-#                                   )
+  canoe.set_name('fr', "Tours et Canoë")
+  canoe.set_name('en', "Tours and Canoe")
+  canoe.set_description('fr', "Tours & Canoë organise votre randonnée en canoë sur la Loire. Demandez-nous, on s’occupe de tout !
+Le lieu de rendez-vous est à notre base de Vouvray où se fait l’inscription et la préparation à la randonnée.
+Le départ de toutes les randonnées se fait à Chaumont sur Loire.
+La randonnée canoë sur la Loire est accessible à tous (à partir de 6 ans, savoir nager). La difficulté est de niveau 1-2 avec quelques passages un peu plus mouvementés sous les ponts.")
+  canoe.set_description('en', "Tours & Canoë organizes your canoe trip on the Loire. Ask us, we'll take care of everything!
+The meeting point is at our base in Vouvray where registration and preparation for the hike takes place.
+The start of all hikes is in Chaumont sur Loire.
+Canoeing on the Loire is accessible to all (from 6 years old, know how to swim). The difficulty is level 1-2 with a few more eventful passages under the bridges.")
 
-#     rando.image.attach(io: File.open(Rails.root.join("app/assets/images/rando.jpg")),
-#     filename: "rando.jpg")
+        quad = Activity.create(phone: "06 71 63 12 61",
+                                url: "http://www.vitiquad37.com/",
+                                address: "27 rue des Locquets 37210 Parçay-Meslay, France",
+                                price: " ~ ",
+                                distance: "10km",
+                                tag_list: "Loisir"
+                                  )
 
+    quad.image.attach(io: File.open(Rails.root.join("app/assets/images/quad.jpg")),
+    filename: "quad.jpg")
 
+  quad.set_name('fr', "VitiQuad")
+  quad.set_name('en', "VitiQuad")
+  quad.set_description('fr', "RANDONNÉES GUIDÉES EN QUAD DANS LE VIGNOBLE DU VOUVRAY. OUVERT TOUTE L’ANNÉE SUR RÉSERVATION DU LUNDI AU SAMEDI
+Vous découvrirez, au guidon de nos quads, les vallées et coteaux de notre belle Touraine et vous parcourrez, de l’intérieur, ce trésor d’histoires et de terroirs.")
+  quad.set_description('en', "GUIDED QUAD TOURS IN THE VOUVRAY VINEYARD. OPEN ALL YEAR BY RESERVATION FROM MONDAY TO SATURDAY
+You will discover, on the handlebars of our quads, the valleys and hillsides of our beautiful Touraine and you will explore, from the inside, this treasure of history and terroirs.")
 
+    bowl = Activity.create(phone: "02 47 40 03 00",
+                                url: "http://www.skybowl.fr/",
+                                address: "Rue Jean Monnet 37390 Notre-Dame-d'Oé, France",
+                                price: " ~ ",
+                                distance: "10km",
+                                tag_list: "Loisir"
+                                  )
 
-#     puts " #{Activity.count} activities were created"
+    bowl.image.attach(io: File.open(Rails.root.join("app/assets/images/bowl.jpg")),
+    filename: "bowl.jpg")
+
+  bowl.set_name('fr', "skybowl")
+  bowl.set_name('en', "skybowl")
+  bowl.set_description('fr', "Bowling, Billard, Arcades")
+  bowl.set_description('en', "Bowling, Billard, Arcades")
+
+    rando = Activity.create(phone: "02 47 40 25 26",
+                                url: "http://www.cdrp37.fr/",
+                                address: "rue de l'Aviation - 37210 Parçay-Meslay, France",
+                                price: " ~ ",
+                                distance: "",
+                                tag_list: "Loisir"
+                                  )
+
+  rando.set_name('fr', "Randonnée")
+  rando.set_name('en', "Trek")
+  rando.set_description('fr', "")
+  rando.set_description('en', "")
+
+    rando.image.attach(io: File.open(Rails.root.join("app/assets/images/rando.jpg")),
+    filename: "rando.jpg")
 
 
 
@@ -430,73 +494,83 @@ room3 = Room.create(name: "Clos Vallière",
 
 
 
-#     vignoble1 = Activity.create(name: "Cave de Vouvray",
-#                               description: "La Cave des Producteurs de Vouvray a été créée en 1953 à l’initiative d’un petit groupe de vignerons. Actuellement, la cave coopérative de Vouvray compte une trentaine de passionnés qui poursuivent l’aventure avec près de 400 ha de vignes réparties sur toute l’appellation Vouvray. L’alcool est dangereux pour la santé, à consommer avec modération.",
-#                               phone: "02 47 52 75 03",
-#                               url: "https://cavedevouvray.com/",
-#                               address: "38 rue de la vallée coquette, 37210 Vouvray France",
-#                               price: "",
-#                               distance: "14km",
-#                               tag_list: "Vignobles"
-#                             )
+    vignoble1 = Activity.create(phone: "02 47 52 75 03",
+                              url: "https://cavedevouvray.com/",
+                              address: "38 rue de la vallée coquette, 37210 Vouvray France",
+                              price: "",
+                              distance: "14km",
+                              tag_list: "Vignobles"
+                            )
 
-#     vignoble1.image.attach(io: File.open(Rails.root.join("app/assets/images/vouvray.jpg")),
-#     filename: "vouvray.jpg")
+    vignoble1.image.attach(io: File.open(Rails.root.join("app/assets/images/vouvray.jpg")),
+    filename: "vouvray.jpg")
 
-#         vignoble2 = Activity.create(name: "Montcontour",
-#                               description: "
-# SURPLOMBANT LA LOIRE, LE CHÂTEAU MONCONTOUR S’ÉLÈVE À FLANC DE COTEAU AU COEUR DE L’APPELLATION VOUVRAY.
-# LE SITE OFFRE UN POINT DE VUE REMARQUABLE SUR TOUTE LA VALLÉE LIGÉRIENNE.
+  vignoble1.set_name('fr', "Cave de Vouvray")
+  vignoble1.set_name('en', "Cellar of Vouvray")
+  vignoble1.set_description('fr', "La Cave des Producteurs de Vouvray a été créée en 1953 à l’initiative d’un petit groupe de vignerons. Actuellement, la cave coopérative de Vouvray compte une trentaine de passionnés qui poursuivent l’aventure avec près de 400 ha de vignes réparties sur toute l’appellation Vouvray. L’alcool est dangereux pour la santé, à consommer avec modération.")
+  vignoble1.set_description('en', "The Cave des Producteurs de Vouvray was created in 1953 on the initiative of a small group of winegrowers. Currently, the cooperative cellar of Vouvray has about thirty enthusiasts who continue the adventure with nearly 400 ha of vines spread over the entire Vouvray appellation. Alcohol is dangerous for your health, consume in moderation.")
 
+        vignoble2 = Activity.create(phone: "02 47 52 60 77",
+                              url: "https://www.vouvray.com/",
+                              address: "Rue de Moncontour 37210 Vouvray France",
+                              price: "",
+                              distance: "14km",
+                              tag_list: "Vignobles"
+                            )
 
+    vignoble2.image.attach(io: File.open(Rails.root.join("app/assets/images/montcontour.jpg")),
+    filename: "montcontour.jpg")
 
-# Depuis 1994, avec passion et engagement, la famille Feray a su préserver et embellir ce château pour en faire l’un des sites historiques remarquables du Val de Loire.
+  vignoble2.set_name('fr', "Montcontour")
+  vignoble2.set_name('en', "Montcontour")
+  vignoble2.set_description('fr', "
+SURPLOMBANT LA LOIRE, LE CHÂTEAU MONCONTOUR S’ÉLÈVE À FLANC DE COTEAU AU COEUR DE L’APPELLATION VOUVRAY.
+LE SITE OFFRE UN POINT DE VUE REMARQUABLE SUR TOUTE LA VALLÉE LIGÉRIENNE.
+Depuis 1994, avec passion et engagement, la famille Feray a su préserver et embellir ce château pour en faire l’un des sites historiques remarquables du Val de Loire.
+Le vignoble, l’un des plus anciens de Touraine, est aujourd’hui classé parmi les propriétés viticoles les plus prestigieuses du Val de Loire.
+Le domaine court sur 130 hectares à travers le coteau et la vallée. L’alcool est dangereux pour la santé, à consommer avec modération.")
+  vignoble2.set_description('en', "OVERLOOKING THE LOIRE, CHÂTEAU MONCONTOUR Rises on the side of a hill in the heart of the Vouvray appellation.
+THE SITE OFFERS A REMARKABLE POINT OF VIEW OVER THE ENTIRE LIGERIAN VALLEY.
+Since 1994, with passion and commitment, the Feray family has managed to preserve and embellish this castle to make it one of the remarkable historical sites of the Loire Valley.
+The vineyard, one of the oldest in Touraine, is today ranked among the most prestigious wine estates in the Loire Valley.
+The estate runs over 130 hectares across the hillside and the valley. Alcohol is dangerous for your health, consume in moderation.")
 
-# Le vignoble, l’un des plus anciens de Touraine, est aujourd’hui classé parmi les propriétés viticoles les plus prestigieuses du Val de Loire.
+            vignoble3 = Activity.create(phone: "02 47 52 74 95",
+                              url: "http://www.domaineallias.com/",
+                              address: "106 rue de la Vallée Coquette, 37210 VOUVRAY",
+                              price: "",
+                              distance: "14km",
+                              tag_list: "Vignobles"
+                            )
 
-# Le domaine court sur 130 hectares à travers le coteau et la vallée. L’alcool est dangereux pour la santé, à consommer avec modération.",
-#                               phone: "02 47 52 60 77",
-#                               url: "https://www.vouvray.com/",
-#                               address: "Rue de Moncontour 37210 Vouvray France",
-#                               price: "",
-#                               distance: "14km",
-#                               tag_list: "Vignobles"
-#                             )
+  vignoble3.set_name('fr', "Domaine Allias")
+  vignoble3.set_name('en', "Domaine Allias")
+  vignoble3.set_description('fr', "L'exploitation est un domaine entièrement viticole de 14 hectares, dont le centre est le Clos du Petit Mont. Du raisin de ses vignes sont obtenus des vins élaborés avec soins. Depuis 5 générations, le savoir-faire se transmet : culture traditionnelle, vendanges manuelles, tris successifs, fermentations longues…
+Dès 2003, la culture biologique a été appliquée officiellement sur toute l'exploitation. Ainsi sont obtenus des vins fins et typés qui mûriront lentement et pourront devenir centenaires.
+L’alcool est dangereux pour la santé, à consommer avec modération.")
+  vignoble3.set_description('en', "The exploitation is an entirely wine-growing domain of 14 hectares, the center of which is the Clos du Petit Mont. From the grapes of its vines, wines produced with care are obtained. For 5 generations, the know-how has been passed on: traditional cultivation, manual harvesting, successive sorting, long fermentation ...
+From 2003, organic farming was officially applied throughout the farm. In this way, fine and distinctive wines are obtained which will ripen slowly and may become a hundred years old.
+Alcohol is dangerous for your health, consume in moderation.")
 
-#     vignoble2.image.attach(io: File.open(Rails.root.join("app/assets/images/montcontour.jpg")),
-#     filename: "montcontour.jpg")
+    vignoble3.image.attach(io: File.open(Rails.root.join("app/assets/images/vin1.jpg")),
+    filename: "vin1.jpg")
 
-#             vignoble3 = Activity.create(name: "Domaine Allias",
-#                               description: "L'exploitation est un domaine entièrement viticole de 14 hectares, dont le centre est le Clos du Petit Mont. Du raisin de ses vignes sont obtenus des vins élaborés avec soins. Depuis 5 générations, le savoir-faire se transmet : culture traditionnelle, vendanges manuelles, tris successifs, fermentations longues…
+    vignoble4 = Activity.create(phone: "02 47 52 77 77",
+                              url: "http://www.vouvray-guertin.com/",
+                              address: "37210 Vouvray, France",
+                              price: "",
+                              distance: "14km",
+                              tag_list: "Vignobles"
+                            )
 
-# Dès 2003, la culture biologique a été appliquée officiellement sur toute l'exploitation. Ainsi sont obtenus des vins fins et typés qui mûriront lentement et pourront devenir centenaires.
+    vignoble4.image.attach(io: File.open(Rails.root.join("app/assets/images/vin2.jpg")),
+    filename: "vin2.jpg")
+    #  // Montlouis-sur Loire ~ 20 km // Amboise ~ 27 km  //  Chinon ~ 60 km // Bourgueil et Saint-Nicolas de Bourgueil ~ 60 km
 
-# L’alcool est dangereux pour la santé, à consommer avec modération.",
-#                               phone: "02 47 52 74 95",
-#                               url: "http://www.domaineallias.com/",
-#                               address: "106 rue de la Vallée Coquette, 37210 VOUVRAY",
-#                               price: "",
-#                               distance: "14km",
-#                               tag_list: "Vignobles"
-#                             )
-
-#     vignoble3.image.attach(io: File.open(Rails.root.join("app/assets/images/vin1.jpg")),
-#     filename: "vin1.jpg")
-
-#     vignoble4 = Activity.create(name: "Thierry Guertin - Cellier de la verrine",
-#                               description: "Site en construction. L’alcool est dangereux pour la santé, à consommer avec modération.",
-#                               phone: "02 47 52 77 77",
-#                               url: "http://www.vouvray-guertin.com/",
-#                               address: "37210 Vouvray, France",
-#                               price: "",
-#                               distance: "14km",
-#                               tag_list: "Vignobles"
-#                             )
-
-#     vignoble4.image.attach(io: File.open(Rails.root.join("app/assets/images/vin2.jpg")),
-#     filename: "vin2.jpg")
-#     #  // Montlouis-sur Loire ~ 20 km // Amboise ~ 27 km  //  Chinon ~ 60 km // Bourgueil et Saint-Nicolas de Bourgueil ~ 60 km
-
+  cuir.set_name('fr', "Thierry Guertin - Cellier de la verrine")
+  cuir.set_name('en', "Thierry Guertin - Cellier de la verrine")
+  cuir.set_description('fr', "Site en construction. L’alcool est dangereux pour la santé, à consommer avec modération.")
+  cuir.set_description('en', "Construction site. Alcohol is dangerous for your health, consume in moderation.")
 
 
 #     # ----------------------------------
@@ -515,6 +589,11 @@ room3 = Room.create(name: "Clos Vallière",
 #     traiteur1.image.attach(io: File.open(Rails.root.join("app/assets/images/morgandomet.jpg")),
 #     filename: "morgandomet.jpg")
 
+  cuir.set_name('fr', "Musée du cuir et de la tannerie")
+  cuir.set_name('en', "Leather and tannery museum")
+  cuir.set_description('fr', "")
+  cuir.set_description('en', "")
+
 #     traiteur2 = Activity.create(name: "Philippe Menager - Chef à Domicile",
 #                               description: "Philippe Traiteur, pour se régaler entre amis, en famille ou en amoureux chez vous.
 # Nous élaborons avec vous sur mesure des buffets, repas chaud, ateliers plancha, pour tous types d'événements !
@@ -529,6 +608,11 @@ room3 = Room.create(name: "Clos Vallière",
 
 #     traiteur2.image.attach(io: File.open(Rails.root.join("app/assets/images/philipe.jpg")),
 #     filename: "philipe.jpg")
+
+  cuir.set_name('fr', "Musée du cuir et de la tannerie")
+  cuir.set_name('en', "Leather and tannery museum")
+  cuir.set_description('fr', "")
+  cuir.set_description('en', "")
 
 #     traiteur3 = Activity.create(name: "Hardouin - Traiteur",
 #                               description: "La Maison Hardouin a acquis ses lettres de noblesse avec la charcuterie de tradition. L’excellence de son travail lui a valu d’être régulièrement sollicitée pour l’organisation de repas de groupe.
@@ -545,6 +629,11 @@ room3 = Room.create(name: "Clos Vallière",
 #     traiteur3.image.attach(io: File.open(Rails.root.join("app/assets/images/hardouin.jpg")),
 #     filename: "hardouin.jpg")
 
+  cuir.set_name('fr', "Musée du cuir et de la tannerie")
+  cuir.set_name('en', "Leather and tannery museum")
+  cuir.set_description('fr', "")
+  cuir.set_description('en', "")
+
 #     traiteur4 = Activity.create(name: "Marceul - Reception",
 #                               description: "MARCEUL Réceptions, traiteur en Val-de-Loire vous accompagne depuis 1983 dans vos réceptions privées, de mariage, ou professionnelles. Vos repas sont élaborés dans notre laboratoire aux normes européennes (agrément CEE) pour répondre aux exigences de qualité que vous attendez.",
 #                               phone: "02 47 85 46 46",
@@ -558,6 +647,10 @@ room3 = Room.create(name: "Clos Vallière",
 #     traiteur4.image.attach(io: File.open(Rails.root.join("app/assets/images/marceul.jpg")),
 #     filename: "marceul.jpg")
 
+  cuir.set_name('fr', "Musée du cuir et de la tannerie")
+  cuir.set_name('en', "Leather and tannery museum")
+  cuir.set_description('fr', "")
+  cuir.set_description('en', "")
 
 
 # # -----------------------------------------------------
