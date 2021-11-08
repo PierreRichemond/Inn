@@ -567,312 +567,356 @@ Alcohol is dangerous for your health, consume in moderation.")
     filename: "vin2.jpg")
     #  // Montlouis-sur Loire ~ 20 km // Amboise ~ 27 km  //  Chinon ~ 60 km // Bourgueil et Saint-Nicolas de Bourgueil ~ 60 km
 
-  cuir.set_name('fr', "Thierry Guertin - Cellier de la verrine")
-  cuir.set_name('en', "Thierry Guertin - Cellier de la verrine")
-  cuir.set_description('fr', "Site en construction. L’alcool est dangereux pour la santé, à consommer avec modération.")
-  cuir.set_description('en', "Construction site. Alcohol is dangerous for your health, consume in moderation.")
+  vignoble4.set_name('fr', "Thierry Guertin - Cellier de la verrine")
+  vignoble4.set_name('en', "Thierry Guertin - Cellier de la verrine")
+  vignoble4.set_description('fr', "Site en construction. L’alcool est dangereux pour la santé, à consommer avec modération.")
+  vignoble4.set_description('en', "Construction site. Alcohol is dangerous for your health, consume in moderation.")
 
 
 #     # ----------------------------------
 
 
-#     traiteur1 = Activity.create(name: "Morgan Domet - Chef à Domicile",
-#                               description: "Traiteur, chef de cuisine à domicile pour vos repas en amis ou en famille.",
-#                               phone: "06 74 43 78 58",
-#                               url: "https://www.facebook.com/morgandometchef",
-#                               address: "Crotelles, France",
-#                               price: "",
-#                               distance: "",
-#                               tag_list: "Traiteur"
-#                             )
+    traiteur1 = Activity.create(phone: "06 74 43 78 58",
+                              url: "https://www.facebook.com/morgandometchef",
+                              address: "Crotelles, France",
+                              price: "",
+                              distance: "",
+                              tag_list: "Traiteur"
+                            )
 
-#     traiteur1.image.attach(io: File.open(Rails.root.join("app/assets/images/morgandomet.jpg")),
-#     filename: "morgandomet.jpg")
+    traiteur1.image.attach(io: File.open(Rails.root.join("app/assets/images/morgandomet.jpg")),
+    filename: "morgandomet.jpg")
 
-  cuir.set_name('fr', "Musée du cuir et de la tannerie")
-  cuir.set_name('en', "Leather and tannery museum")
-  cuir.set_description('fr', "")
-  cuir.set_description('en', "")
+  traiteur1.set_name('fr', "Morgan Domet - Chef à Domicile")
+  traiteur1.set_name('en', "Morgan Domet - Home Chef")
+  traiteur1.set_description('fr', "Traiteur, chef de cuisine à domicile pour vos repas en amis ou en famille.")
+  traiteur1.set_description('en', "Caterer, home chef for your meals with friends or family.")
 
-#     traiteur2 = Activity.create(name: "Philippe Menager - Chef à Domicile",
-#                               description: "Philippe Traiteur, pour se régaler entre amis, en famille ou en amoureux chez vous.
-# Nous élaborons avec vous sur mesure des buffets, repas chaud, ateliers plancha, pour tous types d'événements !
-# Et proposons des plats a emporter depuis l'atelier !",
-#                               phone: "06 69 60 65 76",
-#                               url: "https://www.facebook.com/Philippe-Traiteur-113540753667009/",
-#                               address: "37380 Monnaie, France",
-#                               price: "",
-#                               distance: "",
-#                               tag_list: "Traiteur"
-#                             )
+    traiteur2 = Activity.create(phone: "06 69 60 65 76",
+                              url: "https://www.facebook.com/Philippe-Traiteur-113540753667009/",
+                              address: "37380 Monnaie, France",
+                              price: "",
+                              distance: "",
+                              tag_list: "Traiteur"
+                            )
 
-#     traiteur2.image.attach(io: File.open(Rails.root.join("app/assets/images/philipe.jpg")),
-#     filename: "philipe.jpg")
+    traiteur2.image.attach(io: File.open(Rails.root.join("app/assets/images/philipe.jpg")),
+    filename: "philipe.jpg")
 
-  cuir.set_name('fr', "Musée du cuir et de la tannerie")
-  cuir.set_name('en', "Leather and tannery museum")
-  cuir.set_description('fr', "")
-  cuir.set_description('en', "")
+  traiteur2.set_name('fr', "Philippe Menager - Chef à Domicile")
+  traiteur2.set_name('en', "Philippe Menager - Home Chef")
+  traiteur2.set_description('fr', "Philippe Traiteur, pour se régaler entre amis, en famille ou en amoureux chez vous.
+Nous élaborons avec vous sur mesure des buffets, repas chaud, ateliers plancha, pour tous types d'événements !
+Et proposons des plats a emporter depuis l'atelier!")
+  traiteur2.set_description('en', "Philippe Caterer, to feast with friends, family or lovers at home.
+We work with you to tailor buffets, hot meals, plancha workshops, for all types of events!
+And offer take-away meals from the workshop!")
 
-#     traiteur3 = Activity.create(name: "Hardouin - Traiteur",
-#                               description: "La Maison Hardouin a acquis ses lettres de noblesse avec la charcuterie de tradition. L’excellence de son travail lui a valu d’être régulièrement sollicitée pour l’organisation de repas de groupe.
+    traiteur3 = Activity.create(phone: "02 47 40 40 40",
+                              url: "https://www.hardouin.fr/",
+                              address: "Vouvray, France",
+                              price: "",
+                              distance: "",
+                              tag_list: "Traiteur"
+                            )
 
-# L’entreprise a donc tout naturellement développé une activité de traiteur de réception. Elle s’appuie aujourd’hui sur des équipes dédiées à chacune de ses activités, avec une même exigence : la satisfaction client.",
-#                               phone: "02 47 40 40 40",
-#                               url: "https://www.hardouin.fr/",
-#                               address: "Vouvray, France",
-#                               price: "",
-#                               distance: "",
-#                               tag_list: "Traiteur"
-#                             )
+    traiteur3.image.attach(io: File.open(Rails.root.join("app/assets/images/hardouin.jpg")),
+    filename: "hardouin.jpg")
 
-#     traiteur3.image.attach(io: File.open(Rails.root.join("app/assets/images/hardouin.jpg")),
-#     filename: "hardouin.jpg")
+  traiteur3.set_name('fr', "Hardouin - Traiteur")
+  traiteur3.set_name('en', "Hardouin - Caterer")
+  traiteur3.set_description('fr', "La Maison Hardouin a acquis ses lettres de noblesse avec la charcuterie de tradition. L’excellence de son travail lui a valu d’être régulièrement sollicitée pour l’organisation de repas de groupe.
+L’entreprise a donc tout naturellement développé une activité de traiteur de réception. Elle s’appuie aujourd’hui sur des équipes dédiées à chacune de ses activités, avec une même exigence : la satisfaction client.")
+  traiteur3.set_description('en', "Maison Hardouin has acquired its letters of nobility with traditional charcuterie. For the excellence of her work, she has been regularly asked to organize group meals.
+The company therefore naturally developed a reception caterer activity. Today, it relies on teams dedicated to each of its activities, with the same requirement: customer satisfaction.")
 
-  cuir.set_name('fr', "Musée du cuir et de la tannerie")
-  cuir.set_name('en', "Leather and tannery museum")
-  cuir.set_description('fr', "")
-  cuir.set_description('en', "")
+    traiteur4 = Activity.create( phone: "02 47 85 46 46",
+                              url: "http://www.marceul-receptions.eu/",
+                              address: "37390 Notre Dame D'Oé, France",
+                              price: "",
+                              distance: "",
+                              tag_list: "Traiteur"
+                            )
 
-#     traiteur4 = Activity.create(name: "Marceul - Reception",
-#                               description: "MARCEUL Réceptions, traiteur en Val-de-Loire vous accompagne depuis 1983 dans vos réceptions privées, de mariage, ou professionnelles. Vos repas sont élaborés dans notre laboratoire aux normes européennes (agrément CEE) pour répondre aux exigences de qualité que vous attendez.",
-#                               phone: "02 47 85 46 46",
-#                               url: "http://www.marceul-receptions.eu/",
-#                               address: "37390 Notre Dame D'Oé, France",
-#                               price: "",
-#                               distance: "",
-#                               tag_list: "Traiteur"
-#                             )
+    traiteur4.image.attach(io: File.open(Rails.root.join("app/assets/images/marceul.jpg")),
+    filename: "marceul.jpg")
 
-#     traiteur4.image.attach(io: File.open(Rails.root.join("app/assets/images/marceul.jpg")),
-#     filename: "marceul.jpg")
-
-  cuir.set_name('fr', "Musée du cuir et de la tannerie")
-  cuir.set_name('en', "Leather and tannery museum")
-  cuir.set_description('fr', "")
-  cuir.set_description('en', "")
+  traiteur4.set_name('fr', "Marceul - Reception")
+  traiteur4.set_name('en', "Marceul - Reception")
+  traiteur4.set_description('fr', "MARCEUL Réceptions, traiteur en Val-de-Loire vous accompagne depuis 1983 dans vos réceptions privées, de mariage, ou professionnelles. Vos repas sont élaborés dans notre laboratoire aux normes européennes (agrément CEE) pour répondre aux exigences de qualité que vous attendez.")
+  traiteur4.set_description('en', "Supermarket")
 
 
 # # -----------------------------------------------------
 
 
-#     resto1 = Activity.create(name: "La Guizarderie",
-#                               description: "Restaurant français convivial.",
-#                               phone: "02 47 22 86 81",
-#                               url: "",
-#                               address: "chemin rural de la croix jean delahaie, 37380 Crotelles, France",
-#                               price: "12 ~ ",
-#                               distance: "1km",
-#                               tag_list: "Restauration"
-#                             )
+    resto1 = Activity.create(phone: "02 47 22 86 81",
+                              url: "",
+                              address: "chemin rural de la croix jean delahaie, 37380 Crotelles, France",
+                              price: "15 ~ ",
+                              distance: "1km",
+                              tag_list: "Restauration"
+                            )
 
-#     resto1.image.attach(io: File.open(Rails.root.join("app/assets/images/guizarderie.jpg")),
-#     filename: "guizarderie.jpg")
+    resto1.image.attach(io: File.open(Rails.root.join("app/assets/images/guizarderie.jpg")),
+    filename: "guizarderie.jpg")
 
-
-#     resto2 = Activity.create(name: "L'Epicurien",
-#                               description: "Restaurant français convivial",
-#                               phone: "02 47 56 10 34",
-#                               url: "",
-#                               address: "53 Rue Nationale, 37380 Monnaie, France",
-#                               price: "12 ~ ",
-#                               distance: "4km",
-#                               tag_list: "Restauration"
-#                             )
-
-#     resto2.image.attach(io: File.open(Rails.root.join("app/assets/images/epicurien.jpg")),
-#     filename: "epicurien.jpg")
-
-#     resto3 = Activity.create(name: "Le bouchon tourangeau",
-#                               description: "Degustez la cuisine locale!.",
-#                               phone: "02 47 61 46 04",
-#                               url: "",
-#                               address: "22 Rue du grand marché 37000 Tours, France",
-#                               price: "12 ~ ",
-#                               distance: "20km",
-#                               tag_list: "Restauration"
-#                             )
-
-#     resto3.image.attach(io: File.open(Rails.root.join("app/assets/images/bouchon.jpg")),
-#     filename: "bouchon.jpg")
+  resto1.set_name('fr', "La Guizarderie")
+  resto1.set_name('en', "La Guizarderie")
+  resto1.set_description('fr', "Restaurant français convivial.")
+  resto1.set_description('en', "Friendly French restaurant.")
 
 
-#     resto4 = Activity.create(name: "Les gueules noires",
-#                               description: "Restaurant français convivial",
-#                               phone: "02 47 52 62 18",
-#                               url: "",
-#                               address: "66 rue de la vallée coquette 37210 Vouvray France",
-#                               price: " ~ ",
-#                               distance: "10km",
-#                               tag_list: "Restauration"
-#                             )
+    resto2 = Activity.create(phone: "02 47 56 10 34",
+                              url: "",
+                              address: "53 Rue Nationale, 37380 Monnaie, France",
+                              price: "12 ~ ",
+                              distance: "4km",
+                              tag_list: "Restauration"
+                            )
 
-#     resto4.image.attach(io: File.open(Rails.root.join("app/assets/images/gueulles.jpg")),
-#     filename: "gueulles.jpg")
+    resto2.image.attach(io: File.open(Rails.root.join("app/assets/images/epicurien.jpg")),
+    filename: "epicurien.jpg")
+
+  resto2.set_name('fr', "L'Epicurien")
+  resto2.set_name('en', "L'Epicurien")
+  resto2.set_description('fr', "Restaurant français convivial")
+  resto2.set_description('en', "Friendly French restaurant")
 
 
-#     resto5 = Activity.create(name: "le Val Joli",
-#                               description: "Restaurant français convivial",
-#                               phone: "02 47 52 70 18",
-#                               url: "",
-#                               address: "Le val Joli, 37210 Vouvray, France",
-#                               price: " 18 ~ ",
-#                               distance: "10km",
-#                               tag_list: "Restauration"
-#                             )
+    resto3 = Activity.create(phone: "02 47 61 46 04",
+                              url: "",
+                              address: "22 Rue du grand marché 37000 Tours, France",
+                              price: "12 ~ ",
+                              distance: "20km",
+                              tag_list: "Restauration"
+                            )
 
-#     resto5.image.attach(io: File.open(Rails.root.join("app/assets/images/valjoli.jpg")),
-#     filename: "valjoli.jpg")
+    resto3.image.attach(io: File.open(Rails.root.join("app/assets/images/bouchon.jpg")),
+    filename: "bouchon.jpg")
 
-#     resto6 = Activity.create(name:"La cave Montlouis",
-#                               description: "Restaurant français convivial",
-#                               phone: "02 47 45 05 05",
-#                               url: "http://www.restaurant-la-cave-com/",
-#                               address: "68 quai Albert Baillet 37270 Montlouis sur loire, France",
-#                               price: " ~ ",
-#                               distance: "10km",
-#                               tag_list: "Restauration"
-#                             )
+  resto3.set_name('fr', "Le bouchon tourangeau")
+  resto3.set_name('en', "Le bouchon tourangeau")
+  resto3.set_description('fr', "Degustez la cuisine locale!")
+  resto3.set_description('en', "Try out some local dishes!")
 
-#     resto6.image.attach(io: File.open(Rails.root.join("app/assets/images/cave.jpg")),
-#     filename: "cave.jpg")
+    resto4 = Activity.create(phone: "02 47 52 62 18",
+                              url: "",
+                              address: "66 rue de la vallée coquette 37210 Vouvray France",
+                              price: " ~ ",
+                              distance: "10km",
+                              tag_list: "Restauration"
+                            )
 
-#     resto7 = Activity.create(name:"Le Pizzaiolo",
-#                               description: "Pizza traditionnelle à emporter",
-#                               phone: "02 47 29 95 31",
-#                               url: "http://www.restaurant-la-cave-com/",
-#                               address: "41 Rue Nationale, 37380 Monnaie, France",
-#                               price: " ~ ",
-#                               distance: "4km",
-#                               tag_list: "Restauration"
-#                             )
+    resto4.image.attach(io: File.open(Rails.root.join("app/assets/images/gueulles.jpg")),
+    filename: "gueulles.jpg")
 
-#     resto7.image.attach(io: File.open(Rails.root.join("app/assets/images/pizza.jpg")),
-#     filename: "pizza.jpg")
+  resto4.set_name('fr', "Les gueules noires")
+  resto4.set_name('en', "Les gueules noires")
+  resto4.set_description('fr', "Restaurant français convivial")
+  resto4.set_description('en', "Friendly French restaurant")
 
-#     resto8 = Activity.create(name:"Just do eat",
-#                               description: "Burger, tacos, sandwiches, couscous à emporter sur reservation",
-#                               phone: "02 47 59 90 48",
-#                               url: "http://www.restaurant-la-cave-com/",
-#                               address: "32 Rue Nationale, 37380 Monnaie, France",
-#                               price: " ~ ",
-#                               distance: "4km",
-#                               tag_list: "Restauration"
-#                             )
+    resto5 = Activity.create(phone: "02 47 52 70 18",
+                              url: "",
+                              address: "Le val Joli, 37210 Vouvray, France",
+                              price: " 18 ~ ",
+                              distance: "10km",
+                              tag_list: "Restauration"
+                            )
 
-#     resto8.image.attach(io: File.open(Rails.root.join("app/assets/images/justdoeat.jpg")),
-#     filename: "justdoeat.jpg")
+    resto5.image.attach(io: File.open(Rails.root.join("app/assets/images/valjoli.jpg")),
+    filename: "valjoli.jpg")
+
+  resto5.set_name('fr', "le Val Joli")
+  resto5.set_name('en', "le Val Joli")
+  resto5.set_description('fr', "Restaurant français convivial")
+  resto5.set_description('en', "Friendly French restaurant")
+
+    resto6 = Activity.create(phone: "02 47 45 05 05",
+                              url: "http://www.restaurant-la-cave-com/",
+                              address: "68 quai Albert Baillet 37270 Montlouis sur loire, France",
+                              price: " ~ ",
+                              distance: "10km",
+                              tag_list: "Restauration"
+                            )
+
+    resto6.image.attach(io: File.open(Rails.root.join("app/assets/images/cave.jpg")),
+    filename: "cave.jpg")
+
+  resto6.set_name('fr', "La cave Montlouis")
+  resto6.set_name('en', "La cave Montlouis")
+  resto6.set_description('fr', "Restaurant français convivial")
+  resto6.set_description('en', "Restaurant français convivial")
+
+    resto7 = Activity.create( phone: "02 47 29 95 31",
+                              url: "http://www.restaurant-la-cave-com/",
+                              address: "41 Rue Nationale, 37380 Monnaie, France",
+                              price: " ~ ",
+                              distance: "4km",
+                              tag_list: "Restauration"
+                            )
+
+    resto7.image.attach(io: File.open(Rails.root.join("app/assets/images/pizza.jpg")),
+    filename: "pizza.jpg")
+
+  resto7.set_name('fr', "Le Pizzaiolo")
+  resto7.set_name('en', "Le Pizzaiolo")
+  resto7.set_description('fr', "Pizza traditionnelle à emporter.")
+  resto7.set_description('en', "Traditional Pizza to take away.")
+
+    resto8 = Activity.create( phone: "02 47 59 90 48",
+                              url: "http://www.restaurant-la-cave-com/",
+                              address: "32 Rue Nationale, 37380 Monnaie, France",
+                              price: " ~ ",
+                              distance: "4km",
+                              tag_list: "Restauration"
+                            )
+
+    resto8.image.attach(io: File.open(Rails.root.join("app/assets/images/justdoeat.jpg")),
+    filename: "justdoeat.jpg")
+
+  resto8.set_name('fr', "Just do eat")
+  resto8.set_name('en', "Just do eat")
+  resto8.set_description('fr', "Burger, tacos, sandwiches & couscous à emporter sur reservation.")
+  resto8.set_description('en', "Burger, tacos, sandwiches & couscous to take away on reservation.")
 
 #     # --------------------------------------------------------
 
-#     gaz1 = Activity.create(name:"Station service Auchan Monnaie",
-#                               description: "",
-#                               phone: "",
-#                               url: "",
-#                               address: "la croix poëlon, 37380 Monnaie, France",
-#                               price: " ~ ",
-#                               distance: "4km",
-#                               tag_list: "Station service"
-#                             )
+    gaz1 = Activity.create(phone: "",
+                              url: "",
+                              address: "la croix poëlon, 37380 Monnaie, France",
+                              price: " ~ ",
+                              distance: "4km",
+                              tag_list: "Station service"
+                            )
 
-#     gaz1.image.attach(io: File.open(Rails.root.join("app/assets/images/auchan.jpg")),
-#     filename: "auchan.jpg")
+    gaz1.image.attach(io: File.open(Rails.root.join("app/assets/images/auchan.jpg")),
+    filename: "auchan.jpg")
 
-#     gaz2 = Activity.create(name:"Total access Villedomer",
-#                               description: "",
-#                               phone: "",
-#                               url: "",
-#                               address: "37276 Villedomer, France",
-#                               price: " ~ ",
-#                               distance: "6km",
-#                               tag_list: "Station service"
-#                             )
+  gaz1.set_name('fr', "Station service Auchan Monnaie")
+  gaz1.set_name('en', "Gaz Station Auchan Monnaie")
+  gaz1.set_description('fr', "")
+  gaz1.set_description('en', "")
 
-#     gaz2.image.attach(io: File.open(Rails.root.join("app/assets/images/total.jpg")),
-#     filename: "total.jpg")
+    gaz2 = Activity.create(phone: "",
+                              url: "",
+                              address: "37276 Villedomer, France",
+                              price: " ~ ",
+                              distance: "6km",
+                              tag_list: "Station service"
+                            )
+
+  gaz2.set_name('fr', "TOTAL Station service Villedomer")
+  gaz2.set_name('en', "TOTAL Gaz Station Villedomer")
+  gaz2.set_description('fr', "")
+  gaz2.set_description('en', "")
+    gaz2.image.attach(io: File.open(Rails.root.join("app/assets/images/total.jpg")),
+    filename: "total.jpg")
 
 
 #        # --------------------------------------------------------
 
 
-#     commerce1 = Activity.create(name:"Auchan Monnaie",
-#                               description: "",
-#                               phone: "",
-#                               url: "",
-#                               address: "la croix poëlon, 37380 Monnaie, France",
-#                               price: " ~ ",
-#                               distance: "4km",
-#                               tag_list: "Commerce"
-#                             )
+    commerce1 = Activity.create(phone: "",
+                              url: "",
+                              address: "la croix poëlon, 37380 Monnaie, France",
+                              price: " ~ ",
+                              distance: "4km",
+                              tag_list: "Commerce"
+                            )
 
-#     commerce1.image.attach(io: File.open(Rails.root.join("app/assets/images/monnaie.jpg")),
-#     filename: "monnaie.jpg")
+    commerce1.image.attach(io: File.open(Rails.root.join("app/assets/images/monnaie.jpg")),
+    filename: "monnaie.jpg")
+
+  commerce1.set_name('fr', "Auchan Monnaie")
+  commerce1.set_name('en', " Auchan Monnaie")
+  commerce1.set_description('fr', "Supermarché")
+  commerce1.set_description('en', "Supermarket")
+
+    commerce2 = Activity.create(phone: "02 47 56 87 18",
+                              url: "",
+                              address: "Rue du petit Versailles, 37110 Château-Renault, France",
+                              price: " ~ ",
+                              distance: "8km",
+                              tag_list: "Commerce"
+                            )
+
+    commerce2.image.attach(io: File.open(Rails.root.join("app/assets/images/inter.jpg")),
+    filename: "inter.jpg")
+
+  commerce2.set_name('fr', "Intermarché Château-Renault")
+  commerce2.set_name('en', " Intermarché Château-Renault")
+  commerce2.set_description('fr', "Supermarché")
+  commerce2.set_description('en', "Supermarket")
 
 
-#     commerce2 = Activity.create(name:"Intermarché Château-Renault",
-#                               description: "",
-#                               phone: "02 47 56 87 18",
-#                               url: "",
-#                               address: "Rue du petit Versailles, 37110 Château-Renault, France",
-#                               price: " ~ ",
-#                               distance: "8km",
-#                               tag_list: "Commerce"
-#                             )
+    commerce3 = Activity.create(phone: "02 47 56 10 36",
+                              url: "",
+                              address: "3 Place Jean-Baptiste Moreau, 37380 Monnaie, France",
+                              price: " ~ ",
+                              distance: "4km",
+                              tag_list: "Commerce"
+                            )
+  commerce3.set_name('fr', "Pharmacie Piron")
+  commerce3.set_name('en', "Pharmacie Piron")
+  commerce3.set_description('fr', "")
+  commerce3.set_description('en', "Drugstore")
 
-#     commerce2.image.attach(io: File.open(Rails.root.join("app/assets/images/inter.jpg")),
-#     filename: "inter.jpg")
 
-#     commerce3 = Activity.create(name:"Pharmacie Piron",
-#                               description: "",
-#                               phone: "02 47 56 10 36",
-#                               url: "",
-#                               address: "3 Place Jean-Baptiste Moreau, 37380 Monnaie, France",
-#                               price: " ~ ",
-#                               distance: "4km",
-#                               tag_list: "Commerce"
-#                             )
+    commerce3.image.attach(io: File.open(Rails.root.join("app/assets/images/pharmacie.jpg")),
+    filename: "pharmacie.jpg")
 
-#     commerce3.image.attach(io: File.open(Rails.root.join("app/assets/images/pharmacie.jpg")),
-#     filename: "pharmacie.jpg")
 
-#     commerce4 = Activity.create(name:"Au pain Perdu - Boulangerie",
-#                               description: "",
-#                               phone: "02 47 86 43 05",
-#                               url: "",
-#                               address: "80 Rue nationale, 37380 Monnaie, France",
-#                               price: " ~ ",
-#                               distance: "4km",
-#                               tag_list: "Commerce"
-#                             )
+    commerce4 = Activity.create(phone: "02 47 86 43 05",
+                              url: "",
+                              address: "80 Rue nationale, 37380 Monnaie, France",
+                              price: " ~ ",
+                              distance: "4km",
+                              tag_list: "Commerce"
+                            )
 
-#     commerce4.image.attach(io: File.open(Rails.root.join("app/assets/images/pain.jpg")),
-#     filename: "pain.jpg")
+    commerce4.image.attach(io: File.open(Rails.root.join("app/assets/images/pain.jpg")),
+    filename: "pain.jpg")
 
-#     commerce5 = Activity.create(name:"Boudet - Boulangerie",
-#                               description: "",
-#                               phone: "02 47 38 40 51",
-#                               url: "",
-#                               address: "21 Rue nationale, 37380 Monnaie, France",
-#                               price: " ~ ",
-#                               distance: "4km",
-#                               tag_list: "Commerce"
-#                             )
+  commerce4.set_name('fr', "Au pain Perdu - Boulangerie")
+  commerce4.set_name('en', "Au pain Perdu - Bakery")
+  commerce4.set_description('fr', "")
+  commerce4.set_description('en', "")
 
-#     commerce5.image.attach(io: File.open(Rails.root.join("app/assets/images/boudet.jpg")),
-#     filename: "boudet.jpg")
 
-#     commerce6 = Activity.create(name:"Café du centre",
-#                               description: "",
-#                               phone: "02 47 56 11 05",
-#                               url: "",
-#                               address: "1 Place Jean-Baptiste Moreau, 37380 Monnaie, France",
-#                               price: " ~ ",
-#                               distance: "4km",
-#                               tag_list: "Commerce"
-#                             )
+    commerce5 = Activity.create(phone: "02 47 38 40 51",
+                              url: "",
+                              address: "21 Rue nationale, 37380 Monnaie, France",
+                              price: " ~ ",
+                              distance: "4km",
+                              tag_list: "Commerce"
+                            )
+    commerce5.image.attach(io: File.open(Rails.root.join("app/assets/images/boudet.jpg")),
+    filename: "boudet.jpg")
 
-#     commerce6.image.attach(io: File.open(Rails.root.join("app/assets/images/cafe.jpg")),
-#     filename: "cafe.jpg")
+  commerce5.set_name('fr', "Boudet - Boulangerie")
+  commerce5.set_name('en', "Boudet - Bakery")
+  commerce5.set_description('fr', "")
+  commerce5.set_description('en', "")
+
+
+    commerce6 = Activity.create(phone: "02 47 56 11 05",
+                              url: "",
+                              address: "1 Place Jean-Baptiste Moreau, 37380 Monnaie, France",
+                              price: " ~ ",
+                              distance: "4km",
+                              tag_list: "Commerce"
+                            )
+
+    commerce6.image.attach(io: File.open(Rails.root.join("app/assets/images/cafe.jpg")),
+    filename: "cafe.jpg")
+
+  commerce6.set_name('fr', "Café du centre")
+  commerce6.set_name('en', "Café du centre")
+  commerce6.set_description('fr', "")
+  commerce6.set_description('en', "Can also buy cigarette")
+
+
 #    # --------------------------------------------------------
 
-#     puts " #{Activity.count} activities were created"
+    puts " #{Activity.count} activities were created"
