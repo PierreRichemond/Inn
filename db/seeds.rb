@@ -98,9 +98,7 @@ room3 = Room.create(name: "Clos Vallière",
   puts "#{Room.count} rooms were created"
 
 
-    amboise = Activity.create(name: "Château d’Amboise",
-                              description: "Rattaché à la couronne en 1434, ce monument emblématique et ses jardins paysagers offrent un des plus remarquables panoramas sur la vallée de la Loire. Pour visiter le château, plusieurs parcours sont proposés aux visiteurs. Chacun d’entre eux porte un regard singulier son rayonnement politique et artistique européen à la Renaissance, les moments intimes de la vie des souverains, la vie quotidienne et les coulisses de la Cour. En 1516, Léonard de Vinci fut invité par François 1er à Amboise où il finira ses jours trois années plus tard. Pendant trois ans, pour célébrer le 500e anniversaire de sa présence, le château d’Amboise lui consacrera plusieurs événements.",
-                              phone: "02 47 57 00 98",
+    amboise = Activity.create(phone: "02 47 57 00 98",
                               url: "www.chateau-amboise.com",
                               address: "Mnt de l'Emir Abd el Kader, 37400 Amboise, France",
                               price: "13.5",
@@ -111,6 +109,10 @@ room3 = Room.create(name: "Clos Vallière",
     amboise.image.attach(io: File.open(Rails.root.join("app/assets/images/Amboise.jpg")),
     filename: "Amboise.jpg")
 
+  amboise.set_name('fr', "Château d’Amboise")
+  amboise.set_name('en', "Amboise Castle")
+  amboise.set_description('fr', "Rattaché à la couronne en 1434, ce monument emblématique et ses jardins paysagers offrent un des plus remarquables panoramas sur la vallée de la Loire. Pour visiter le château, plusieurs parcours sont proposés aux visiteurs. Chacun d’entre eux porte un regard singulier son rayonnement politique et artistique européen à la Renaissance, les moments intimes de la vie des souverains, la vie quotidienne et les coulisses de la Cour. En 1516, Léonard de Vinci fut invité par François 1er à Amboise où il finira ses jours trois années plus tard. Pendant trois ans, pour célébrer le 500e anniversaire de sa présence, le château d’Amboise lui consacrera plusieurs événements.")
+  amboise.set_description('en', "Attached to the crown in 1434, this emblematic monument and its landscaped gardens offer one of the most remarkable panoramas over the Loire Valley. To visit the castle, several routes are offered to visitors. Each of them takes a unique look at their European political and artistic influence during the Renaissance, the intimate moments in the life of sovereigns, daily life and behind the scenes at the Court. In 1516, Leonardo da Vinci was invited by François 1er to Amboise where he will end his days three years later. For three years, to celebrate the 500th anniversary of its presence, the Château d'Amboise will dedicate several events to it.")
 #     luce = Activity.create(name: "Le Château du Clos Lucé",
 #                               description: "L’épopée de cette demeure de briques roses et de pierres de tuffeau, bâtie sur des fondations gallo-romaines, commence sous le règne de Louis XI, en 1471. Offert par le Roi à son favori Étienne le Loup, un ancien marmiton anobli, le château du Cloux à Amboise était entouré de fortifications. Le lieu est acheté par Charles VIII et devient alors la résidence de plaisance des rois de France. Le Roi transforme la forteresse médiévale en château d’agrément et fait construire un oratoire, pur joyau de l’architecture gothique, pour son épouse la reine Anne de Bretagne. Le jeune duc d’Angoulême, futur François Ier, y séjourne régulièrement. Devenu ensuite Clos-Lucé, il fut le lieu de résidence de Léonard de Vinci au cours des trois dernières années de sa vie.",
 #                               phone: "02 47 57 00 73",
