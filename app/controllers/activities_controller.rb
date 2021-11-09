@@ -1,5 +1,12 @@
 class ActivitiesController < ApplicationController
   def index
+    @tag =
+    if params[:locale] == 'en'
+    Activity::TAGS.values_at(* Activity::TAGS.each_index.select {|i| i.odd?})
+    else
+    Activity::TAGS.values_at(* Activity::TAGS.each_index.select {|i| i.even?})
+    end
+
     @activities =
     if params[:tag].present?
       Activity.tagged_with(params[:tag])
@@ -21,9 +28,11 @@ class ActivitiesController < ApplicationController
   def show
   end
 
+
   private
 
   def activity_params
     params.require(:activity).permit(:name, :locale, tag_list: [])
   end
+
 end

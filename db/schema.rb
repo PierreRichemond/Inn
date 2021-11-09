@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_08_031341) do
+ActiveRecord::Schema.define(version: 2021_11_08_050443) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,17 +44,24 @@ ActiveRecord::Schema.define(version: 2021_11_08_031341) do
   end
 
   create_table "activities", force: :cascade do |t|
-    t.string "name"
     t.string "address"
     t.float "longitude"
     t.float "latitude"
     t.string "price"
-    t.text "description"
     t.string "url"
     t.string "phone"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "distance"
+  end
+
+  create_table "activities_translations", force: :cascade do |t|
+    t.integer "activity_id"
+    t.string "locale"
+    t.string "field_name"
+    t.string "text"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "rooms", force: :cascade do |t|
@@ -71,6 +78,16 @@ ActiveRecord::Schema.define(version: 2021_11_08_031341) do
     t.string "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tag_translations", force: :cascade do |t|
+    t.integer "tag_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.index ["locale"], name: "index_tag_translations_on_locale"
+    t.index ["tag_id"], name: "index_tag_translations_on_tag_id"
   end
 
   create_table "taggings", id: :serial, force: :cascade do |t|
