@@ -307,12 +307,12 @@ Activity.delete_all
                                 url: "www.grandaquariumdetouraine.com",
                                 address: "37400 Lussault-Sur-Loire, France",
                                 price: "28",
-                                distance: "27km",
-                                tag_list: "Loisir, Leasure"
+                                distance: "27km"
                               )
 
       aquarium.image.attach(io: File.open(Rails.root.join("app/assets/images/Aquarium.jpg")),
       filename: "Aquarium.jpg")
+      aquarium.tag_list.add("Loisir", "Leasure")
 
   aquarium.set_name('fr', "Grand aquarium de Touraine")
   aquarium.set_name('en', "Great aquarium of Touraine")

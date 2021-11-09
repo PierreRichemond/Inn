@@ -9,8 +9,7 @@ class ActivitiesController < ApplicationController
 
     @activities =
     if params[:tag].present?
-      Activity.all.select {|activity| activity.tag_list.include?(params[:tag])}
-      # Activity.tagged_with(params[:tag])
+      Activity.tagged_with(params[:tag])
     else
       Activity.all
     end

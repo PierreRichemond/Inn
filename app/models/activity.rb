@@ -25,4 +25,3 @@ class Activity < ApplicationRecord
 
      TAGS = ["Culture", "Culture", "Restauration", "Catering", "Commerce", "Business", "Loisir", "Leasure", "Vignobles", "Vineyards", "Traiteur", "Caterer", "Station service", "Gaz station"]
 end
-exit
