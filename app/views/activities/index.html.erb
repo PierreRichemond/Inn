@@ -5,9 +5,10 @@
 </div>
 <div>
   <div class= "text-center m-5" >
-    <% Activity::TAGS.each do |tag| %>
+    <% @tag.each do |tag| %>
       <%= link_to tag, activities_path(tag: tag), class: "btn-lg btn-success tag-btn button" %>
     <% end %>
+    <% break %>
   </div>
   <div class="activity-container my-3">
     <div class="row">

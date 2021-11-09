@@ -17,7 +17,7 @@
         <p id= 'modal-description'><%= activity.description(locale) %></p>
         <div class="d-flex justify-content-between">
           <% if activity.distance != '' %>
-            <p>A <%= activity.distance %> du gîte.</p>
+            <p><%= activity.distance %> <%= t('distance') %>.</p>
           <% end %>
           <% if activity.price != '' %>
             <p>Prix:<%= activity.price %>€.</p>

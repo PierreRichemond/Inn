@@ -1,4 +1,12 @@
 fr:
+    culture: "Culture"
+    catering: "Restauration"
+    business: "Commerces"
+    leasure: "Loisir"
+    vineyards: "Vignobles"
+    caterer: "traiteur"
+    gaz: "Station services"
+    distance: "du gîte"
     table-header: "Tarif"
     table-subheader: "(en euro par nuit)"
     sept-oct2021: "30 Aôut - 14 Novembre"

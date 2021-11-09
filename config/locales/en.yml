@@ -1,4 +1,12 @@
 en:
+    culture: "Culture"
+    catering: "Catering"
+    business: "Business"
+    leasure: "Leasure"
+    vineyards: "Vineyards"
+    caterer: "Caterers"
+    gaz: "Gaz stations"
+    distance: "from the inn"
     table-header: 'Rate'
     table-subheader: '(in euro per night)'
     sept-oct2021: "August 30th - November 14th"
