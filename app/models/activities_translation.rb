@@ -1,3 +1,3 @@
 class ActivitiesTranslation < ApplicationRecord
-  has_many :activities
+  belongs_to :activities
 end
