@@ -1,5 +1,11 @@
 <div class="my-3">
-  <%= month_calendar(attribute: :start_date, end_attribute: :end_date) do |date| %>
-    <%= date.day %>
+  <%= month_calendar(events: @bookings, attribute: :start_date, end_attribute: :end_date) do |date, bookings| %>
+    <div >
+      <%= date %>
+      <% bookings.each do |booking| %>
+        <div>
+        </div>
+      <% end %>
+    </div>
   <% end %>
 </div>

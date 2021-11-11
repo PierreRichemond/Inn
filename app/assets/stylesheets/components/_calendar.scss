@@ -25,3 +25,27 @@ th{
 .simple-calendar .day {
   height: 50px;
 }
+
+// app/assets/stylesheets/components/_calendar.scss
+.simple-calendar {
+  table {
+    min-height: 40vh;
+  }
+  .today {
+    background-color: #FAF3DD;
+  }
+   .past {
+     background-color: grey;
+   }
+
+   .future {
+     background-color: rgb(224, 250, 224);;
+   }
+   .has-events {
+     background-color: pink;
+   }
+}
+
+.booking {
+  margin-bottom: 0;
+}
