@@ -1,6 +1,6 @@
 class ActivitiesController < ApplicationController
   def index
-    @tag =
+    @tags =
     if params[:locale] == 'en'
     Activity::TAGS.values_at(* Activity::TAGS.each_index.select {|i| i.odd?})
     else

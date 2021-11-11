@@ -1,5 +1,5 @@
 class Booking < ApplicationRecord
   belongs_to :room
-  validates :start_day, presence: true
-  validates :end_day, presence: true
+  validates :start_date, presence: true
+  validates :end_date, presence: true
 end
