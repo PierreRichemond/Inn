@@ -10,6 +10,7 @@ import "channels"
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 import { initMapbox } from '../plugins/init_mapbox';
+import { initFlatpickr } from "../plugins/flatpickr";
 
 Rails.start()
 Turbolinks.start()
@@ -29,6 +30,7 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
+  initFlatpickr();
   initMapbox();
   $('.owl-carousel').owlCarousel({
     loop: true,

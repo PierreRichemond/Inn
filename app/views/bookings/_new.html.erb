@@ -1,0 +1,17 @@
+<script type="text/javascript">
+  function showForm() {
+      const form = document.getElementById('formElement')
+      form.classList.toggle("d-block")
+  }
+</script>
+<button class="btn btn-link"  style="padding-bottom: 20px" onclick="showForm()">
+  <h4 class = "text-center"><strong>Create an booking</strong></h4>
+</button>
+<div id="formElement" style="display: none;">
+  <%= simple_form_for [room, booking] do |f| %>
+    <%= f.input :start_date,:label => "Start date", as: :string, required: true, input_html: { id: "range_start" }%>
+    <%= f.input :end_date,:label => "End date", as: :string, required: true, input_html: { id: "range_end" }%>
+    <%= f.hidden_field :room_id, :value => room.id %>
+    <%= f.submit 'Submit the dates', class: 'btn btn-primary w-100', style: "border-radius: 20px; font-size: 24px;" %>
+  <% end %>
+</div>

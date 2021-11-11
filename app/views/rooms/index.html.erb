@@ -19,6 +19,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-5" id="calendars-<%= room.name %>">
               <%= render partial: "calendar" %>
+              <%= render partial: "bookings/new", locals: {room: room, booking: @booking} %>
             </div>
           </div>
         </div>
