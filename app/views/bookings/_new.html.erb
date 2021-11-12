@@ -5,11 +5,9 @@
   }
 </script>
 <div class="d-flex justify-content-around align-self-center">
-  <div  class= ''>
-    <button class="btn btn-link align-self-center"  style="padding-bottom: 20px" onclick="showForm()">
-      <h4 class = "text-center"><strong>Create an booking</strong></h4>
-    </button>
-  </div>
+  <button class="btn btn-link align-self-center"  style="padding-bottom: 20px" onclick="showForm()">
+    <h4 class = "text-center"><strong>Create an booking</strong></h4>
+  </button>
   <div id="formElement" style="display: none;", class= "justify-content-around ">
     <%= simple_form_for [room, booking], wrapper: :inline_form, html: { class: 'form-inline' } do |f| %>
       <div class="d-flex justify-content-around mt-0">
