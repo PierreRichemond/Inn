@@ -11,14 +11,14 @@
             <p><span style="font-size:30px;"><%= t(".floor1") %>:</span> <%= room.details(locale) %></p>
             <p><span style="font-size:30px;"><%= t(".floor2") %>:</span> <%= room.detailz(locale) %></p>
           </div>
-          <div class="row">
+          <div class="row ">
             <div class="col-12 col-md-6 col-lg-7  owl-carousel owl-theme">
-              <%= room.images.each do |image| %>
-                <div><%= cl_image_tag image.key %></div>
+              <% room.images.each do |image| %>
+                <div><%= cl_image_tag image.key%></div>
               <% end %>
             </div>
-            <div class="col-12 col-md-6 col-lg-5" id="calendar">
-              <%= render partial: "calendar", locals: {bookings: room.bookings}%>
+            <div class="col-12 col-md-6 col-lg-5" id="calendars-<%= room.name %>">
+              <%= render partial: "calendar", locals: {bookings: room.bookings} %>
             </div>
           </div>
         </div>
