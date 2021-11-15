@@ -5,23 +5,23 @@ class Activity < ApplicationRecord
   acts_as_taggable_on :tags
   has_many :activities_translations
 
-    def name(locale)
-      activities_translations.find_by(locale: locale, field_name: 'name').text
-    end
+  def name(locale)
+    activities_translations.find_by(locale: locale, field_name: 'name').text
+  end
 
-    def set_name(locale, name)
-      name_translation = activities_translations.find_or_initialize_by(locale: locale, field_name: 'name')
-      name_translation.update(text: name)
-    end
+  def set_name(locale, name)
+    name_translation = activities_translations.find_or_initialize_by(locale: locale, field_name: 'name')
+    name_translation.update(text: name)
+  end
 
-    def description(locale)
-      activities_translations.find_by(locale: locale, field_name: 'description').text
-    end
+  def description(locale)
+    activities_translations.find_by(locale: locale, field_name: 'description').text
+  end
 
-    def set_description(locale, title)
-      title_translation = activities_translations.find_or_initialize_by(locale: locale, field_name: 'description')
-      title_translation.update(text: title)
-    end
+  def set_description(locale, description)
+    description_translation = activities_translations.find_or_initialize_by(locale: locale, field_name: 'description')
+    description_translation.update(text: description)
+  end
 
-     TAGS = ["Culture", "Culture", "Restauration", "Catering", "Commerce", "Business", "Loisir", "Leasure", "Vignobles", "Vineyards", "Traiteur", "Caterer", "Station service", "Gaz station"]
+  TAGS = ["Culture", "Culture", "Restauration", "Catering", "Commerce", "Business", "Loisir", "Leasure", "Vignobles", "Vineyards", "Traiteur", "Caterer", "Station service", "Gaz station"]
 end

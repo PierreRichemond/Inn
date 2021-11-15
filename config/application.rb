@@ -16,7 +16,6 @@ module Inn
       generate.test_framework :test_unit, fixture: false
     end
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.1
 
     # Configuration for the application, engines, and railties goes here.
     #
@@ -29,6 +28,6 @@ module Inn
     config.i18n.available_locales = [:fr, :en]
     config.i18n.default_locale = :fr
     config.i18n.fallbacks = true
-    config.autoloader = :classic
+
   end
 end

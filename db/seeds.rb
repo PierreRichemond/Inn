@@ -28,6 +28,22 @@ room1.images.attach(io: File.open(Rails.root.join("app/assets/images/leclosvalie
                  - Corridor with separate shower room and wc.")
 
 
+
+  # aquarium = Activity.create(phone: "02 47 23 44 57",
+  #                               url: "www.grandaquariumdetouraine.com",
+  #                               address: "37400 Lussault-Sur-Loire, France",
+  #                               price: "28",
+  #                               distance: "27km",
+  #                               tag_list: "Loisir")
+
+  #     aquarium.image.attach(io: File.open(Rails.root.join("app/assets/images/Aquarium.jpg")),
+  #     filename: "Aquarium.jpg")
+
+  # aquarium.set_name('fr', "Grand aquarium de Touraine")
+  # aquarium.set_name('en', "Great aquarium of Touraine")
+  # aquarium.set_description('fr', "Des torrents des montagnes françaises aux mers lointaines, le Grand Aquarium de Touraine est le plus grand aquarium d’eau douce d’Europe. Découvrez tous ces écosystèmes à travers 63 aquariums et ses 2 millions de litres d’eau!")
+  # aquarium.set_description('en', "From the torrents of the French mountains to distant seas, the Grand Aquarium de Touraine is the largest freshwater aquarium in Europe. Discover all these ecosystems through 63 aquariums and its 2 million liters of water!")
+
 # # room2 = Room.create(name: "Gîte Rabelais",
 # #                   price: 230)
 # # room2.images.attach(io: File.open(Rails.root.join("app/assets/images/favicon1.png")),
@@ -307,17 +323,18 @@ room1.images.attach(io: File.open(Rails.root.join("app/assets/images/leclosvalie
                                 url: "www.grandaquariumdetouraine.com",
                                 address: "37400 Lussault-Sur-Loire, France",
                                 price: "28",
-                                distance: "27km"
+                                distance: "27km",
+                                tag_list: "Loisir"
                               )
 
       aquarium.image.attach(io: File.open(Rails.root.join("app/assets/images/Aquarium.jpg")),
       filename: "Aquarium.jpg")
-      aquarium.tag_list.add("Loisir", "Leasure")
 
   aquarium.set_name('fr', "Grand aquarium de Touraine")
   aquarium.set_name('en', "Great aquarium of Touraine")
   aquarium.set_description('fr', "Des torrents des montagnes françaises aux mers lointaines, le Grand Aquarium de Touraine est le plus grand aquarium d’eau douce d’Europe. Découvrez tous ces écosystèmes à travers 63 aquariums et ses 2 millions de litres d’eau!")
   aquarium.set_description('en', "From the torrents of the French mountains to distant seas, the Grand Aquarium de Touraine is the largest freshwater aquarium in Europe. Discover all these ecosystems through 63 aquariums and its 2 million liters of water!")
+
 
   #       zoo = Activity.create(  phone: "02 54 75 50 00",
   #                               url: "www.zoobeauval.com",
