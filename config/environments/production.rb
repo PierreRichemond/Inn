@@ -2,16 +2,20 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
 
-# Defaults to:
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: "https://le-clos-valliere.herokuapp.com/" }
-# config.action_mailer.sendmail_settings = {
-#   location: '/usr/sbin/sendmail',
-#   arguments: '-i'
-# }
-config.action_mailer.perform_deliveries = true
-config.action_mailer.raise_delivery_errors = true
 
+config.action_mailer.default_url_options = { :host => 'https://le-clos-valliere.herokuapp.com/' }
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.perform_deliveries = true
+config.action_mailer.raise_delivery_errors = false
+config.action_mailer.default :charset => "utf-8"
+config.action_mailer.smtp_settings = {
+  address:              'smtp.gmail.com',
+  port:                 587,
+  domain:               'new_app_name.herokuapp.com',
+  user_name:            ENV["EMAIL"],
+  password:             ENV["PASSWORD"],
+  authentication:       'plain',
+  enable_starttls_auto: true  }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
