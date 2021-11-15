@@ -37,7 +37,8 @@ gem 'cloudinary', '~> 1.16.0'
 gem "simple_calendar", "~> 2.4"
 gem 'mail_form'
 gem 'mail'
-
+gem 'devise'
+gem 'money-rails'
 
 group :development, :test do
   gem 'pry-byebug'

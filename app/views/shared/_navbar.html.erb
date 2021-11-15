@@ -22,6 +22,19 @@
           <p class="pb-0 mb-0"><%= t("nav_contact") %></p>
         <% end %>
       </li>
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to destroy_user_session_path, method: :delete, class: "pb-0 mb-0" do%>
+            <p><%= "Log out" %></p>
+          <% end %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to new_user_session_path, class: "pb-0 mb-0" do %>
+            <p><%= "login" %></p>
+          <% end %>
+        </li>
+      <% end %>
       <%= link_to url_for(locale: :fr), class: "lang-icon nav-item" do %>
         🇫🇷
       <% end %>
