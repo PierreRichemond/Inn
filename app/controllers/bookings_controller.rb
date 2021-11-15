@@ -6,12 +6,13 @@ class BookingsController < ApplicationController
     already_booked = availibilities
 
     if already_booked == true
-      flash.now[:error] = "Your dates don't match availibilities. Please check the again and resubmit."
       redirect_to rooms_path
+      flash[:danger] = "Your dates don't match availibilities. Please check the again and resubmit."
     else
       @booking.save!
-      flash[:success] = "Thank you for your booking! We'll get contact you soon!"
       redirect_to root_path
+      flash[:success] = "Thank you for your booking! We will contact you soon!"
+      MessageMailer.with( booking: @booking).booked_email.deliver_now
     end
   end
 

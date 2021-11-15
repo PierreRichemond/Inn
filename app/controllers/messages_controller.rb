@@ -8,12 +8,11 @@ class MessagesController < ApplicationController
 
     if @message.save
       MessageMailer.with(message: @message).new_email.deliver_now
-
-      flash[:success] = "Thank you for your message! We'll get contact you soon!"
       redirect_to root_path
+      flash[:success] = "Thank you for your message! We'll get contact you soon!"
     else
-      flash.now[:error] = "Your order message had some errors. Please check the message and resubmit."
       render :new
+      flash[:danger] = "Your order message had some errors. Please check the message and resubmit."
     end
   end
 

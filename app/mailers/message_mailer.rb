@@ -6,8 +6,8 @@ class MessageMailer < ApplicationMailer
   end
 
   def booked_email
-    @message = params[:message]
+    @booking = params[:booking]
 
-    mail(to: ENV["EMAIL"], subject: "You got a new message!")
+    mail(to: ENV["EMAIL"], subject: "You got a new booking!")
   end
 end
