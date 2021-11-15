@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resources :activities, only: [:index, :show]
     get '/tagged', to: "activities#tagged", as: :tagged
     resources :messages
+    devise_for :users
   end
 end

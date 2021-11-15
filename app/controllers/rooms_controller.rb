@@ -1,4 +1,5 @@
 class RoomsController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
   def index
     @rooms = Room.all
     @booking = Booking.new
@@ -11,6 +12,13 @@ class RoomsController < ApplicationController
 
     # Or, for a weekly view:
     @bookings = Booking.where(start_date: start_date.beginning_of_week..start_date.end_of_week)
+
+    # respond_to do |format|
+    #   format.html
+    #   format.json do
+    #     render json: { name: room.name }
+    #   end
+    # end
 
   end
 

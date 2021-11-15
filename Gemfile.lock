@@ -67,6 +67,7 @@ GEM
     autoprefixer-rails (10.2.5.0)
       execjs (< 2.8.0)
     aws_cf_signer (0.1.3)
+    bcrypt (3.1.16)
     bindex (0.8.1)
     bootsnap (1.9.1)
       msgpack (~> 1.0)
@@ -87,6 +88,12 @@ GEM
     coderay (1.1.3)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
+    devise (4.8.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.7.6)
@@ -130,6 +137,15 @@ GEM
     mime-types-data (3.2021.0901)
     mini_mime (1.1.1)
     minitest (5.14.4)
+    monetize (1.11.0)
+      money (~> 6.12)
+    money (6.16.0)
+      i18n (>= 0.6.4, <= 2)
+    money-rails (1.15.0)
+      activesupport (>= 3.0)
+      monetize (~> 1.9)
+      money (~> 6.13)
+      railties (>= 3.0)
     msgpack (1.4.2)
     netrc (0.11.0)
     nio4r (2.5.8)
@@ -137,6 +153,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
+    orm_adapter (0.5.0)
     pg (1.2.3)
     pry (0.13.1)
       coderay (~> 1.1)
@@ -190,6 +207,9 @@ GEM
     regexp_parser (2.1.1)
     request_store (1.5.0)
       rack (>= 1.4)
+    responders (3.0.1)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     rest-client (2.1.0)
       http-accept (>= 1.7.0, < 2.0)
       http-cookie (>= 1.0.2, < 2.0)
@@ -233,6 +253,8 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     web-console (4.1.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -266,6 +288,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   cloudinary (~> 1.16.0)
+  devise
   dotenv-rails
   font-awesome-sass
   geocoder
@@ -274,6 +297,7 @@ DEPENDENCIES
   listen (~> 3.3)
   mail
   mail_form
+  money-rails
   pg (~> 1.1)
   pry-byebug
   pry-rails

@@ -2,6 +2,7 @@ class Room < ApplicationRecord
   has_many_attached :images
   has_many :rooms_translations
   has_many :bookings
+  monetize :price_cents
 
   def ppl(arg)
     rooms_translations.find_by(locale: arg.to_s, field_name: 'ppl').text
