@@ -5,7 +5,7 @@ Activity.delete_all
   puts "activities destroyed"
 
 room1 = Room.create(name: "Gîte Ronsard",
-                  price: 21000)
+                  price: 210)
 room1.images.attach(io: File.open(Rails.root.join("app/assets/images/favicon1.png")),
     filename: "favicon1.png")
 room1.images.attach(io: File.open(Rails.root.join("app/assets/images/gite_de_qualite.png")),

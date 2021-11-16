@@ -40,6 +40,7 @@ gem 'mail'
 gem 'devise'
 gem 'money-rails'
 gem 'stripe'
+gem 'stripe_event'
 
 group :development, :test do
   gem 'pry-byebug'

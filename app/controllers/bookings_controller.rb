@@ -18,28 +18,37 @@ class BookingsController < ApplicationController
 
   def create
     room = Room.find(params[:room_id])
-    booking  = Booking.create!(room: room, room_name: room.name, amount: room.price, state: 'pending', user: current_user)
+    @booking = Booking.new(room: room, room_name: room.name, amount: room.price, state: 'pending', user: current_user, start_date: params[:start_date][0..9], end_date: params[:end_date].to_date - 1)
+    @length_of_stay = (@booking.end_date - @booking.start_date).to_i + 1
 
+    already_booked = availibilities
+    if already_booked == true
+      redirect_to rooms_path
+      flash[:danger] = "Your dates don't match availibilities. Please check the again and resubmit."
+    else
+
+      @booking.save
     session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
       line_items: [{
         name: room.name,
         amount: room.price_cents,
         currency: 'eur',
-        quantity: 1
+        quantity: @length_of_stay
       }],
-      success_url: booking_url(booking),
-      cancel_url: booking_url(booking)
+      success_url: booking_url(@booking),
+      cancel_url: booking_url(@booking)
     )
+    @booking.update(checkout_session_id: session.id)
+    redirect_to new_booking_payment_path(@booking)
 
-    booking.update(checkout_session_id: session.id)
-    redirect_to new_booking_payment_path(booking)
+    end
   end
 
   def show
     @booking = current_user.bookings.find(params[:id])
+    @length_of_stay = (@booking.end_date - @booking.start_date).to_i + 1
   end
-
 
   private
 
