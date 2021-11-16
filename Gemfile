@@ -39,6 +39,7 @@ gem 'mail_form'
 gem 'mail'
 gem 'devise'
 gem 'money-rails'
+gem 'stripe'
 
 group :development, :test do
   gem 'pry-byebug'

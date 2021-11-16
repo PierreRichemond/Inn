@@ -9,7 +9,7 @@
     <h4 class = "text-center"><strong>Create an booking</strong></h4>
   </button>
   <div id="formElement" style="display: none;", class= "justify-content-around ">
-    <%= simple_form_for [room, booking], wrapper: :inline_form, html: { class: 'form-inline' } do |f| %>
+    <%= simple_form_for bookings_path, wrapper: :inline_form, html: { class: 'form-inline' } do |f| %>
       <div class="d-flex justify-content-around mt-0">
         <%= f.input :start_date, :placeholder => "Start date", as: :string, required: true, input_html: { id: "range_start" }, class: 'mr-1'%>
         <%= f.input :end_date, :placeholder => "End date", as: :string, required: true, input_html: { id: "range_end" }, class: 'mr-1'%>
@@ -19,3 +19,7 @@
     <% end %>
   </div>
 </div>
+<%= form_tag bookings_path do %>
+  <%= hidden_field_tag 'room_id', room.id %>
+  <%= submit_tag 'Book now', class: 'btn btn-primary' %>
+<% end %>

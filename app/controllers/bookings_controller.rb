@@ -1,25 +1,50 @@
 class BookingsController < ApplicationController
 
+  # def create
+  #   @booking = Booking.new(start_date: booking_params[:start_date][0..9], end_date: booking_params[:end_date].to_date - 1, room_id: booking_params[:room_id])
+
+  #   already_booked = availibilities
+
+  #   if already_booked == true
+  #     redirect_to rooms_path
+  #     flash[:danger] = "Your dates don't match availibilities. Please check the again and resubmit."
+  #   else
+  #     @booking.save!
+  #     redirect_to root_path
+  #     flash[:success] = "Thank you for your booking! We will contact you soon!"
+  #     MessageMailer.with( booking: @booking).booked_email.deliver_now
+  #   end
+  # end
+
   def create
-    @booking = Booking.new(start_date: booking_params[:start_date][0..9], end_date: booking_params[:end_date].to_date - 1, room_id: booking_params[:room_id])
+    room = Room.find(params[:room_id])
+    booking  = Booking.create!(room: room, room_name: room.name, amount: room.price, state: 'pending', user: current_user)
 
-    already_booked = availibilities
+    session = Stripe::Checkout::Session.create(
+      payment_method_types: ['card'],
+      line_items: [{
+        name: room.name,
+        amount: room.price_cents,
+        currency: 'eur',
+        quantity: 1
+      }],
+      success_url: booking_url(booking),
+      cancel_url: booking_url(booking)
+    )
 
-    if already_booked == true
-      redirect_to rooms_path
-      flash[:danger] = "Your dates don't match availibilities. Please check the again and resubmit."
-    else
-      @booking.save!
-      redirect_to root_path
-      flash[:success] = "Thank you for your booking! We will contact you soon!"
-      MessageMailer.with( booking: @booking).booked_email.deliver_now
-    end
+    booking.update(checkout_session_id: session.id)
+    redirect_to new_booking_payment_path(booking)
   end
+
+  def show
+    @booking = current_user.bookings.find(params[:id])
+  end
+
 
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :room_id)
+    params.require(:booking).permit(:start_date, :end_date, :room_id, :user_id)
   end
 
   def availibilities
