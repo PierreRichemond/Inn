@@ -1,0 +1,27 @@
+<!-- app/views/bookings/show.html.erb -->
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-6  owl-carousel owl-theme">
+      <% @booking.room.images.each do |image| %>
+        <div><%= cl_image_tag image.key%></div>
+      <% end %>
+    </div>
+    <div class="col-12 col-lg-6">
+      <h1>booking #<%= @booking.id %> <small><span class="badge badge-primary"><%= @booking.state %></span></small></h1>
+      <h3><strong>ISSUED ON</strong> <%= @booking.created_at.to_date %></h3>
+      <p> <strong>Room :</strong> <%= @booking.room.name %></p>
+      <p><strong>From</strong> <%= @booking.start_date %></p>
+      <p><strong>Until</strong> <%= @booking.end_date + 1 %></p>
+      <p> <strong>number of nights:</strong> <%= (@booking.end_date - @booking.start_date).to_i + 1 %></p>
+      <p> <strong>Price per night</strong> <%= humanized_money_with_symbol @booking.amount %></p>
+      <h4> <strong>TOTAL</strong> €<%= @booking.amount * @length_of_stay %></h4>
+      <p>Estimated reply in <strong>2 business days</strong></p>
+    </div>
+  </div>
+  <%= link_to "/rooms" do %>
+    <p class="pb-0 mb-0"><%= t("nav_room") %></p>
+  <% end %>
+  <%= link_to "/" do %>
+    <p class="pb-0 mb-0"><%= t("nav_home") %></p>
+  <% end %>
+</div>

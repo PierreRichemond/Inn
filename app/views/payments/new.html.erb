@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-6  owl-carousel owl-theme">
+      <% @booking.room.images.each do |image| %>
+        <div><%= cl_image_tag image.key%></div>
+      <% end %>
+    </div>
+    <div>
+      <h3><strong>ISSUED ON</strong> <%= @booking.created_at.to_date %></h3>
+      <p> <strong>Room :</strong> <%= @booking.room.name %> [<%= @booking.room_name %>]</p>
+      <p><strong>From</strong> <%= @booking.start_date %></p>
+      <p><strong>Until</strong> <%= @booking.end_date + 1 %></p>
+      <p> <strong>number of nights:</strong> <%= (@booking.end_date - @booking.start_date).to_i + 1 %></p>
+      <p> <strong>Price per night</strong> <%= humanized_money_with_symbol @booking.amount %></p>
+      <h4> <strong>TOTAL</strong> €<%= @booking.amount * @length_of_stay %></h4>
+      <button id="pay" class="btn btn-primary">Pay</button>
+      <script src="https://js.stripe.com/v3/"></script>
+      <script>
+        const paymentButton = document.getElementById('pay');
+        paymentButton.addEventListener('click', () => {
+          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+          stripe.redirectToCheckout({
+            sessionId: '<%= @booking.checkout_session_id %>'
+          });
+        });
+      </script>
+    </div>
+  </div>
+</div>

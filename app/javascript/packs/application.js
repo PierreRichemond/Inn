@@ -12,6 +12,7 @@ import 'owl.carousel';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initFlatpickr } from "../plugins/flatpickr";
 
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
@@ -24,6 +25,7 @@ ActiveStorage.start()
 
 // External imports
 import "bootstrap";
+
 
 
 // Internal imports, e.g:
@@ -46,8 +48,8 @@ document.addEventListener('turbolinks:load', () => {
   });
 
   // function getUrl(event) {
-  //   console.log(event)
-  //   const url = event.target.href
+    //   console.log(event)
+    //   const url = event.target.href
   //   console.log(url)
   //   fetch(url, {
   //     method: 'GET',

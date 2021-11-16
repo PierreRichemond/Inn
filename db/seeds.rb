@@ -1,3 +1,4 @@
+Booking.delete_all
 Room.delete_all
   puts "Rooms destroyed"
 Activity.delete_all
