@@ -5,6 +5,7 @@
 </div>
 <div>
   <div class= "text-center m-5" >
+    <p class='text-center'>Tags only work in french for now, sorry.</p>
     <% @tags.each do |tag| %>
       <%= link_to tag, activities_path(tag: tag), class: "btn-lg btn-success tag-btn button" %>
     <% end %>
