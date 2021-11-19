@@ -9,6 +9,6 @@ Rails.application.routes.draw do
     get '/tagged', to: "activities#tagged", as: :tagged
     resources :messages
     devise_for :users
-    mount StripeEvent::Engine, at: '/webhook'
+    mount StripeEvent::Engine, at: '/stripe-webhooks'
   end
 end
