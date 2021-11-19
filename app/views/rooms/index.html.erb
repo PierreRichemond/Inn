@@ -15,17 +15,18 @@
             <p><span style="font-size:30px;"><%= t(".floor2") %>:</span> <%= room.detailz(locale) %></p>
           </div>
           <div class="row ">
-            <div class="col-12 col-md-6 col-lg-7  owl-carousel owl-theme">
+            <div class="col-12 col-md-5 col-lg-5 offset-1  owl-carousel owl-theme">
               <% room.images.each do |image| %>
                 <div><%= cl_image_tag image.key%></div>
               <% end %>
             </div>
-            <div class="col-12 col-md-6 col-lg-5" id="calendars-<%= room.name %>">
+            <div class="col-12 col-md-4 col-lg-4 offset-1" id="calendars-<%= room.name %>">
               <%= render partial: "calendar", locals: {bookings: room.bookings} %>
             </div>
           </div>
         </div>
-        <%= render partial: "bookings/new", locals: {room: room, booking: @booking} %>
+        <p class='text-center'>Payment with stripe on Test mode for now.</p>
+        <%= render partial: "booking_previews/new", locals: {room: room, booking: @booking} %>
       </div>
     <% end %>
   </div>

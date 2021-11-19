@@ -1,4 +1,4 @@
-<%= form_tag bookings_path do %>
+<%= form_tag booking_previews_path do %>
   <%= date_field_tag :start_date, params[:start_date], placeholder: "until"%>
   <%= date_field_tag :end_date, params[:end_date], placeholder: "until" %>
   <%= hidden_field_tag 'room_id', room.id %>

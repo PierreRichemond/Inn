@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   def index
     @rooms = Room.all
-    @booking = Booking.new
+    @booking = BookingPreview.new
 
     # Scope your query to the dates being shown:
     start_date = params.fetch(:start_date, Date.today).to_date
