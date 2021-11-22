@@ -3,9 +3,8 @@ class StripeCheckoutSessionService
     booking = BookingPreview.find_by(checkout_session_id: event.data.object.id)
     booking.update(state: 'paid')
     if booking.state == 'paid'
-      flash[:success] = "Thank you for your booking! We will contact you soon!"
-      MessageMailer.with(booking: @booking).booked_email.deliver_now
-      Booking.create!(booking)
+      MessageMailer.with(booking: booking).booked_email.deliver_now
+      Booking.create!(room: booking.room, room_name: booking.room.name, amount: booking.room.price, state: 'paid', user: booking.user, start_date: booking.start_date, end_date: booking.end_date)
     end
   end
 end
