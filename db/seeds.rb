@@ -50,7 +50,7 @@ room1.images.attach(io: File.open(Rails.root.join("app/assets/images/gite3.jpg")
 room2 = Room.create(name: "Gîte Rabelais",
                   price: 230)
 room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais5.jpg")),
-    filename: "rabelais5.jpg")
+    filename: "rabelais5.JPG")
     room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais3.jpg")),
     filename: "rabelais3.jpg")
 room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais2.jpg")),
