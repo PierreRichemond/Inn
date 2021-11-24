@@ -8,12 +8,12 @@ Activity.delete_all
 
 room1 = Room.create(name: "Gîte Ronsard",
                   price: 210)
-room1.images.attach(io: File.open(Rails.root.join("app/assets/images/favicon1.png")),
-    filename: "favicon1.png")
-room1.images.attach(io: File.open(Rails.root.join("app/assets/images/gite_de_qualite.png")),
-    filename: "gite_de_qualite.png")
-room1.images.attach(io: File.open(Rails.root.join("app/assets/images/leclosvaliere.png")),
-    filename: "leclosvaliere.png")
+room1.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard1.jpg")),
+    filename: "ronsard1.jpg")
+room1.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard2.jpg")),
+    filename: "ronsard2.jpg")
+room1.images.attach(io: File.open(Rails.root.join("app/assets/images/gite3.jpg")),
+    filename: "gite3.jpg")
 
   room1.set_ppl('fr', "165 m² – couchage : 6 adultes + 3 enfants")
   room1.set_ppl('en', "165 m² - bed: 6 adults + 3 children")
@@ -49,12 +49,14 @@ room1.images.attach(io: File.open(Rails.root.join("app/assets/images/leclosvalie
 
 room2 = Room.create(name: "Gîte Rabelais",
                   price: 230)
-room2.images.attach(io: File.open(Rails.root.join("app/assets/images/favicon1.png")),
-    filename: "favicon1.png")
-room2.images.attach(io: File.open(Rails.root.join("app/assets/images/gite_de_qualite.png")),
-    filename: "gite_de_qualite.png")
-room2.images.attach(io: File.open(Rails.root.join("app/assets/images/leclosvaliere.png")),
-    filename: "leclosvaliere.png")
+room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais5.jpg")),
+    filename: "rabelais5.jpg")
+    room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais3.jpg")),
+    filename: "rabelais3.jpg")
+room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais2.jpg")),
+    filename: "rabelais2.jpg")
+room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais1.jpg")),
+    filename: "rabelais1.jpg")
 
 
   room2.set_ppl('fr', "155m² – couchage : 10/12 personnes")
@@ -113,6 +115,20 @@ room3 = Room.create(name: "Clos Vallière",
   room3.images.attach(io: File.open(Rails.root.join("app/assets/images/leclosvaliere.png")),
   filename: "leclosvaliere.png",
   content_type: 'image/png')
+room3.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard1.jpg")),
+    filename: "ronsard1.jpg")
+room3.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard2.jpg")),
+    filename: "ronsard2.jpg")
+room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite3.jpg")),
+    filename: "gite3.jpg")
+    room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais5.jpg")),
+    filename: "rabelais5.jpg")
+    room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais3.jpg")),
+    filename: "rabelais3.jpg")
+room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais2.jpg")),
+    filename: "rabelais2.jpg")
+room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais1.jpg")),
+    filename: "rabelais1.jpg")
 
   puts "#{Room.count} rooms were created"
 
