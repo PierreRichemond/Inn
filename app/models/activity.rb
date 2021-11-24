@@ -23,5 +23,5 @@ class Activity < ApplicationRecord
     description_translation.update(text: description)
   end
 
-  TAGS = ["Culture", "Culture", "Restauration", "Catering", "Commerce", "Business", "Loisir", "Leasure", "Vignobles", "Vineyards", "Traiteur", "Caterer", "Station service", "Gaz station"]
+  TAGS = ["Culture", "Castle", "Restauration", "Catering", "Commerce", "Business", "Loisir", "Leisure", "Vignobles", "Vineyards", "Traiteur", "Caterer", "Station service", "Gaz station"]
 end

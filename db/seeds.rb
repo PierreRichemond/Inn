@@ -1,153 +1,137 @@
 
-Booking.delete_all
-BookingPreview.delete_all
-Room.delete_all
-  puts "Rooms destroyed"
+# Booking.delete_all
+# BookingPreview.delete_all
+# Room.delete_all
+#   puts "Rooms destroyed"
 Activity.delete_all
   puts "activities destroyed"
 
-room1 = Room.create(name: "Gîte Ronsard",
-                  price: 210)
-room1.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard1.jpg")),
-    filename: "ronsard1.jpg")
-room1.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard2.jpg")),
-    filename: "ronsard2.jpg")
-room1.images.attach(io: File.open(Rails.root.join("app/assets/images/gite3.jpg")),
-    filename: "gite3.jpg")
+# room1 = Room.create(name: "Gîte Ronsard",
+#                   price: 210)
+# room1.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard1.jpg")),
+#     filename: "ronsard1.jpg")
+# room1.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard2.jpg")),
+#     filename: "ronsard2.jpg")
+# room1.images.attach(io: File.open(Rails.root.join("app/assets/images/gite3.jpg")),
+#     filename: "gite3.jpg")
 
-  room1.set_ppl('fr', "165 m² – couchage : 6 adultes + 3 enfants")
-  room1.set_ppl('en', "165 m² - bed: 6 adults + 3 children")
-  room1.set_description('fr', "Idéal pour vos retrouvailles en famille et entre amis, le gite Ronsard vous invite au repos. Un grand salon de 60 m², sa cheminée et son cachet à l’ancienne vous permettront de profiter du calme de la campagne.")
-  room1.set_description('en', "Ideal for your reunion with family and friends, the Ronsard gîte invites you to rest. A large living room of 60 m², it's fireplace and its old style will allow you to enjoy the peace of the countryside.")
-  room1.set_details('fr', "Grand salon / salle à manger.
-                - Cuisine, sellier, wc.")
-  room1.set_details('en', "Large living / dining room.
-                 - Kitchen, saddler, wc")
-  room1.set_detailz('fr', "Une grande suite parentale avec salle de bain : 2 adultes + 3 lits enfants.
-                - Deux chambres doubles.
-                - Couloir avec salle de douche et wc séparés.")
-  room1.set_detailz('en', "A large parental suite with bathroom: 2 adults + 3 children's beds.
-                 - Two double bedrooms.
-                 - Corridor with separate shower room and wc.")
+#   room1.set_ppl('fr', "165 m² – couchage : 6 adultes + 3 enfants")
+#   room1.set_ppl('en', "165 m² - bed: 6 adults + 3 children")
+#   room1.set_description('fr', "Idéal pour vos retrouvailles en famille et entre amis, le gite Ronsard vous invite au repos. Un grand salon de 60 m², sa cheminée et son cachet à l’ancienne vous permettront de profiter du calme de la campagne.")
+#   room1.set_description('en', "Perfect to meet with family and friends, the Ronsard inn invites you to rest. A large living room of 60 m², its fireplace and its old style will allow you to enjoy the peace of the countryside.")
+#   room1.set_details('fr', "Grand salon / salle à manger.
+#                 - Cuisine, sellier, wc.")
+#   room1.set_details('en', "Large living / dining room.
+#                  - Kitchen, saddler, wc")
+#   room1.set_detailz('fr', "Une grande suite parentale avec salle de bain : 2 adultes + 3 lits enfants.
+#                 - Deux chambres doubles.
+#                 - Couloir avec salle de douche et wc séparés.")
+#   room1.set_detailz('en', "A large parental suite with bathroom: 2 adults + 3 children's beds.
+#                  - Two double bedrooms.
+#                  - Corridor with separate shower room and wc.")
 
-
-
-  # aquarium = Activity.create(phone: "02 47 23 44 57",
-  #                               url: "www.grandaquariumdetouraine.com",
-  #                               address: "37400 Lussault-Sur-Loire, France",
-  #                               price: "28",
-  #                               distance: "27km",
-  #                               tag_list: "Loisir")
-
-  #     aquarium.image.attach(io: File.open(Rails.root.join("app/assets/images/Aquarium.jpg")),
-  #     filename: "Aquarium.jpg")
-
-  # aquarium.set_name('fr', "Grand aquarium de Touraine")
-  # aquarium.set_name('en', "Great aquarium of Touraine")
-  # aquarium.set_description('fr', "Des torrents des montagnes françaises aux mers lointaines, le Grand Aquarium de Touraine est le plus grand aquarium d’eau douce d’Europe. Découvrez tous ces écosystèmes à travers 63 aquariums et ses 2 millions de litres d’eau!")
-  # aquarium.set_description('en', "From the torrents of the French mountains to distant seas, the Grand Aquarium de Touraine is the largest freshwater aquarium in Europe. Discover all these ecosystems through 63 aquariums and its 2 million liters of water!")
-
-room2 = Room.create(name: "Gîte Rabelais",
-                  price: 230)
-room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais5.JPG")),
-    filename: "rabelais5.JPG")
-    room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais3.jpg")),
-    filename: "rabelais3.jpg")
-room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais2.jpg")),
-    filename: "rabelais2.jpg")
-room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais1.jpg")),
-    filename: "rabelais1.jpg")
+# room2 = Room.create(name: "Gîte Rabelais",
+#                   price: 230)
+# room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais5.JPG")),
+#     filename: "rabelais5.JPG")
+#     room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais3.jpg")),
+#     filename: "rabelais3.jpg")
+# room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais2.jpg")),
+#     filename: "rabelais2.jpg")
+# room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais1.jpg")),
+#     filename: "rabelais1.jpg")
 
 
-  room2.set_ppl('fr', "155m² – couchage : 10/12 personnes")
-  room2.set_ppl('en', "165 m² - bed: 10/12 people")
-  room2.set_description('fr', "Plutôt moderne, le gite Rabelais s’accorde parfaitement avec vos soirées festives. Une belle salle de réception avec sa mezzanine et sa grande table vous permettront d’accueillir facilement une trentaine de convives.")
-  room2.set_description('en', "Rather modern, the Rabelais cottage goes perfectly with your festive evenings. A beautiful reception room with its mezzanine and large table will easily accommodate around thirty guests.")
-  room2.set_details('fr', " Une suite parentale avec salle de bain.
-                    - Une chambre double.
-                    - Salle de douche et wc dans le couloir.
-                    - Salle de réception avec cuisine équipée à l’américaine.
-                    - Mezzanine.")
-  room2.set_details('en', "A parental suite with bathroom.
-                     - A double room.
-                     - Shower room and wc in the hallway.
-                     - Reception room with American style kitchen.
-                     - Mezzanine.")
-  room2.set_detailz('fr', "Dortoir de 50 m²: 4 lits.
-                   - 1 salle de douche.")
-  room2.set_detailz('en', "50 m² dormitory: 4 beds.
-                    - 1 shower room.")
+#   room2.set_ppl('fr', "155m² – couchage : 10/12 personnes")
+#   room2.set_ppl('en', "165 m² - bed: 10/12 people")
+#   room2.set_description('fr', "Plutôt moderne, le gite Rabelais s’accorde parfaitement avec vos soirées festives. Une belle salle de réception avec sa mezzanine et sa grande table vous permettront d’accueillir facilement une trentaine de convives.")
+#   room2.set_description('en', "Rather modern, the Rabelais cottage goes perfectly with your fun evenings. A beautiful reception room with its mezzanine and large table will easily accommodate around thirty guests.")
+#   room2.set_details('fr', " Une suite parentale avec salle de bain.
+#                     - Une chambre double.
+#                     - Salle de douche et wc dans le couloir.
+#                     - Salle de réception avec cuisine équipée à l’américaine.
+#                     - Mezzanine.")
+#   room2.set_details('en', "A parental suite with bathroom.
+#                      - A double room.
+#                      - Shower room and wc in the hallway.
+#                      - Reception room with American style kitchen.
+#                      - Mezzanine.")
+#   room2.set_detailz('fr', "Dortoir de 50 m²: 4 lits.
+#                    - 1 salle de douche.")
+#   room2.set_detailz('en', "50 m² dormitory: 4 beds.
+#                     - 1 shower room.")
 
-room3 = Room.create(name: "Clos Vallière",
-                  price: 400)
+# room3 = Room.create(name: "Clos Vallière",
+#                   price: 400)
 
-  room3.set_ppl('fr', "320 m² - couchage : 18/20 personnes")
-  room3.set_ppl('en', "320 m² - bed : 18/20 people")
-  room3.set_description('fr', "Profitez de l’ensemble de cette demeure tourangelle et de ses avantages. Un mariage ? Un enterrement de vie de garçon/jeune fille ? Un séminaire ou une rencontre professionnelle ? Plus de 300 m² d’espaces de vie, vous permettront d’accueillir un grand nombre de convives.")
-  room3.set_description('en', "Enjoy all of this Touraine residence and its advantages. A marriage ? A bachelorette party? A seminar or a professional meeting? More than 300 m² of living space, will allow you to accommodate a large number of guests.")
-  room3.set_details('fr', "  Grand salon / salle à manger.
-                - Cuisines à l'ancienne, sellier, 2wc.
-                - Une suite parentale avec salle de bain.
-                - Une chambre double avec salle de douche.
-                - Salle de réception avec cuisine équipée à l’américaine.
-                - Mezzanine.")
-  room3.set_details('en', "Large living / dining room.
-                 - Old-fashioned kitchens, saddler, 2wc.
-                 - A parental suite with bathroom.
-                 - A double bedroom with shower room.
-                 - Reception room with American style kitchen.
-                 - Mezzanine.")
-  room3.set_detailz('fr', " Une grande suite parentale avec salle de bain : 2 adultes + 3 lits enfants.
-                - Deux chambres doubles.
-                - 2 Salle de douche, 2wc.
-                - Dortoir de 50 m²: 4 lits.")
-  room3.set_detailz('en', "A large parental suite with bathroom: 2 adults + 3 children's beds.
-                 - Two double bedrooms.
-                 - 2 Shower room, 2 toilets.
-                 - Dormitory of 50 m²: 4 beds.")
+#   room3.set_ppl('fr', "320 m² - couchage : 18/20 personnes")
+#   room3.set_ppl('en', "320 m² - bed : 18/20 people")
+#   room3.set_description('fr', "Profitez de l’ensemble de cette demeure tourangelle et de ses avantages. Un mariage ? Un enterrement de vie de garçon/jeune fille ? Un séminaire ou une rencontre professionnelle ? Plus de 300 m² d’espaces de vie, vous permettront d’accueillir un grand nombre de convives.")
+#   room3.set_description('en', "Enjoy all of this Touraine residence and its advantages. A wedding ? A party? A seminar or a professional meeting? More than 300 m² of living space, will allow you to accommodate a large number of guests.")
+#   room3.set_details('fr', "  Grand salon / salle à manger.
+#                 - Cuisines à l'ancienne, sellier, 2wc.
+#                 - Une suite parentale avec salle de bain.
+#                 - Une chambre double avec salle de douche.
+#                 - Salle de réception avec cuisine équipée à l’américaine.
+#                 - Mezzanine.")
+#   room3.set_details('en', "Large living / dining room.
+#                  - Old-fashioned kitchens, saddler, 2wc.
+#                  - A parental suite with bathroom.
+#                  - A double bedroom with shower room.
+#                  - Reception room with American style kitchen.
+#                  - Mezzanine.")
+#   room3.set_detailz('fr', " Une grande suite parentale avec salle de bain : 2 adultes + 3 lits enfants.
+#                 - Deux chambres doubles.
+#                 - 2 Salle de douche, 2wc.
+#                 - Dortoir de 50 m²: 4 lits.")
+#   room3.set_detailz('en', "A large parental suite with bathroom: 2 adults + 3 children's beds.
+#                  - Two double bedrooms.
+#                  - 2 Shower room, 2 toilets.
+#                  - Dormitory of 50 m²: 4 beds.")
 
 
-room3.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard1.jpg")),
-    filename: "ronsard1.jpg")
-room3.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard2.jpg")),
-    filename: "ronsard2.jpg")
-room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite3.jpg")),
-    filename: "gite3.jpg")
-    room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais5.JPG")),
-    filename: "rabelais5.JPG")
-    room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais3.jpg")),
-    filename: "rabelais3.jpg")
-room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais2.jpg")),
-    filename: "rabelais2.jpg")
-room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais1.jpg")),
-    filename: "rabelais1.jpg")
-        room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite2.jpg")),
-    filename: "gite2.jpg")
-room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite4.jpg")),
-    filename: "gite4.jpg")
-room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG")),
-    filename: "jardin2.JPG")
-    room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin3.JPG")),
-    filename: "jardin3.JPG")
+# room3.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard1.jpg")),
+#     filename: "ronsard1.jpg")
+# room3.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard2.jpg")),
+#     filename: "ronsard2.jpg")
+# room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite3.jpg")),
+#     filename: "gite3.jpg")
+#     room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais5.JPG")),
+#     filename: "rabelais5.JPG")
+#     room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais3.jpg")),
+#     filename: "rabelais3.jpg")
+# room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais2.jpg")),
+#     filename: "rabelais2.jpg")
+# room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais1.jpg")),
+#     filename: "rabelais1.jpg")
+#         room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite2.jpg")),
+#     filename: "gite2.jpg")
+# room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite4.jpg")),
+#     filename: "gite4.jpg")
+# room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG")),
+#     filename: "jardin2.JPG")
+#     room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin3.JPG")),
+#     filename: "jardin3.JPG")
 
-  puts "#{Room.count} rooms were created"
+#   puts "#{Room.count} rooms were created"
 
 
   #   amboise = Activity.create(phone: "02 47 57 00 98",
   #                             url: "www.chateau-amboise.com",
   #                             address: "Mnt de l'Emir Abd el Kader, 37400 Amboise, France",
   #                             price: "13.5",
-  #                             distance: "27km",
-  #                             tag_list: "Culture"
+  #                             distance: "27km"
   #                           )
 
   #   amboise.image.attach(io: File.open(Rails.root.join("app/assets/images/Amboise.jpg")),
   #   filename: "Amboise.jpg")
+  #     amboise.tag_list = "Culture, Castle"
+  #     amboise.save
 
   # amboise.set_name('fr', "Château d’Amboise")
   # amboise.set_name('en', "Amboise castle")
   # amboise.set_description('fr', "Rattaché à la couronne en 1434, ce monument emblématique et ses jardins paysagers offrent un des plus remarquables panoramas sur la vallée de la Loire. Pour visiter le château, plusieurs parcours sont proposés aux visiteurs. Chacun d’entre eux porte un regard singulier son rayonnement politique et artistique européen à la Renaissance, les moments intimes de la vie des souverains, la vie quotidienne et les coulisses de la Cour. En 1516, Léonard de Vinci fut invité par François 1er à Amboise où il finira ses jours trois années plus tard. Pendant trois ans, pour célébrer le 500e anniversaire de sa présence, le château d’Amboise lui consacrera plusieurs événements.")
-  # amboise.set_description('en', "Attached to the crown in 1434, this emblematic monument and its landscaped gardens offer one of the most remarkable panoramas over the Loire Valley. To visit the castle, several routes are offered to visitors. Each of them takes a unique look at their European political and artistic influence during the Renaissance, the intimate moments in the life of sovereigns, daily life and behind the scenes at the Court. In 1516, Leonardo da Vinci was invited by François 1er to Amboise where he will end his days three years later. For three years, to celebrate the 500th anniversary of its presence, the Château d'Amboise will dedicate several events to it.")
+  # amboise.set_description('en', "Attached to the crown in 1434, this emblematic monument and its landscaped gardens offer one of the most remarkable panoramas over the Loire Valley. To visit the castle, several routes are offered to visitors. Each of them takes a unique look at their European political and artistic influence during the Renaissance, the intimate moments in the life of sovereigns, daily life and behind the scenes at the Court. In 1516, Leonardo da Vinci was invited by François 1er to Amboise where he will end his days three years later. For three years, to celebrate the 500th anniversary of it's presence, the Château d'Amboise will dedicate several events to it.")
 
 
   # luce = Activity.create(     phone: "02 47 57 00 73",
@@ -155,7 +139,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
   #                             address: "2 Rue du Clos Lucé, 37400 Amboise, France",
   #                             price: "17.5",
   #                             distance: "27km",
-  #                             tag_list: "Culture"
+  #                             tag_list: "Culture, Castle"
   #                           )
 
   #   luce.image.attach(io: File.open(Rails.root.join("app/assets/images/ClosLuce.jpg")),
@@ -172,7 +156,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
   #                             address: "Château, 41250 Chambord, France",
   #                             price: "14.5",
   #                             distance: "60km",
-  #                             tag_list: "Culture"
+  #                             tag_list: "Culture, Castle"
   #                           )
 
   #   chambord.image.attach(io: File.open(Rails.root.join("app/assets/images/Chambord.jpg")),
@@ -188,7 +172,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
   #                             address: "37520 La Riche, France",
   #                             price: "6",
   #                             distance: "21km",
-  #                             tag_list: "Culture"
+  #                             tag_list: "Culture, Castle"
   #                           )
 
   #   ronsard.image.attach(io: File.open(Rails.root.join("app/assets/images/prieure.jpg")),
@@ -205,7 +189,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
   #                             address: "37150 Chenonceaux, France",
   #                             price: "15",
   #                             distance: "37km",
-  #                             tag_list: "Culture"
+  #                             tag_list: "Culture, Castle"
   #                           )
 
   #   chenonceau.image.attach(io: File.open(Rails.root.join("app/assets/images/Chenonceau.jpg")),
@@ -221,7 +205,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
   #                             address: "Rue de Pineau, 37190 Azay-le-Rideau, France",
   #                             price: "11.5",
   #                             distance: "44km",
-  #                             tag_list: "Culture"
+  #                             tag_list: "Culture, Castle"
   #                           )
 
   #   azay.image.attach(io: File.open(Rails.root.join("app/assets/images/Azay.jpg")),
@@ -230,14 +214,14 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
   # azay.set_name('fr', "Château d’Azay-le-Rideau")
   # azay.set_name('en', "Azay-le-Rideau castle")
   # azay.set_description('fr', "Bâti sur une île au milieu de l’Indre sous le règne de François Ier, ce monument est le résultat d’une subtile alliance de traditions françaises et de décors innovants venus d’Italie. Depuis 2017, vous pouvez découvrir un château magnifié après trois ans de restauration.")
-  # azay.set_description('en', "Built on an island in the middle of the Indre during the reign of François I, this monument is the result of a subtle alliance of French traditions and innovative decorations from Italy. Since 2017, you can discover a castle magnified after three years of restoration.")
+  # azay.set_description('en', "Built on an island in the middle of the Indre during the reign of François the 1st, this monument is the result of a subtle alliance of French traditions and innovative decorations from Italy. Since 2017, you can discover a castle magnified after three years of restoration.")
 
   #   chaumont = Activity.create(phone: "02 54 20 99 22",
   #                             url: "www.domaine-chaumont.fr",
   #                             address: "41150 Chaumont-sur-Loire, France",
   #                             price: "14 ~ 19",
   #                             distance: "35km",
-  #                             tag_list: "Culture"
+  #                             tag_list: "Culture, Castle"
   #                           )
 
   #   chaumont.image.attach(io: File.open(Rails.root.join("app/assets/images/Chaumont.jpg")),
@@ -247,14 +231,14 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
   # chaumont.set_name('fr', "Château de Chaumont-sur-Loire")
   # chaumont.set_name('en', "Chaumont-sur-Loire castle")
   # chaumont.set_description('fr', "Propriété de la Région Centre-Val de Loire depuis 2007, le Domaine de Chaumont-sur-Loire est un véritable bijou de l’architecture Renaissance qui flotte au-dessus de la Loire entre Blois et Amboise. Au-delà d’une histoire très riche, le château est devenu un lieu de passage incontournable pour les amateurs d’art contemporain et de jardins paysagers. Chaque année, une nouvelle saison artistique prend place.")
-  # chaumont.set_description('en', "Property of the Center-Val de Loire Region since 2007, the Domaine de Chaumont-sur-Loire is a real gem of Renaissance architecture that floats above the Loire between Blois and Amboise. Beyond a very rich history, the castle has become an essential stopover for lovers of contemporary art and landscaped gardens. Each year, a new artistic season takes place.")
+  # chaumont.set_description('en', "The Domaine de Chaumont-sur-Loire is a real gem of Renaissance architecture that floats above the Loire between Blois and Amboise. Beyond a very rich history, the castle has become an essential stopover for lovers of contemporary art and landscaped gardens. Each year, a new artistic season takes place.")
 
   #   langeais = Activity.create(phone: "02 47 96 72 60",
   #                             url: "www.chateau-de-langeais.com",
   #                             address: "Place Pierre de Brosse, 37130 Langeais, France",
   #                             price: "11",
   #                             distance: "41km",
-  #                             tag_list: "Culture"
+  #                             tag_list: "Culture, Castle"
   #                           )
 
   #   langeais.image.attach(io: File.open(Rails.root.join("app/assets/images/langeais.jpg")),
@@ -271,7 +255,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
   #                             address: "3 Rue Principale, 37510 Villandry, France",
   #                             price: "12",
   #                             distance: "34km",
-  #                             tag_list: "Culture"
+  #                             tag_list: "Culture, Castle"
   #                           )
 
   #   villandry.image.attach(io: File.open(Rails.root.join("app/assets/images/villandry.jpg")),
@@ -288,7 +272,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
   #   address: "Musee Rabelais, 4 Rue de la Devinière, 37500 Seuilly, France",
   #   price: "6",
   #   distance: "70km",
-  #   tag_list: "Culture"
+  #   tag_list: "Culture, Castle"
   # )
 
   # rabelais.image.attach(io: File.open(Rails.root.join("app/assets/images/Rabelais.jpg")),
@@ -306,7 +290,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
   #   address: "2 Rue du Château, 37500 Chinon, France",
   #   price: "9",
   #   distance: "63km",
-  #   tag_list: "Culture"
+  #   tag_list: "Culture, Castle"
   # )
 
   # chinon.image.attach(io: File.open(Rails.root.join("app/assets/images/Chinon.jpg")),
@@ -323,7 +307,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
   #   address: "105 rue de la republique, 37110 Château-Renault, France",
   #   price: "",
   #   distance: "10km",
-  #   tag_list: "Culture"
+  #   tag_list: "Culture, Castle"
   # )
 
   # cuir.image.attach(io: File.open(Rails.root.join("app/assets/images/cuir.jpg")),
@@ -347,7 +331,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
 
       aquarium.image.attach(io: File.open(Rails.root.join("app/assets/images/Aquarium.jpg")),
       filename: "Aquarium.jpg")
-      aquarium.tag_list = "Loisir"
+      aquarium.tag_list = "Loisir, Leisure"
       aquarium.save
   aquarium.set_name('fr', "Grand aquarium de Touraine")
   aquarium.set_name('en', "Great aquarium of Touraine")
@@ -355,21 +339,21 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
   aquarium.set_description('en', "From the torrents of the French mountains to distant seas, the Grand Aquarium de Touraine is the largest freshwater aquarium in Europe. Discover all these ecosystems through 63 aquariums and its 2 million liters of water!")
 
 
-#         zoo = Activity.create(  phone: "02 54 75 50 00",
-#                                 url: "www.zoobeauval.com",
-#                                 address: "41110 Saint-Aignan, France",
-#                                 price: "27 ~ 32",
-#                                 distance: "60km",
-#                                 tag_list: "Loisir"
-#                               )
+        zoo = Activity.create!(phone: "02 54 75 50 00",
+                                url: "www.zoobeauval.com",
+                                address: "41110 Saint-Aignan, France",
+                                price: "27 ~ 32",
+                                distance: "60km"
+                              )
 
-#       zoo.image.attach(io: File.open(Rails.root.join("app/assets/images/Beauval.jpg")),
-#       filename: "Beauval.jpg")
-
-#   zoo.set_name('fr', "Zoo de Beauval")
-#   zoo.set_name('en', "Zoo of Beauval")
-#   zoo.set_description('fr', "Sur plus de 40 hectares, le ZooParc de Beauval regroupe 10.000 animaux de 600 espèces différentes, dont les très rares pandas géants, uniques en France. À travers son association « Beauval Nature », le ZooParc participe activement à la préservation de la biodiversité, en soutenant plus de 40 programmes de conservation et de recherche dans le monde.")
-#   zoo.set_description('en', "On more than 40 hectares, the Beauval ZooParc brings together 10,000 animals of 600 different species, including the very rare giant pandas, unique in France. Through its “Beauval Nature” association, the ZooParc actively participates in the preservation of biodiversity, by supporting more than 40 conservation and research programs around the world.")
+      zoo.image.attach(io: File.open(Rails.root.join("app/assets/images/Beauval.jpg")),
+      filename: "Beauval.jpg")
+      zoo.tag_list = "Loisir, Leisure"
+      zoo.save
+  zoo.set_name('fr', "Zoo de Beauval")
+  zoo.set_name('en', "Zoo of Beauval")
+  zoo.set_description('fr', "Sur plus de 40 hectares, le ZooParc de Beauval regroupe 10.000 animaux de 600 espèces différentes, dont les très rares pandas géants, uniques en France. À travers son association « Beauval Nature », le ZooParc participe activement à la préservation de la biodiversité, en soutenant plus de 40 programmes de conservation et de recherche dans le monde.")
+  zoo.set_description('en', "On more than 40 hectares, the Beauval ZooParc brings together 10,000 animals of 600 different species, including the very rare giant pandas, unique in France. Through its “Beauval Nature” association, the ZooParc actively participates in the preservation of biodiversity, by supporting more than 40 conservation and research programs around the world.")
 
 
 #       safari = Activity.create( phone: "02 47 56 22 30",
@@ -377,7 +361,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
 #                                 address: "37110 Autrèche, France",
 #                                 price: "8.5",
 #                                 distance: "16km",
-#                                 tag_list: "Loisir"
+#                                 tag_list: "Loisir, Leisure"
 #                               )
 
 #       safari.image.attach(io: File.open(Rails.root.join("app/assets/images/Safari.jpg")),
@@ -393,7 +377,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
 #                                 address: "7 Rue de l'ile d'Or, 37400 Amboise",
 #                                 price: "189 ~ 899",
 #                                 distance: "27km",
-#                                 tag_list: "Loisir"
+#                                 tag_list: "Loisir, Leisure"
 #                                   )
 
 #   mongolfiere.image.attach(io: File.open(Rails.root.join("app/assets/images/Mongolfiere.jpg")),
@@ -409,7 +393,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
 #                                 address: "Quai de la Loire, 37210 ROCHECORBON France",
 #                                 price: "7 ~ ",
 #                                 distance: "30km",
-#                                 tag_list: "Loisir"
+#                                 tag_list: "Loisir, Leisure"
 #                                   )
 
 #     lulu.image.attach(io: File.open(Rails.root.join("app/assets/images/lulu.jpg")),
@@ -425,7 +409,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
 #                                 address: "37360 Saint-Antoine-du-Rocher, France",
 #                                 price: "23 ~ ",
 #                                 distance: "30km",
-#                                 tag_list: "Loisir"
+#                                 tag_list: "Loisir, Leisure"
 #                                   )
 
 #     golf.image.attach(io: File.open(Rails.root.join("app/assets/images/bluegreen.jpg")),
