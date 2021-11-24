@@ -47,36 +47,36 @@ room1.images.attach(io: File.open(Rails.root.join("app/assets/images/gite3.jpg")
   # aquarium.set_description('fr', "Des torrents des montagnes françaises aux mers lointaines, le Grand Aquarium de Touraine est le plus grand aquarium d’eau douce d’Europe. Découvrez tous ces écosystèmes à travers 63 aquariums et ses 2 millions de litres d’eau!")
   # aquarium.set_description('en', "From the torrents of the French mountains to distant seas, the Grand Aquarium de Touraine is the largest freshwater aquarium in Europe. Discover all these ecosystems through 63 aquariums and its 2 million liters of water!")
 
-# room2 = Room.create(name: "Gîte Rabelais",
-#                   price: 230)
-# room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais5.jpg")),
-#     filename: "rabelais5.jpg")
-#     room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais3.jpg")),
-#     filename: "rabelais3.jpg")
-# room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais2.jpg")),
-#     filename: "rabelais2.jpg")
-# room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais1.jpg")),
-#     filename: "rabelais1.jpg")
+room2 = Room.create(name: "Gîte Rabelais",
+                  price: 230)
+room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais5.jpg")),
+    filename: "rabelais5.jpg")
+    room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais3.jpg")),
+    filename: "rabelais3.jpg")
+room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais2.jpg")),
+    filename: "rabelais2.jpg")
+room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais1.jpg")),
+    filename: "rabelais1.jpg")
 
 
-#   room2.set_ppl('fr', "155m² – couchage : 10/12 personnes")
-#   room2.set_ppl('en', "165 m² - bed: 10/12 people")
-#   room2.set_description('fr', "Plutôt moderne, le gite Rabelais s’accorde parfaitement avec vos soirées festives. Une belle salle de réception avec sa mezzanine et sa grande table vous permettront d’accueillir facilement une trentaine de convives.")
-#   room2.set_description('en', "Rather modern, the Rabelais cottage goes perfectly with your festive evenings. A beautiful reception room with its mezzanine and large table will easily accommodate around thirty guests.")
-#   room2.set_details('fr', " Une suite parentale avec salle de bain.
-#                     - Une chambre double.
-#                     - Salle de douche et wc dans le couloir.
-#                     - Salle de réception avec cuisine équipée à l’américaine.
-#                     - Mezzanine.")
-#   room2.set_details('en', "A parental suite with bathroom.
-#                      - A double room.
-#                      - Shower room and wc in the hallway.
-#                      - Reception room with American style kitchen.
-#                      - Mezzanine.")
-#   room2.set_detailz('fr', "Dortoir de 50 m²: 4 lits.
-#                    - 1 salle de douche.")
-#   room2.set_detailz('en', "50 m² dormitory: 4 beds.
-#                     - 1 shower room.")
+  room2.set_ppl('fr', "155m² – couchage : 10/12 personnes")
+  room2.set_ppl('en', "165 m² - bed: 10/12 people")
+  room2.set_description('fr', "Plutôt moderne, le gite Rabelais s’accorde parfaitement avec vos soirées festives. Une belle salle de réception avec sa mezzanine et sa grande table vous permettront d’accueillir facilement une trentaine de convives.")
+  room2.set_description('en', "Rather modern, the Rabelais cottage goes perfectly with your festive evenings. A beautiful reception room with its mezzanine and large table will easily accommodate around thirty guests.")
+  room2.set_details('fr', " Une suite parentale avec salle de bain.
+                    - Une chambre double.
+                    - Salle de douche et wc dans le couloir.
+                    - Salle de réception avec cuisine équipée à l’américaine.
+                    - Mezzanine.")
+  room2.set_details('en', "A parental suite with bathroom.
+                     - A double room.
+                     - Shower room and wc in the hallway.
+                     - Reception room with American style kitchen.
+                     - Mezzanine.")
+  room2.set_detailz('fr', "Dortoir de 50 m²: 4 lits.
+                   - 1 salle de douche.")
+  room2.set_detailz('en', "50 m² dormitory: 4 beds.
+                    - 1 shower room.")
 
 room3 = Room.create(name: "Clos Vallière",
                   price: 400)
