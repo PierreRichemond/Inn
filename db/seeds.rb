@@ -49,7 +49,7 @@ room1.images.attach(io: File.open(Rails.root.join("app/assets/images/gite3.jpg")
 
 room2 = Room.create(name: "Gîte Rabelais",
                   price: 230)
-room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais5.jpg")),
+room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais5.JPG")),
     filename: "rabelais5.JPG")
     room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais3.jpg")),
     filename: "rabelais3.jpg")
@@ -113,7 +113,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard2.jp
     filename: "ronsard2.jpg")
 room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite3.jpg")),
     filename: "gite3.jpg")
-    room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais5.jpg")),
+    room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais5.JPG")),
     filename: "rabelais5.JPG")
     room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais3.jpg")),
     filename: "rabelais3.jpg")
@@ -125,9 +125,9 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais1.j
     filename: "gite2.jpg")
 room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite4.jpg")),
     filename: "gite4.jpg")
-room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.jpg")),
+room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG")),
     filename: "jardin2.JPG")
-    room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin3.jpg")),
+    room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin3.JPG")),
     filename: "jardin3.JPG")
 
   puts "#{Room.count} rooms were created"
@@ -347,7 +347,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.jpg
 
       aquarium.image.attach(io: File.open(Rails.root.join("app/assets/images/Aquarium.jpg")),
       filename: "Aquarium.jpg")
-      aquarium.tag_list = "Loisir, Leasure"
+      aquarium.tag_list = "Loisir"
       aquarium.save
   aquarium.set_name('fr', "Grand aquarium de Touraine")
   aquarium.set_name('en', "Great aquarium of Touraine")
