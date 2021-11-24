@@ -2,7 +2,7 @@
   display: flex;
   margin-top: 50px;
   margin-bottom: 50px;
-  height: fit-content;
+
 
   .owl-prev {
     position: absolute;
@@ -18,17 +18,12 @@
     height: 90%;
     font-size: 30px !important;
   }
+
   .owl-item img {
     object-fit: cover;
-    height: 30em;
-    justify-content: center;
-    align-items: center;
+    height: 35vh;
   }
 }
 .owl-item.active:hover {
   cursor: grab;
-}
-
-.owl-stage-outer {
-  height: 300px;
 }

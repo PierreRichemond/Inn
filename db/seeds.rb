@@ -106,15 +106,7 @@ room3 = Room.create(name: "Clos Vallière",
                  - 2 Shower room, 2 toilets.
                  - Dormitory of 50 m²: 4 beds.")
 
-  room3.images.attach(io: File.open(Rails.root.join("app/assets/images/favicon1.png")),
-  filename: "favicon1.png",
-  content_type: 'image/png')
-  room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite_de_qualite.png")),
-  filename: "gite_de_qualite.png",
-  content_type: 'image/png')
-  room3.images.attach(io: File.open(Rails.root.join("app/assets/images/leclosvaliere.png")),
-  filename: "leclosvaliere.png",
-  content_type: 'image/png')
+
 room3.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard1.jpg")),
     filename: "ronsard1.jpg")
 room3.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard2.jpg")),
@@ -129,6 +121,14 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais2.j
     filename: "rabelais2.jpg")
 room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais1.jpg")),
     filename: "rabelais1.jpg")
+        room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite2.jpg")),
+    filename: "gite2.jpg")
+room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite4.jpg")),
+    filename: "gite4.jpg")
+room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.jpg")),
+    filename: "jardin2.jpg")
+    room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin3.jpg")),
+    filename: "jardin3.jpg")
 
   puts "#{Room.count} rooms were created"
 
