@@ -1,12 +1,12 @@
 <!-- app/views/bookings/show.html.erb -->
 <div class="container">
   <div class="row">
-    <div class="col-12 col-lg-6  owl-carousel owl-theme">
+    <div class= "col-12 col-lg-6  owl-carousel owl-theme">
       <% @booking_preview.room.images.each do |image| %>
         <div><%= cl_image_tag image.key%></div>
       <% end %>
     </div>
-    <div class="col-12 col-lg-6">
+    <div class= "col-12 col-lg-6 offset-lg-3">
       <h1>booking #<%= @booking_preview.id %> <small><span class="badge badge-primary"><%= @booking_preview.state %></span></small></h1>
       <h3><strong>ISSUED ON</strong> <%= @booking_preview.created_at.to_date %></h3>
       <p> <strong>Room :</strong> <%= @booking_preview.room.name %></p>
