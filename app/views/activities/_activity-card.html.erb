@@ -1,6 +1,6 @@
 <div class="activity-card">
   <div class="d-flex">
-    <%= image_tag activity.image, class: 'activity-img' %>
+    <%= cl_image_tag activity.image.key, class: 'activity-img' %>
   </div>
   <h2 class = 'activity-name text-center'><%= activity.name(locale) %></h2>
 </div>

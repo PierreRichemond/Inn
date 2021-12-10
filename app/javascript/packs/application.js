@@ -47,29 +47,29 @@ document.addEventListener('turbolinks:load', () => {
     navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"]
   });
 
-  // function getUrl(event) {
-    //   console.log(event)
-    //   const url = event.target.href
-  //   console.log(url)
-  //   fetch(url, {
-  //     method: 'GET',
-  //     headers: { 'Accept': "application/json", 'Content-Type': 'application/json' }
-  //   })
-  //     .then(response => response.json())
-  //     .then((data) => {
-  //       console.log(data)
+  function getUrl(event) {
+      console.log(event)
+      const url = event.target.href
+    console.log(url)
+    fetch(url, {
+      method: 'GET',
+      headers: { 'Accept': "application/json", 'Content-Type': 'application/json' }
+    })
+      .then(response => response.json())
+      .then((data) => {
+        console.log(data)
 
-  //       const calendar = document.getElementById(`calendar-${data.name}`)
-  //       // calendar.innerHTML
+        const calendar = document.getElementById(`calendar-${data.name}`)
+        // calendar.innerHTML
 
-  //     });
-  // }
-  // const calendarHeadings = document.querySelectorAll(".calendar-heading");
-  // calendarHeadings.forEach((header) => {
-  //   const aTag = header.querySelectorAll("a");
-  //   console.log(aTag)
-  //   aTag.forEach(link => {
-  //     link.addEventListener('click', getUrl);
-  //   })
-  // });
+      });
+  }
+  const calendarHeadings = document.querySelectorAll(".calendar-heading");
+  calendarHeadings.forEach((header) => {
+    const aTag = header.querySelectorAll("a");
+    console.log(aTag)
+    aTag.forEach(link => {
+      link.addEventListener('click', getUrl);
+    })
+  });
 });

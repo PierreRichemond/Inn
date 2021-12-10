@@ -1,0 +1,10 @@
+<%# const calendarHeadings = document.querySelectorAll(".calendar-heading");
+  calendarHeadings.forEach((header) => {
+    const aTag = header.querySelectorAll("a");
+    console.log(aTag)
+    aTag.forEach(link => {
+      link.addEventListener('click', getUrl);
+    })
+  }); %>
+
+$("#events_calendar").html("<%= escape_javascript render(partial: "calendar", locals: {bookings: @bookings}) %>");
