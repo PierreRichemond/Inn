@@ -2,10 +2,17 @@ class BookingPreviewsController < ApplicationController
 
   def create
     room = Room.find(params[:room_id])
-    @booking_preview = BookingPreview.create!(room: room, room_name: room.name, amount: room.price, state: 'pending', user: current_user, start_date: params[:start_date][0..9], end_date: params[:end_date].to_date - 1)
-    @length_of_stay = (@booking_preview.end_date - @booking_preview.start_date).to_i + 1
+    @booking_preview = BookingPreview.create!(
+      room: room, room_name: room.name,
+      amount: price_of_stay(room.price, ((params[:end_date].to_date - 1) - params[:start_date][0..9].to_date).to_i + 1),
+      state: 'pending',
+      user: current_user,
+      start_date: params[:start_date][0..9],
+      end_date: params[:end_date].to_date - 1)
 
+    @length_of_stay = (@booking_preview.end_date - @booking_preview.start_date).to_i + 1
     already_booked = availibilities
+
     if already_booked == true
       redirect_to rooms_path
       flash[:danger] = "Your dates don't match availibilities. Please check the again and resubmit."
@@ -14,7 +21,7 @@ class BookingPreviewsController < ApplicationController
       payment_method_types: ['card'],
       line_items: [{
         name: room.name,
-        amount: price_of_stay(room.price, @length_of_stay),
+        amount: @booking_preview.amount_cents,
         currency: 'eur',
         quantity: 1
       }],
