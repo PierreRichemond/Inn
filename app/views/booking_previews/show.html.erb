@@ -1,27 +1,19 @@
 <!-- app/views/bookings/show.html.erb -->
 <div class="container">
   <div class="row">
-    <div class= "col-12 col-lg-6  owl-carousel owl-theme">
-      <% @booking_preview.room.images.each do |image| %>
-        <div><%= cl_image_tag image.key%></div>
-      <% end %>
-    </div>
+    <%= render "payements/booking_carousel", booking: @booking_preview  %>
     <div class= "col-12 col-lg-6 offset-lg-3">
-      <h1>booking #<%= @booking_preview.id %> <small><span class="badge badge-primary"><%= @booking_preview.state %></span></small></h1>
-      <h3><strong>ISSUED ON</strong> <%= @booking_preview.created_at.to_date %></h3>
-      <p> <strong>Room :</strong> <%= @booking_preview.room.name %></p>
-      <p><strong>From</strong> <%= @booking_preview.start_date %></p>
-      <p><strong>Until</strong> <%= @booking_preview.end_date + 1 %></p>
-      <p> <strong>number of nights:</strong> <%= (@booking_preview.end_date - @booking_preview.start_date).to_i + 1 %></p>
-      <p> <strong>Price per night</strong> <%= humanized_money_with_symbol @booking_preview.amount %></p>
-      <h4> <strong>TOTAL</strong> €<%= price_of_stay(@booking_preview.room.price, (@booking_preview.end_date - @booking_preview.start_date).to_i + 1) %></h4>
+      <%= render "payements/booking_details", booking: @booking_preview  %>
       <p>Estimated reply in <strong>2 business days</strong></p>
     </div>
   </div>
+  <%= render "payements/number_of_nights", booking: @booking_preview  %>
+  <div class='mt-5'>
   <%= link_to "/rooms" do %>
     <p class="pb-0 mb-0"><%= t("nav_room") %></p>
   <% end %>
   <%= link_to "/" do %>
     <p class="pb-0 mb-0"><%= t("nav_home") %></p>
   <% end %>
+  </div>
 </div>

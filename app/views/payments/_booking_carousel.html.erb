@@ -1,0 +1,5 @@
+    <div class="col-12 col-lg-6  owl-carousel owl-theme">
+      <% booking.room.images.each do |image| %>
+        <div><%= cl_image_tag image.key%></div>
+      <% end %>
+    </div>

@@ -3,16 +3,16 @@ class ActivitiesController < ApplicationController
 
   def index
     @tags = if params[:locale] == 'en'
-      Activity::TAGS.values_at(* Activity::TAGS.each_index.select {|i| i.odd?})
-    else
-      Activity::TAGS.values_at(* Activity::TAGS.each_index.select {|i| i.even?})
-    end
+              Activity::TAGS.values_at(* Activity::TAGS.each_index.select {|i| i.odd?})
+            else
+              Activity::TAGS.values_at(* Activity::TAGS.each_index.select {|i| i.even?})
+            end
 
     @activities = if params[:tag].present?
-      Activity.tagged_with(params[:tag])
-    else
-      Activity.all
-    end
+                    Activity.tagged_with(params[:tag])
+                  else
+                    Activity.all
+                  end
 
     @markers = @activities.geocoded.map do |activity|
       {

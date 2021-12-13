@@ -1,63 +1,44 @@
-<% if (@booking.end_date - @booking.start_date).to_i + 1 <= 4%>
+<% if number_of_nights(@booking.start_date, @booking.end_date) > 7%>
   <div class="row">
+    <%= render "discounts"%>
     <div class= "col-12 col-lg-6">
-      <h3 class='mt-1 text-center'><%= t('renting-detail') %></h3>
-      <h3 class='text-center'><%= t('discount') %></h3>
-      <p class='text-center'><%= t('discounts_html') %></p>
-    </div>
-    <div class= "col-12 col-lg-6">
-    <h3>Details</h3>
-      <p>4 nights: <%= price_of_stay(@booking.room.price, 4) %></p>
-    </div>
-  </div>
-<% end %>
-<% if (@booking.end_date - @booking.start_date).to_i + 1 > 4%>
-  <div class="row">
-    <div class= "col-12 col-lg-6">
-      <h3 class='mt-1 text-center'><%= t('renting-detail') %></h3>
-      <h3 class='text-center'><%= t('discount') %></h3>
-      <p class='text-center'><%= t('discounts_html') %></p>
-    </div>
-    <div class= "col-12 col-lg-6">
-    <h3>Details</h3>
+      <h3>Details</h3>
       <p>4 nights: <%= price_of_stay(@booking.room.price, 4) %></p>
       <p>5-6 nights: <%= price_of_stay(@booking.room.price, 6) - price_of_stay(@booking.room.price, 4) %>€</p>
-      <p>7 night: <%= price_of_stay(@booking.room.price, 7) - price_of_stay(@booking.room.price, 6) %>€</p>
-      <p>after 7th night: <%= (@booking.end_date - @booking.start_date).to_i + 1 - 7 %> * <%= price_of_stay(@booking.room.price, 8) - price_of_stay(@booking.room.price, 7) %>€ = <%= price_of_stay(@booking.room.price, (@booking.end_date - @booking.start_date).to_i + 1) - price_of_stay(@booking.room.price, 7) %>€</p>
-      </div>
+      <p>7 nights: <%= price_of_stay(@booking.room.price, 7) - price_of_stay(@booking.room.price, 6) %>€</p>
+      <p>after 7th night: <%= number_of_nights(@booking.start_date, @booking.end_date) - 7 %> * <%= price_of_stay(@booking.room.price, 8) - price_of_stay(@booking.room.price, 7) %>€ = <%= price_of_stay(@booking.room.price, number_of_nights(@booking.start_date, @booking.end_date)) - price_of_stay(@booking.room.price, 7) %>€</p>
+    </div>
   </div>
-<% end %>
 
-<% if (@booking.end_date - @booking.start_date).to_i + 1 > 4%>
+<% elsif number_of_nights(@booking.start_date, @booking.end_date) == 7 %>
   <div class="row">
+    <%= render "discounts"%>
     <div class= "col-12 col-lg-6">
-      <h3 class='mt-1 text-center'><%= t('renting-detail') %></h3>
-      <h3 class='text-center'><%= t('discount') %></h3>
-      <p class='text-center'><%= t('discounts_html') %></p>
-    </div>
-    <div class= "col-12 col-lg-6">
-    <h3>Details</h3>
+      <h3>Details</h3>
       <p>4 nights: <%= price_of_stay(@booking.room.price, 4) %></p>
       <p>5-6 nights: <%= price_of_stay(@booking.room.price, 6) - price_of_stay(@booking.room.price, 4) %>€</p>
-      <p>7 night: <%= price_of_stay(@booking.room.price, 7) - price_of_stay(@booking.room.price, 6) %>€</p>
-      <p>after 7th night: <%= (@booking.end_date - @booking.start_date).to_i + 1 - 7 %> * <%= price_of_stay(@booking.room.price, 8) - price_of_stay(@booking.room.price, 7) %>€ = <%= price_of_stay(@booking.room.price, (@booking.end_date - @booking.start_date).to_i + 1) - price_of_stay(@booking.room.price, 7) %>€</p>
-      </div>
+      <p>7 nights: <%= price_of_stay(@booking.room.price, 7) - price_of_stay(@booking.room.price, 6) %>€</p>
+    </div>
   </div>
-<% end %>
 
-<% if (@booking.end_date - @booking.start_date).to_i + 1 > 4%>
+<% elsif number_of_nights(@booking.start_date, @booking.end_date) <= 4 %>
   <div class="row">
+    <%= render "discounts"%>
     <div class= "col-12 col-lg-6">
-      <h3 class='mt-1 text-center'><%= t('renting-detail') %></h3>
-      <h3 class='text-center'><%= t('discount') %></h3>
-      <p class='text-center'><%= t('discounts_html') %></p>
+      <h3>Details</h3>
+      <p>4 nights: <%= price_of_stay(@booking.room.price, number_of_nights(@booking.start_date, @booking.end_date)) %></p>
     </div>
-    <div class= "col-12 col-lg-6">
-    <h3>Details</h3>
-      <p>4 nights: <%= price_of_stay(@booking.room.price, 4) %></p>
-      <p>5-6 nights: <%= price_of_stay(@booking.room.price, 6) - price_of_stay(@booking.room.price, 4) %>€</p>
-      <p>7 night: <%= price_of_stay(@booking.room.price, 7) - price_of_stay(@booking.room.price, 6) %>€</p>
-      <p>after 7th night: <%= (@booking.end_date - @booking.start_date).to_i + 1 - 7 %> * <%= price_of_stay(@booking.room.price, 8) - price_of_stay(@booking.room.price, 7) %>€ = <%= price_of_stay(@booking.room.price, (@booking.end_date - @booking.start_date).to_i + 1) - price_of_stay(@booking.room.price, 7) %>€</p>
-      </div>
   </div>
+
+<% elsif number_of_nights(@booking.start_date, @booking.end_date) <= 6 %>
+  <div class="row">
+    <%= render "discounts"%>
+    <div class= "col-12 col-lg-6">
+      <h3>Details</h3>
+      <p>4 nights: <%= price_of_stay(@booking.room.price, 4) %></p>
+      <% nights = number_of_nights(@booking.start_date, @booking.end_date) %>
+      <p>5-6 nights: <%= price_of_stay(@booking.room.price, nights) - price_of_stay(@booking.room.price, 4) %>€</p>
+    </div>
+  </div>
+
 <% end %>

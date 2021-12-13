@@ -9,7 +9,8 @@ class BookingPreviewsController < ApplicationController
       state: 'pending',
       user: current_user,
       start_date: params[:start_date][0..9],
-      end_date: params[:end_date].to_date - 1)
+      end_date: params[:end_date].to_date - 1
+    )
 
     @length_of_stay = (@booking_preview.end_date - @booking_preview.start_date).to_i + 1
     already_booked = availibilities
