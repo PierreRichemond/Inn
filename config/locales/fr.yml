@@ -1,4 +1,14 @@
 fr:
+    th: 'ème'
+    night: "nuit"
+    nights: "nuits"
+    after_7_nights: "Après 7 nuits"
+    issue_on: "Delivré le"
+    room_booked: "Chambre"
+    From: "Du"
+    Until: "Au"
+    number_of_nights: "Nombre de nuits"
+    price_per_night: "Prix par nuit"
     CDG: "Conditions générales de ventes"
     culture: "Culture"
     catering: "Restauration"

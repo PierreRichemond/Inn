@@ -1,4 +1,14 @@
 en:
+    th: 'th'
+    night: "night"
+    nights: "nights"
+    after_7_nights: "After 7 nights"
+    issue_on: "Issue On"
+    room_booked: "Room"
+    From: "From"
+    Until: "Until"
+    number_of_nights: "Number of nights"
+    price_per_night: "Price per night"
     CDG: "General conditions of sale"
     culture: "Culture"
     catering: "Catering"

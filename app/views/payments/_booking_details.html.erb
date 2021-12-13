@@ -1,7 +1,8 @@
-<h3 class='text-center'><strong>ISSUED ON</strong> <%= booking.created_at.to_date %></h3>
-<p class='ml-3'> <strong>Room :</strong> <%= booking.room.name %></p>
-<p class='ml-3'><strong>From</strong> <%= booking.start_date %></p>
-<p class='ml-3'><strong>Until</strong> <%= booking.end_date + 1 %></p>
-<p class='ml-3'> <strong>number of nights:</strong> <%= (booking.end_date - booking.start_date).to_i + 1 %></p>
-<p class='ml-3'> <strong>Price per night</strong> <%= humanized_money_with_symbol booking.room.price %></p>
-<h4 class='ml-3'> <strong>TOTAL</strong> €<%= price_of_stay(booking.room.price, (booking.end_date - booking.start_date).to_i + 1) %></h4>
+<h3 class='text-center'><strong><%= t("issue_on") %>:</strong> <%= booking.created_at.to_date %></h3>
+<p class='text-center'> <strong><%= t("room_booked") %>:</strong> <%= booking.room.name %></p>
+<p class='text-center'><strong><%= t("From") %>:</strong> <%= booking.start_date %></p>
+<p class='text-center'><strong><%= t("Until") %>:</strong> <%= booking.end_date + 1 %></p>
+<p class='text-center'> <strong><%= t("number_of_nights") %>:</strong> <%= (booking.end_date - booking.start_date).to_i + 1 %></p>
+<p class='text-center'> <strong><%= t("price_per_night") %>:</strong> <%= humanized_money_with_symbol booking.room.price %></p>
+<% currency = humanized_money_with_symbol booking.room.price %>
+<h4 class='text-center'> <strong>TOTAL</strong> <%= currency[0] %><%= price_of_stay(booking.room.price, (booking.end_date - booking.start_date).to_i + 1) %></h4>
