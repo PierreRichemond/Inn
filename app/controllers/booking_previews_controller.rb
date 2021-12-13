@@ -2,6 +2,7 @@ class BookingPreviewsController < ApplicationController
 
   def create
     room = Room.find(params[:room_id])
+
     @booking_preview = BookingPreview.create!(
       room: room, room_name: room.name,
       amount: price_of_stay(room.price, ((params[:end_date].to_date - 1) - params[:start_date][0..9].to_date).to_i + 1),

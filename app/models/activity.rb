@@ -4,6 +4,7 @@ class Activity < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
   acts_as_taggable_on :tags
   has_many :activities_translations
+  TAGS = ["Culture", "Culture", "Restauration", "Catering", "Commerce", "Business", "Loisir", "Leisure", "Vignobles", "Vineyards", "Traiteur", "Caterer", "Station service", "Gaz station"]
 
   def name(locale)
     activities_translations.find_by(locale: locale, field_name: 'name').text
@@ -23,5 +24,4 @@ class Activity < ApplicationRecord
     description_translation.update(text: description)
   end
 
-  TAGS = ["Culture", "Castle", "Restauration", "Catering", "Commerce", "Business", "Loisir", "Leisure", "Vignobles", "Vineyards", "Traiteur", "Caterer", "Station service", "Gaz station"]
 end
