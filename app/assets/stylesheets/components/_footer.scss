@@ -10,9 +10,7 @@
 }
 
 .footer-container {
-
   height: fit-content;
-  /* Height of the footer*/
   background-color: rgba(92, 209, 46, 0.6);
   position: relative;
   p{
@@ -26,11 +24,8 @@
     color: rgb(110, 110, 110);
     text-shadow: 1px 1px 3px rgba(240, 240, 240, 0.5);
   }
-
 }
-
 .footer-container:before {
-
   content: "";
   position: absolute;
   top: 0px;
@@ -46,4 +41,15 @@
   min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.footer_link{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 3px rgba(240, 240, 240, 0.5);
+    margin-bottom: 0;
+    &:hover{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  }
 }

@@ -1,119 +1,119 @@
 
-# Booking.delete_all
-# BookingPreview.delete_all
-# Room.delete_all
-#   puts "Rooms destroyed"
+Booking.delete_all
+BookingPreview.delete_all
+Room.delete_all
+  puts "Rooms destroyed"
 Activity.delete_all
   puts "activities destroyed"
 
-# room1 = Room.create(name: "Gîte Ronsard",
-#                   price: 210)
-# room1.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard1.jpg")),
-#     filename: "ronsard1.jpg")
-# room1.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard2.jpg")),
-#     filename: "ronsard2.jpg")
-# room1.images.attach(io: File.open(Rails.root.join("app/assets/images/gite3.jpg")),
-#     filename: "gite3.jpg")
+room1 = Room.create(name: "Gîte Ronsard",
+                  price: 210)
+room1.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard1.jpg")),
+    filename: "ronsard1.jpg")
+room1.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard2.jpg")),
+    filename: "ronsard2.jpg")
+room1.images.attach(io: File.open(Rails.root.join("app/assets/images/gite3.jpg")),
+    filename: "gite3.jpg")
 
-#   room1.set_ppl('fr', "165 m² – couchage : 6 adultes + 3 enfants")
-#   room1.set_ppl('en', "165 m² - bed: 6 adults + 3 children")
-#   room1.set_description('fr', "Idéal pour vos retrouvailles en famille et entre amis, le gite Ronsard vous invite au repos. Un grand salon de 60 m², sa cheminée et son cachet à l’ancienne vous permettront de profiter du calme de la campagne.")
-#   room1.set_description('en', "Perfect to meet with family and friends, the Ronsard inn invites you to rest. A large living room of 60 m², its fireplace and its old style will allow you to enjoy the peace of the countryside.")
-#   room1.set_details('fr', "Grand salon / salle à manger.
-#                 - Cuisine, sellier, wc.")
-#   room1.set_details('en', "Large living / dining room.
-#                  - Kitchen, saddler, wc")
-#   room1.set_detailz('fr', "Une grande suite parentale avec salle de bain : 2 adultes + 3 lits enfants.
-#                 - Deux chambres doubles.
-#                 - Couloir avec salle de douche et wc séparés.")
-#   room1.set_detailz('en', "A large parental suite with bathroom: 2 adults + 3 children's beds.
-#                  - Two double bedrooms.
-#                  - Corridor with separate shower room and wc.")
+  room1.set_ppl('fr', "165 m² – couchage : 6 adultes + 3 enfants")
+  room1.set_ppl('en', "165 m² - bed: 6 adults + 3 children")
+  room1.set_description('fr', "Idéal pour vos retrouvailles en famille et entre amis, le gite Ronsard vous invite au repos. Un grand salon de 60 m², sa cheminée et son cachet à l’ancienne vous permettront de profiter du calme de la campagne.")
+  room1.set_description('en', "Perfect to meet with family and friends, the Ronsard inn invites you to rest. A large living room of 60 m², its fireplace and its old style will allow you to enjoy the peace of the countryside.")
+  room1.set_details('fr', "Grand salon / salle à manger.
+                - Cuisine, sellier, wc.")
+  room1.set_details('en', "Large living / dining room.
+                 - Kitchen, saddler, wc")
+  room1.set_detailz('fr', "Une grande suite parentale avec salle de bain : 2 adultes + 3 lits enfants.
+                - Deux chambres doubles.
+                - Couloir avec salle de douche et wc séparés.")
+  room1.set_detailz('en', "A large parental suite with bathroom: 2 adults + 3 children's beds.
+                 - Two double bedrooms.
+                 - Corridor with separate shower room and wc.")
 
-# room2 = Room.create(name: "Gîte Rabelais",
-#                   price: 230)
-# room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais5.JPG")),
-#     filename: "rabelais5.JPG")
-#     room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais3.jpg")),
-#     filename: "rabelais3.jpg")
-# room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais2.jpg")),
-#     filename: "rabelais2.jpg")
-# room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais1.jpg")),
-#     filename: "rabelais1.jpg")
-
-
-#   room2.set_ppl('fr', "155m² – couchage : 10/12 personnes")
-#   room2.set_ppl('en', "165 m² - bed: 10/12 people")
-#   room2.set_description('fr', "Plutôt moderne, le gite Rabelais s’accorde parfaitement avec vos soirées festives. Une belle salle de réception avec sa mezzanine et sa grande table vous permettront d’accueillir facilement une trentaine de convives.")
-#   room2.set_description('en', "Rather modern, the Rabelais cottage goes perfectly with your fun evenings. A beautiful reception room with its mezzanine and large table will easily accommodate around thirty guests.")
-#   room2.set_details('fr', " Une suite parentale avec salle de bain.
-#                     - Une chambre double.
-#                     - Salle de douche et wc dans le couloir.
-#                     - Salle de réception avec cuisine équipée à l’américaine.
-#                     - Mezzanine.")
-#   room2.set_details('en', "A parental suite with bathroom.
-#                      - A double room.
-#                      - Shower room and wc in the hallway.
-#                      - Reception room with American style kitchen.
-#                      - Mezzanine.")
-#   room2.set_detailz('fr', "Dortoir de 50 m²: 4 lits.
-#                    - 1 salle de douche.")
-#   room2.set_detailz('en', "50 m² dormitory: 4 beds.
-#                     - 1 shower room.")
-
-# room3 = Room.create(name: "Clos Vallière",
-#                   price: 400)
-
-#   room3.set_ppl('fr', "320 m² - couchage : 18/20 personnes")
-#   room3.set_ppl('en', "320 m² - bed : 18/20 people")
-#   room3.set_description('fr', "Profitez de l’ensemble de cette demeure tourangelle et de ses avantages. Un mariage ? Un enterrement de vie de garçon/jeune fille ? Un séminaire ou une rencontre professionnelle ? Plus de 300 m² d’espaces de vie, vous permettront d’accueillir un grand nombre de convives.")
-#   room3.set_description('en', "Enjoy all of this Touraine residence and its advantages. A wedding ? A party? A seminar or a professional meeting? More than 300 m² of living space, will allow you to accommodate a large number of guests.")
-#   room3.set_details('fr', "  Grand salon / salle à manger.
-#                 - Cuisines à l'ancienne, sellier, 2wc.
-#                 - Une suite parentale avec salle de bain.
-#                 - Une chambre double avec salle de douche.
-#                 - Salle de réception avec cuisine équipée à l’américaine.
-#                 - Mezzanine.")
-#   room3.set_details('en', "Large living / dining room.
-#                  - Old-fashioned kitchens, saddler, 2wc.
-#                  - A parental suite with bathroom.
-#                  - A double bedroom with shower room.
-#                  - Reception room with American style kitchen.
-#                  - Mezzanine.")
-#   room3.set_detailz('fr', " Une grande suite parentale avec salle de bain : 2 adultes + 3 lits enfants.
-#                 - Deux chambres doubles.
-#                 - 2 Salle de douche, 2wc.
-#                 - Dortoir de 50 m²: 4 lits.")
-#   room3.set_detailz('en', "A large parental suite with bathroom: 2 adults + 3 children's beds.
-#                  - Two double bedrooms.
-#                  - 2 Shower room, 2 toilets.
-#                  - Dormitory of 50 m²: 4 beds.")
+room2 = Room.create(name: "Gîte Rabelais",
+                  price: 230)
+room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais5.JPG")),
+    filename: "rabelais5.JPG")
+    room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais3.jpg")),
+    filename: "rabelais3.jpg")
+room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais2.jpg")),
+    filename: "rabelais2.jpg")
+room2.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais1.jpg")),
+    filename: "rabelais1.jpg")
 
 
-# room3.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard1.jpg")),
-#     filename: "ronsard1.jpg")
-# room3.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard2.jpg")),
-#     filename: "ronsard2.jpg")
-# room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite3.jpg")),
-#     filename: "gite3.jpg")
-#     room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais5.JPG")),
-#     filename: "rabelais5.JPG")
-#     room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais3.jpg")),
-#     filename: "rabelais3.jpg")
-# room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais2.jpg")),
-#     filename: "rabelais2.jpg")
-# room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais1.jpg")),
-#     filename: "rabelais1.jpg")
-#         room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite2.jpg")),
-#     filename: "gite2.jpg")
-# room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite4.jpg")),
-#     filename: "gite4.jpg")
-# room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG")),
-#     filename: "jardin2.JPG")
-#     room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin3.JPG")),
-#     filename: "jardin3.JPG")
+  room2.set_ppl('fr', "155m² – couchage : 10/12 personnes")
+  room2.set_ppl('en', "165 m² - bed: 10/12 people")
+  room2.set_description('fr', "Plutôt moderne, le gite Rabelais s’accorde parfaitement avec vos soirées festives. Une belle salle de réception avec sa mezzanine et sa grande table vous permettront d’accueillir facilement une trentaine de convives.")
+  room2.set_description('en', "Rather modern, the Rabelais cottage goes perfectly with your fun evenings. A beautiful reception room with its mezzanine and large table will easily accommodate around thirty guests.")
+  room2.set_details('fr', " Une suite parentale avec salle de bain.
+                    - Une chambre double.
+                    - Salle de douche et wc dans le couloir.
+                    - Salle de réception avec cuisine équipée à l’américaine.
+                    - Mezzanine.")
+  room2.set_details('en', "A parental suite with bathroom.
+                     - A double room.
+                     - Shower room and wc in the hallway.
+                     - Reception room with American style kitchen.
+                     - Mezzanine.")
+  room2.set_detailz('fr', "Dortoir de 50 m²: 4 lits.
+                   - 1 salle de douche.")
+  room2.set_detailz('en', "50 m² dormitory: 4 beds.
+                    - 1 shower room.")
 
-#   puts "#{Room.count} rooms were created"
+room3 = Room.create(name: "Clos Vallière",
+                  price: 400)
+
+  room3.set_ppl('fr', "320 m² - couchage : 18/20 personnes")
+  room3.set_ppl('en', "320 m² - bed : 18/20 people")
+  room3.set_description('fr', "Profitez de l’ensemble de cette demeure tourangelle et de ses avantages. Un mariage ? Un enterrement de vie de garçon/jeune fille ? Un séminaire ou une rencontre professionnelle ? Plus de 300 m² d’espaces de vie, vous permettront d’accueillir un grand nombre de convives.")
+  room3.set_description('en', "Enjoy all of this Touraine residence and its advantages. A wedding ? A party? A seminar or a professional meeting? More than 300 m² of living space, will allow you to accommodate a large number of guests.")
+  room3.set_details('fr', "  Grand salon / salle à manger.
+                - Cuisines à l'ancienne, sellier, 2wc.
+                - Une suite parentale avec salle de bain.
+                - Une chambre double avec salle de douche.
+                - Salle de réception avec cuisine équipée à l’américaine.
+                - Mezzanine.")
+  room3.set_details('en', "Large living / dining room.
+                 - Old-fashioned kitchens, saddler, 2wc.
+                 - A parental suite with bathroom.
+                 - A double bedroom with shower room.
+                 - Reception room with American style kitchen.
+                 - Mezzanine.")
+  room3.set_detailz('fr', " Une grande suite parentale avec salle de bain : 2 adultes + 3 lits enfants.
+                - Deux chambres doubles.
+                - 2 Salle de douche, 2wc.
+                - Dortoir de 50 m²: 4 lits.")
+  room3.set_detailz('en', "A large parental suite with bathroom: 2 adults + 3 children's beds.
+                 - Two double bedrooms.
+                 - 2 Shower room, 2 toilets.
+                 - Dormitory of 50 m²: 4 beds.")
+
+
+room3.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard1.jpg")),
+    filename: "ronsard1.jpg")
+room3.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard2.jpg")),
+    filename: "ronsard2.jpg")
+room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite3.jpg")),
+    filename: "gite3.jpg")
+    room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais5.JPG")),
+    filename: "rabelais5.JPG")
+    room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais3.jpg")),
+    filename: "rabelais3.jpg")
+room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais2.jpg")),
+    filename: "rabelais2.jpg")
+room3.images.attach(io: File.open(Rails.root.join("app/assets/images/rabelais1.jpg")),
+    filename: "rabelais1.jpg")
+        room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite2.jpg")),
+    filename: "gite2.jpg")
+room3.images.attach(io: File.open(Rails.root.join("app/assets/images/gite4.jpg")),
+    filename: "gite4.jpg")
+room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG")),
+    filename: "jardin2.JPG")
+    room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin3.JPG")),
+    filename: "jardin3.JPG")
+
+  puts "#{Room.count} rooms were created"
 
   amboise = Activity.create(phone: "02 47 57 00 98",
                               url: "www.chateau-amboise.com",
