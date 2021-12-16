@@ -15,7 +15,6 @@ class BookingPreviewsController < ApplicationController
 
     @length_of_stay = (@booking_preview.end_date - @booking_preview.start_date).to_i + 1
     already_booked = availibilities
-
     if already_booked == true
       redirect_to rooms_path
       flash[:danger] = "Your dates don't match availibilities. Please check the again and resubmit."
@@ -53,8 +52,7 @@ class BookingPreviewsController < ApplicationController
     @date_start = @booking_preview.start_date.strftime("%Y-%m-%d")
     @date_end = @booking_preview.end_date.strftime("%Y-%m-%d")
     already_booked = false
-    @date_end.to_date <= @date_start.to_date ? already_booked = true : already_booked = false
-    @date_start.to_date <= Date.tomorrow ? already_booked = true : already_booked = false
+    already_booked = @date_end.to_date <= @date_start.to_date || @date_start.to_date <= Date.tomorrow ? true : false
     @all_bookings = Booking.all
 
     @all_bookings.each do |booking|
