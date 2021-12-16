@@ -1,4 +1,5 @@
 class BookingPreviewsController < ApplicationController
+  require "date"
 
   def create
     room = Room.find(params[:room_id])
@@ -52,12 +53,14 @@ class BookingPreviewsController < ApplicationController
     @date_start = @booking_preview.start_date.strftime("%Y-%m-%d")
     @date_end = @booking_preview.end_date.strftime("%Y-%m-%d")
     already_booked = false
+    @date_end.to_date <= @date_start.to_date ? already_booked = true : already_booked = false
+    @date_start.to_date <= Date.tomorrow ? already_booked = true : already_booked = false
     @all_bookings = Booking.all
 
     @all_bookings.each do |booking|
       arrival_date = booking.start_date.strftime("%Y-%m-%d")
       leave_date = booking.end_date.strftime("%Y-%m-%d")
-      if @date_start.between?(arrival_date, leave_date) || @date_end.between?(arrival_date, leave_date) || @date_start < Time.now
+      if @date_start.between?(arrival_date, leave_date) || @date_end.between?(arrival_date, leave_date)
         if booking.room_id == @booking_preview.room_id
           already_booked = true
         end
