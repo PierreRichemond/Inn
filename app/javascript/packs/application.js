@@ -55,4 +55,8 @@ document.addEventListener('turbolinks:load', () => {
     navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"]
   });
 
+  $(function () {
+    $("#start_date").flatpickr();
+    $("#end_date").flatpickr();
+  })
 });
