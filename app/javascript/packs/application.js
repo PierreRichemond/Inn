@@ -3,6 +3,8 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
+//= require jquery
+
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
@@ -12,6 +14,12 @@ import 'owl.carousel';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initFlatpickr } from "../plugins/flatpickr";
 
+var jQuery = require('jquery')
+
+// include jQuery in global and window scope (so you can access it globally)
+// in your web browser, when you type $('.div'), it is actually refering to global.$('.div')
+global.$ = global.jQuery = jQuery;
+window.$ = window.jQuery = jQuery;
 
 Rails.start()
 Turbolinks.start()
@@ -47,29 +55,4 @@ document.addEventListener('turbolinks:load', () => {
     navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"]
   });
 
-  function getUrl(event) {
-      console.log(event)
-      const url = event.target.href
-    console.log(url)
-    fetch(url, {
-      method: 'GET',
-      headers: { 'Accept': "application/json", 'Content-Type': 'application/json' }
-    })
-      .then(response => response.json())
-      .then((data) => {
-        console.log(data)
-
-        const calendar = document.getElementById(`calendar-${data.name}`)
-        // calendar.innerHTML
-
-      });
-  }
-  const calendarHeadings = document.querySelectorAll(".calendar-heading");
-  calendarHeadings.forEach((header) => {
-    const aTag = header.querySelectorAll("a");
-    console.log(aTag)
-    aTag.forEach(link => {
-      link.addEventListener('click', getUrl);
-    })
-  });
 });
