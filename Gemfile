@@ -41,6 +41,7 @@ gem 'devise'
 gem 'money-rails'
 gem 'stripe'
 gem 'stripe_event'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'pry-byebug'
