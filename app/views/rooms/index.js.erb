@@ -1,10 +1,3 @@
-<%# const calendarHeadings = document.querySelectorAll(".calendar-heading");
-  calendarHeadings.forEach((header) => {
-    const aTag = header.querySelectorAll("a");
-    console.log(aTag)
-    aTag.forEach(link => {
-      link.addEventListener('click', getUrl);
-    })
-  }); %>
-
-$("#events_calendar").html("<%= escape_javascript render(partial: "calendar", locals: {bookings: @bookings}) %>");
+$("#calendar-Ronsard").html("<%= escape_javascript render(partial: "calendar", locals: {events: @rooms[0].bookings}) %>");
+$("#calendar-Rabelais").html("<%= escape_javascript render(partial: "calendar", locals: {events: @rooms[1].bookings}) %>");
+$("#calendar-Vallière").html("<%= escape_javascript render(partial: "calendar", locals: {events: @rooms[2].bookings}) %>");

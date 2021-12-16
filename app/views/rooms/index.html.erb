@@ -21,8 +21,9 @@
                   <div><%= cl_image_tag image.key%></div>
                 <% end %>
               </div>
-              <div class="col-12 col-lg-4" id="calendars-<%= room.name %>">
-                <%= render partial: "calendar", locals: {bookings: room.bookings} %>
+              <div class="col-12 col-lg-4" id="calendar-<%= room.name.split(' ').last.to_s %>">
+               <% events = room.bookings %>
+                <%= render partial: "calendar", locals: {events: events } %>
               </div>
             </div>
           </div>
