@@ -38,10 +38,12 @@ gem "simple_calendar", "~> 2.4"
 gem 'mail_form'
 gem 'mail'
 gem 'devise'
+gem 'devise-i18n', '~> 1.2'
 gem 'money-rails'
 gem 'stripe'
 gem 'stripe_event'
 gem 'jquery-rails'
+gem 'friendly_id', '~> 5.4.0'
 
 group :development, :test do
   gem 'pry-byebug'
