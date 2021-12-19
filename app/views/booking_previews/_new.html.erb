@@ -5,12 +5,3 @@
   <%= hidden_field_tag :room_id, room.id %>
   <%= submit_tag 'Book now', class: 'btn btn-primary' %>
 <% end %>
-
-<!--  strftime('%A, %d %b %Y')
-<%= simple_form_for booking_previews_path do |f| %>
-  <%= f.input :start_date, :placeholder => "Start date", as: :string, required: true, input_html: { id: "range_start" }, class: 'mr-1'%>
-  <%= f.input :end_date, :placeholder => "End date", as: :string, required: true, input_html: { id: "range_end" }, class: 'mr-1'%>
-  <%= f.hidden_field :room_id, :value => room.id.to_s %>
-  <%= f.submit 'Submit the dates', class: 'btn btn-primary', style: "border-radius: 1em; font-size: 16px;" %>
-<% end %>
--->

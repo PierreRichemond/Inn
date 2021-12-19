@@ -40,7 +40,6 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
-  initFlatpickr();
   initMapbox();
   $('.owl-carousel').owlCarousel({
     loop: true,
@@ -54,9 +53,10 @@ document.addEventListener('turbolinks:load', () => {
     nav: true,
     navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"]
   });
-
-  $(function () {
-    $("#start_date").flatpickr();
-    $("#end_date").flatpickr();
-  })
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  initFlatpickr();
+  flatpickr("#start_date");
+  flatpickr("#end_date");
+})
