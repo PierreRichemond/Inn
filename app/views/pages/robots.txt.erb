@@ -1,9 +1,8 @@
 <% if Rails.env.production? %>
   User-Agent: *
-  Allow: /
   Disallow: /
-  Sitemap: http://www.mysite.com/sitemap.xml
 <% else %>
   User-Agent: *
-  Disallow: /
+  Noindex: /
 <% end %>
+Sitemap: http://www.mysite.com/sitemap.xml
