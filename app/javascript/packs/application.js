@@ -48,7 +48,6 @@ document.addEventListener('turbolinks:load', () => {
       0: {
         items: 2
       },
-
     },
     nav: true,
     navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"]
