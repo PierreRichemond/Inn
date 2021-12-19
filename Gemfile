@@ -43,6 +43,7 @@ gem 'money-rails'
 gem 'stripe'
 gem 'stripe_event'
 gem 'jquery-rails'
+gem 'friendly_id', '~> 5.4.0'
 
 group :development, :test do
   gem 'pry-byebug'
