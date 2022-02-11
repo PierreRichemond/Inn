@@ -48,8 +48,11 @@
   }
 }
 .room_card{
-  border-top: 10px solid #91ce9c;
   padding-top: 2em;
+}
+
+.top_border__green{
+  border-top: 10px solid #91ce9c;
 }
 
 .home_card{
@@ -113,10 +116,6 @@
 #modal-description{
   font-weight: 400;
   justify-content: center;
-}
-
-.modal-title{
-  text-align: center;
 }
 
 .activity-name{

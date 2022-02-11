@@ -1,7 +1,7 @@
 <div class="row m-3">
   <div class="col-12 col-lg-9">
     <% @rooms.each do |room| %>
-      <div class ="room_card">
+      <div class ="room_card <%= @rooms.first == room ? '' : 'top_border__green' %>">
         <div class="container">
           <div class="col-md-6" id="flash-message">
             <%= render 'shared/flash' %>
@@ -22,7 +22,7 @@
                 <% end %>
               </div>
               <div class="col-12 col-lg-4 mt-3" id="calendar-<%= room.name.split(' ').last.to_s %>">
-               <% events = room.bookings %>
+                <% events = room.bookings %>
                 <%= render partial: "calendar", locals: {events: events } %>
               </div>
             </div>
