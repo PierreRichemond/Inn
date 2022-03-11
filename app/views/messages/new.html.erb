@@ -1,20 +1,19 @@
-<h1 class='text-center'>Contact me !</h1>
-<p class='text-center'>Feel free to send me a message to ask for anything related to your stay.   <br>
-  I will be happy to reply.</p>
+<h1 class='text-center'><%= t("contact_header") %>!</h1>
+<p class='text-center'><%= t("contact_message_html") %></p>
 <%= form_for @message, url: messages_path, remote: true do |f| %>
   <div class="col-md-12">
-    <%= f.label :name %>
+    <%= f.label t("name") %>
     <%= f.text_field  :name, required: true %>
     <%= f.label :email %>
     <%= f.text_field :email, required: true %>
     <%= f.label :message %>
     <%= f.text_area :message, rows: 8, cols: 40, required: true,
-                        placeholder: "Send me a message"%>
+                        placeholder: t("send_me_a_message")%>
     <div class= "d-none">
       <%= f.label :nickname %>
       <%= f.text_field :nickname %>
     </div>
-    <%= f.submit 'Send Message', class: 'btn btn-primary' %>
+    <%= f.submit t('send_message'), class: 'btn btn-primary' %>
   </div>
 <% end %>
 <div class="col-md-6" id="flash-message">

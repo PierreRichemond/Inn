@@ -8,7 +8,7 @@
           </div>
           <div class="text">
             <h2 class= "text-center"><%= room.name %></h2>
-            <h3 class= "text-center"><%= room.price %>€</h3>
+            <!--<h3 class= "text-center"><%= room.price %>€</h3>-->
             <h3 class= "text-center"><%= room.ppl(locale) %></h3>
             <p><%= room.description(locale) %></p>
             <p><span style="font-size:30px;"><%= t(".floor1") %>:</span> <%= room.details(locale) %></p>
@@ -40,7 +40,7 @@
 <div class="modified_container1">
   <div class="our_activities">
     <h2><%= t(".h4") %></h2>
-    <p class='text-center'><%= t(".request_html") %></p>
+    <!-- <p class='text-center'><%= t(".request_html") %></p>-->
     <p><%= t(".content4_html") %></p>
     <%= render "rooms/equipment_list" %>
   </div>

@@ -25,13 +25,13 @@
       <% if user_signed_in? %>
         <li class="nav-item">
           <%= link_to destroy_user_session_path, method: :delete, class: "pb-0 mb-0" do%>
-            <p><%= "Log out" %></p>
+            <p><%= t("log_out") %></p>
           <% end %>
         </li>
       <% else %>
         <li class="nav-item">
           <%= link_to new_user_session_path, class: "pb-0 mb-0" do %>
-            <p><%= "login" %></p>
+            <p><%= t("log_in") %></p>
           <% end %>
         </li>
       <% end %>
