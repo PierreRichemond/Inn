@@ -97,7 +97,6 @@ GEM
       warden (~> 1.2.3)
     devise-i18n (1.10.2)
       devise (>= 4.8.0)
-    digest (3.1.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.7.6)
@@ -123,7 +122,6 @@ GEM
       domain_name (~> 0.5)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
-    io-wait (0.2.1)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -160,13 +158,6 @@ GEM
       money (~> 6.13)
       railties (>= 3.0)
     msgpack (1.4.5)
-    net-protocol (0.1.2)
-      io-wait
-      timeout
-    net-smtp (0.3.1)
-      digest
-      net-protocol
-      timeout
     netrc (0.11.0)
     nio4r (2.5.8)
     nokogiri (1.13.3-x86_64-darwin)
@@ -271,7 +262,6 @@ GEM
       stripe (>= 2.8, < 6)
     thor (1.2.1)
     tilt (2.0.10)
-    timeout (0.2.0)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -312,7 +302,7 @@ PLATFORMS
 DEPENDENCIES
   acts-as-taggable-on (~> 7.0)
   autoprefixer-rails (= 10.2.5)
-  bootsnap (>= 1.4.4)
+  bootsnap
   byebug
   capybara (>= 3.26)
   cloudinary (~> 1.16.0)
@@ -329,7 +319,6 @@ DEPENDENCIES
   mail
   mail_form
   money-rails
-  net-smtp
   pg (~> 1.1)
   pry-byebug
   pry-rails
@@ -350,7 +339,7 @@ DEPENDENCIES
   webpacker (~> 5.0)
 
 RUBY VERSION
-   ruby 3.1.1p18
+   ruby 3.0.2p107
 
 BUNDLED WITH
    2.3.7
