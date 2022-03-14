@@ -116,7 +116,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
   puts "#{Room.count} rooms were created"
 
   amboise = Activity.create(phone: "02 47 57 00 98",
-                              url: "www.chateau-amboise.com",
+                              url: "https://www.chateau-amboise.com",
                               address: "Mnt de l'Emir Abd el Kader, 37400 Amboise, France",
                               price: "13.5",
                               distance: "27km",
@@ -133,7 +133,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
 
 
   luce = Activity.create(     phone: "02 47 57 00 73",
-                              url: "www.vinci-closluce.com",
+                              url: "https://www.vinci-closluce.com",
                               address: "2 Rue du Clos Lucé, 37400 Amboise, France",
                               price: "17.5",
                               distance: "27km",
@@ -166,7 +166,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
   chambord.set_description('en', "The Château de Chambord is one of the most unique constructions that the Renaissance century has left. The architecture is a clever blend of traditional elements of French medieval architecture and those borrowed from the Italian Renaissance. Even though the four massive towers that flank the keep are reminiscent of medieval fortresses, the design of the castle and the innovative elements that compose it are unique. The central plan of the keep, the location of the double-spiral staircase, the geometric clarity of the facades and their ornamentation, the symmetry of the buildings, the presence of coffered vaults on the second floor make the monument unique.")
 
     ronsard = Activity.create(phone: "02 47 37 32 70",
-                              url: "www.prieure-ronsard.fr",
+                              url: "https://www.prieure-ronsard.fr",
                               address: "37520 La Riche, France",
                               price: "6",
                               distance: "21km",
@@ -183,7 +183,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
 
 
     chenonceau = Activity.create(phone: "08 20 20 90 90",
-                              url: "www.chenonceau.com",
+                              url: "https://www.chenonceau.com",
                               address: "37150 Chenonceaux, France",
                               price: "15",
                               distance: "37km",
@@ -199,7 +199,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
   chenonceau.set_description('en', "Administered and protected by women, most of whom have left their mark on history, Chenonceau is known as the 'Château des Dames'. From Katherine Briçonnet to Catherine de Medici, this feminine imprint is present from her architecture to her gardens.")
 
     azay = Activity.create(phone: "02 47 45 42 04",
-                              url: "www.azay-le-rideau.fr",
+                              url: "https://www.azay-le-rideau.fr",
                               address: "Rue de Pineau, 37190 Azay-le-Rideau, France",
                               price: "11.5",
                               distance: "44km",
@@ -215,7 +215,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
   azay.set_description('en', "Built on an island in the middle of the Indre during the reign of François the 1st, this monument is the result of a subtle alliance of French traditions and innovative decorations from Italy. Since 2017, you can discover a castle magnified after three years of restoration.")
 
     chaumont = Activity.create(phone: "02 54 20 99 22",
-                              url: "www.domaine-chaumont.fr",
+                              url: "https://www.domaine-chaumont.fr",
                               address: "41150 Chaumont-sur-Loire, France",
                               price: "14 ~ 19",
                               distance: "35km",
@@ -232,7 +232,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
   chaumont.set_description('en', "The Domaine de Chaumont-sur-Loire is a real gem of Renaissance architecture that floats above the Loire between Blois and Amboise. Beyond a very rich history, the castle has become an essential stopover for lovers of contemporary art and landscaped gardens. Each year, a new artistic season takes place.")
 
     langeais = Activity.create(phone: "02 47 96 72 60",
-                              url: "www.chateau-de-langeais.com",
+                              url: "https://www.chateau-de-langeais.com",
                               address: "Place Pierre de Brosse, 37130 Langeais, France",
                               price: "11",
                               distance: "41km",
@@ -249,7 +249,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
 
 
     villandry = Activity.create(phone: "02 47 50 02 09",
-                              url: "www.chateauvillandry.fr",
+                              url: "https://www.chateauvillandry.fr",
                               address: "3 Rue Principale, 37510 Villandry, France",
                               price: "12",
                               distance: "34km",
@@ -266,7 +266,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
 
 
   rabelais = Activity.create(phone: "02 47 95 91 18",
-    url: "www.musee-rabelais.fr",
+    url: "https://www.musee-rabelais.fr",
     address: "Musee Rabelais, 4 Rue de la Devinière, 37500 Seuilly, France",
     price: "6",
     distance: "70km",
@@ -284,7 +284,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
 
 
   chinon = Activity.create(phone: "02 47 93 13 45",
-    url: "www.forteressechinon.fr",
+    url: "https://www.forteressechinon.fr",
     address: "2 Rue du Château, 37500 Chinon, France",
     price: "9",
     distance: "63km",
@@ -321,7 +321,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
 
 
       aquarium = Activity.create(phone: "02 47 23 44 57",
-                                url: "www.grandaquariumdetouraine.com",
+                                url: "https://www.grandaquariumdetouraine.com",
                                 address: "37400 Lussault-Sur-Loire, France",
                                 price: "28",
                                 distance: "27km",
@@ -338,7 +338,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
 
 
         zoo = Activity.create!(phone: "02 54 75 50 00",
-                                url: "www.zoobeauval.com",
+                                url: "https://www.zoobeauval.com",
                                 address: "41110 Saint-Aignan, France",
                                 price: "27 ~ 32",
                                 distance: "60km",
@@ -354,7 +354,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
 
 
       safari = Activity.create( phone: "02 47 56 22 30",
-                                url: "www.reserve-de-beaumarchais.com",
+                                url: "https://www.reserve-de-beaumarchais.com",
                                 address: "37110 Autrèche, France",
                                 price: "8.5",
                                 distance: "16km",
@@ -370,7 +370,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
   safari.set_description('en', "In the heart of the Loire Valley, a stone's throw from Amboise and Chenonceaux, experience a moment of relaxation and adventure by boarding the Safari Train, for an astonishing crossing of a breeding park to meet the great game.")
 
       mongolfiere = Activity.create(phone: "06 07 41 09 78",
-                                url: "www.balloonrevolution.com",
+                                url: "https://www.balloonrevolution.com",
                                 address: "7 Rue de l'ile d'Or, 37400 Amboise",
                                 price: "189 ~ 899",
                                 distance: "27km",
