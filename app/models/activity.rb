@@ -23,5 +23,4 @@ class Activity < ApplicationRecord
     description_translation = activities_translations.find_or_initialize_by(locale: locale, field_name: 'description')
     description_translation.update(text: description)
   end
-
 end

@@ -6,10 +6,6 @@ class ApplicationController < ActionController::Base
     { locale: I18n.locale }
   end
 
-  # def default_url_options
-  #   { host: ENV["DOMAIN"] || "localhost:3000" }
-  # end
-
   def set_locale
     if params[:locale].present?
       cookies.permanent[:locale] = params[:locale] # save cookies
@@ -21,8 +17,6 @@ class ApplicationController < ActionController::Base
       I18n.locale = locale # use cookies locale
     end
   end
-
-
 
   private
 
