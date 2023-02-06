@@ -1,4 +1,4 @@
-# spec/factories/room.rb
+# spec/factories/rooms_translation.rb
 
 FactoryBot.define do
   factory :room do
