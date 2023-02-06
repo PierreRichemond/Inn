@@ -84,7 +84,7 @@ RSpec.describe Room, :type => :model do
     end
     describe "#details" do
       it "details translation for the room" do
-         room.set_details('fr', 'details')
+        room.set_details('fr', 'details')
         expect(room.details("fr")).to eq('details')
       end
     end
