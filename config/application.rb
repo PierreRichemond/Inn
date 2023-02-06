@@ -30,6 +30,5 @@ module Inn
     config.i18n.fallbacks = true
     config.exceptions_app = self.routes
     config.assets.precompile << 'amp/application.scss'
-
   end
 end

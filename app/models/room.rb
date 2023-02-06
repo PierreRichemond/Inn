@@ -4,6 +4,7 @@ class Room < ApplicationRecord
   has_many :bookings, dependent: :destroy
   has_many :booking_previews, dependent: :destroy
   monetize :price_cents
+  validates :name, presence: true
 
   def ppl(arg)
     rooms_translations.find_by(locale: arg.to_s, field_name: 'ppl').text
