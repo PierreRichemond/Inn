@@ -1,4 +1,4 @@
-class BookingPreview < ApplicationRecord
+class BookingAttempt < ApplicationRecord
   belongs_to :user
   belongs_to :room
   validates :start_date, presence: true

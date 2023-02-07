@@ -1,10 +1,10 @@
-class BookingPreviewsController < ApplicationController
+class BookingAttemptController < ApplicationController
   require "date"
 
   def create
     room = Room.find(params[:room_id])
 
-    @booking_preview = BookingPreview.create!(
+    @booking_attempt = BookingAttempt.create!(
       room: room, room_name: room.name,
       amount: price_of_stay(room.price, ((params[:end_date].to_date - 1) - params[:start_date][0..9].to_date).to_i + 1),
       state: 'pending',
@@ -13,7 +13,7 @@ class BookingPreviewsController < ApplicationController
       end_date: params[:end_date].to_date - 1
     )
 
-    @length_of_stay = (@booking_preview.end_date - @booking_preview.start_date).to_i + 1
+    @length_of_stay = (@booking_attempt.end_date - @booking_attempt.start_date).to_i + 1
     already_booked = availibilities
     if already_booked == true
       redirect_to rooms_path
@@ -23,34 +23,33 @@ class BookingPreviewsController < ApplicationController
       payment_method_types: ['card'],
       line_items: [{
         name: room.name,
-        amount: @booking_preview.amount_cents,
+        amount: @booking_attempt.amount_cents,
         currency: 'eur',
         quantity: 1
       }],
-      success_url: booking_preview_url(@booking_preview),
-      cancel_url: booking_preview_url(@booking_preview)
+      success_url: booking_attempt_url(@booking_attempt),
+      cancel_url: booking_attempt_url(@booking_attempt)
     )
-    @booking_preview.update(checkout_session_id: session.id)
-    redirect_to new_booking_preview_payment_path(@booking_preview)
-
+    @booking_attempt.update(checkout_session_id: session.id)
+    redirect_to new_booking_attempt_payment_path(@booking_attempt)
     end
   end
 
   def show
-    @booking_preview = current_user.booking_previews.find(params[:id])
-    @length_of_stay = (@booking_preview.end_date - @booking_preview.start_date).to_i + 1
+    @booking_attempt = current_user.booking_attempts.find(params[:id])
+    @length_of_stay = (@booking_attempt.end_date - @booking_attempt.start_date).to_i + 1
     flash[:success] = "Thank you for your booking! We will contact you soon!"
   end
 
   private
 
   def booking_params
-    params.require(:booking_preview).permit(:start_date, :end_date, :room_id, :user_id)
+    params.require(:booking_attempt).permit(:start_date, :end_date, :room_id, :user_id)
   end
 
   def availibilities
-    @date_start = @booking_preview.start_date.strftime("%Y-%m-%d")
-    @date_end = @booking_preview.end_date.strftime("%Y-%m-%d")
+    @date_start = @booking_attempt.start_date.strftime("%Y-%m-%d")
+    @date_end = @booking_attempt.end_date.strftime("%Y-%m-%d")
     already_booked = false
     already_booked = @date_end.to_date <= @date_start.to_date || @date_start.to_date <= Date.tomorrow ? true : false
     @all_bookings = Booking.all
@@ -59,7 +58,7 @@ class BookingPreviewsController < ApplicationController
       arrival_date = booking.start_date.strftime("%Y-%m-%d")
       leave_date = booking.end_date.strftime("%Y-%m-%d")
       if @date_start.between?(arrival_date, leave_date) || @date_end.between?(arrival_date, leave_date)
-        if booking.room_id == @booking_preview.room_id
+        if booking.room_id == @booking_attempt.room_id
           already_booked = true
         end
       end

@@ -1,0 +1,19 @@
+ <!-- app/views/bookings/show.html.erb -->
+<div class="container">
+  <div class="row">
+    <%= render "./payments/booking_carousel", booking: @booking_attempt  %>
+    <div class= "col-12 col-lg-6">
+      <h1 class='mt-5 text-center'>booking #<%= @booking_attempt.id %> <small><span class="badge badge-primary"><%= @booking_attempt.state %></span></small></h1>
+      <%= render "payments/booking_details", booking: @booking_attempt  %>
+    </div>
+  </div>
+  <%= render "number_of_nights", booking: @booking_attempt  %>
+  <div class='mt-5'>
+  <%= link_to "/rooms" do %>
+    <p class="pb-0 mb-0"><%= t("nav_room") %></p>
+  <% end %>
+  <%= link_to "/" do %>
+    <p class="pb-0 mb-0"><%= t("nav_home") %></p>
+  <% end %>
+  </div>
+</div>

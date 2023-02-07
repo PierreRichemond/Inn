@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe BookingPreview, :type => :model do
+RSpec.describe BookingAttempt, :type => :model do
   describe "Check validation" do
     context "when invalid" do
       it "raises an error" do
