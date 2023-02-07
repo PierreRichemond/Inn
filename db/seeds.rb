@@ -1,6 +1,6 @@
 
 Booking.delete_all
-BookingPreview.delete_all
+BookingAttempt.delete_all
 Room.delete_all
   puts "Rooms destroyed"
 Activity.delete_all

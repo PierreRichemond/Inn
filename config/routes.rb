@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /fr|en/ do
     root to: 'pages#home'
     resources :rooms
-    resources :booking_previews, only: [:show, :create] do
+    resources :booking_attempts, only: [:show, :create] do
       resources :payments, only: :new
     end
     resources :bookings

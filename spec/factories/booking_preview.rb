@@ -1,7 +1,7 @@
-# spec/factories/booking_preview.rb
+# spec/factories/booking_attempt.rb
 
 FactoryBot.define do
-  factory :booking_preview do
+  factory :booking_attempt do
     state { "Past" }
     room_name { "Ronsard" }
     user_id { User.first || create(:user) }

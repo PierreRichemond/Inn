@@ -1,5 +1,5 @@
 
-<%= form_tag booking_previews_path do %>
+<%= form_tag booking_attempts_path do %>
   <%= date_field_tag :start_date, params[:range_start], :placeholder => "Start date"%>
   <%= date_field_tag :end_date, params[:range_end], :placeholder => "End date"%>
   <%= hidden_field_tag :room_id, room.id %>

@@ -1,6 +1,4 @@
 class ActivitiesController < ApplicationController
-  skip_before_action :authenticate_user!, only: :index
-
   def index
     @tags = if params[:locale] == 'en'
               Activity::TAGS.values_at(* Activity::TAGS.each_index.select {|i| i.odd?})

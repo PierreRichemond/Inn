@@ -2,7 +2,7 @@ class Room < ApplicationRecord
   has_many_attached :images
   has_many :rooms_translations, dependent: :destroy
   has_many :bookings, dependent: :destroy
-  has_many :booking_previews, dependent: :destroy
+  has_many :booking_attempts, dependent: :destroy
   monetize :price_cents
   validates :name, presence: true
 
