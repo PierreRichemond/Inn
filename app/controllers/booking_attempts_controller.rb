@@ -5,8 +5,8 @@ class BookingAttemptsController < ApplicationController
   def create
     room = Room.find(params[:room_id])
     booking_attempt = BookingAttemptService.create(room, params, current_user)
-    already_booked = BookingService.availibilities(booking_attempt)
-    if already_booked == true
+    available = BookingService.room_available?(booking_attempt)
+    if available == false
       redirect_to rooms_path
       flash[:danger] = "Your dates don't match availibilities. Please check the again and resubmit."
     else
