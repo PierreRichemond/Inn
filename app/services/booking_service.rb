@@ -4,7 +4,6 @@ class BookingService
     return room_price_per_night * number_of_night if number_of_night.between?(1, 4)
 
     price = 0
-
     price += room_price_per_night * 4 if number_of_night >= 4
     price += room_price_per_night * 0.8 if number_of_night >= 5
     price += room_price_per_night * 0.8 if number_of_night >= 6

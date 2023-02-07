@@ -3,6 +3,6 @@
 FactoryBot.define do
   factory :room do
     name { "Deluxe Suite" }
-    price_cents { 0 }
+    price_cents { 10_000 }
   end
 end
