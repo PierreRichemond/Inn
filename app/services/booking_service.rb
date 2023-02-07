@@ -23,11 +23,9 @@ class BookingService
     all_bookings.each do |booking|
       arrival_date = booking.start_date.strftime("%Y-%m-%d")
       leave_date = booking.end_date.strftime("%Y-%m-%d")
-      if date_start.between?(arrival_date, leave_date) || date_end.between?(arrival_date, leave_date)
-        if booking.room_id == booking_attempt.room_id
-          available = false
-        end
-      end
+      next unless date_start.between?(arrival_date, leave_date) || date_end.between?(arrival_date, leave_date)
+
+      available = false if booking.room_id == booking_attempt.room_id
     end
     available
   end
