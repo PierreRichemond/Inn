@@ -3,6 +3,7 @@ class BookingAttemptsController < ApplicationController
   before_action :authenticate_user!, only: :create
 
   def create
+    binding.pry
     room = Room.find(params[:room_id])
     booking_attempt = BookingAttemptService.create(room, params, current_user)
     available = BookingService.room_available?(booking_attempt)
