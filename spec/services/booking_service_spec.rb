@@ -1,12 +1,12 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe BookingService, type: :model do
   describe '#self.room_available?(booking_attempt)' do
     let(:user) { create(:user) }
     let(:room) { create(:room) }
-    let(:booking_attempt) { create(:booking_attempt, room_id: room.id) }
-    let(:booking1) { create(:booking, start_date: 8.days.from_now, end_date: 10.days.from_now, room_id: room.id) }
-    let(:booking2) { create(:booking, start_date: 3.days.from_now, end_date: 4.days.from_now, room_id: room.id) }
+    let(:booking_attempt) { create(:booking_attempt, room: room, user: user) }
+    let(:booking1) { create(:booking, start_date: 8.days.from_now, end_date: 10.days.from_now, room: room, user: user) }
+    let(:booking2) { create(:booking, start_date: 3.days.from_now, end_date: 4.days.from_now, room: room, user: user) }
 
     context 'checks for room_available?' do
       it "return true when does not overlaps with already booked dates" do

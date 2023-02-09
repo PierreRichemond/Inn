@@ -1,4 +1,20 @@
 fr:
+    activerecord:
+      errors:
+        messages:
+          record_invalid: 'La validation à échoué: %{errors}'
+          restrict_dependent_destroy:
+            has_one: 'Ne peut supprimer le registe %{record}'
+            has_many: 'Ne peut supprimer les registes %{record}'
+        models:
+          booking:
+            attributes:
+              user:
+                required: 'log in avant de creer une chambre'
+          activities_translation:
+            attributes:
+              activities:
+                required: 'need an activity'
     log_out: "Se déconnecter"
     log_in: 'Se connecter'
     name: 'Nom'
