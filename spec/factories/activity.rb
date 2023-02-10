@@ -8,5 +8,6 @@ FactoryBot.define do
     price { '13.5' }
     url { "https://www.chateau-amboise.com" }
     phone { '06 06 06 06 06' }
+    tag_list { "Culture" }
   end
 end

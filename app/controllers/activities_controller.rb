@@ -1,18 +1,14 @@
 class ActivitiesController < ApplicationController
   def index
-    @tags = if params[:locale] == 'en'
-              Activity::TAGS.values_at(* Activity::TAGS.each_index.select {|i| i.odd?})
-            else
-              Activity::TAGS.values_at(* Activity::TAGS.each_index.select {|i| i.even?})
-            end
+    @tags = ActivityService.tags_per_language(params[:locale])
+    @activities = ActivityService.activities_with_tag(params[:tag])
+    @markers = set_markers(@activities)
+  end
 
-    @activities = if params[:tag].present?
-                    Activity.tagged_with(params[:tag])
-                  else
-                    Activity.all
-                  end
+  private
 
-    @markers = @activities.geocoded.map do |activity|
+  def set_markers(activities)
+    activities.geocoded.map do |activity|
       {
         lat: activity.latitude,
         lng: activity.longitude,
@@ -20,11 +16,6 @@ class ActivitiesController < ApplicationController
       }
     end
   end
-
-  def show
-  end
-
-  private
 
   def activity_params
     params.require(:activity).permit(:name, :locale, tag_list: [])

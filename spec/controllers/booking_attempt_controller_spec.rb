@@ -7,7 +7,7 @@ RSpec.describe BookingAttemptsController, type: :controller do
     let!(:booking_attempt) { create(:booking_attempt, amount_cents: 4343, checkout_session_id: 1234) }
     login_user
 
-    it "assigns @rooms" do
+    it "checks stripe call" do
       allow(BookingService).to receive(:price_of_stay) { 4343 }
       allow(BookingAttemptService).to receive(:create) { booking_attempt }
       allow(BookingService).to receive(:room_available?) { true }
