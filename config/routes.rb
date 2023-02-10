@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       resources :payments, only: :new
     end
     resources :bookings
-    resources :activities, only: [:index, :show]
+    resources :activities, only: :index
     get '/tagged', to: "activities#tagged", as: :tagged
     resources :messages
     devise_for :users
