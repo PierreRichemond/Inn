@@ -12,7 +12,7 @@
       </div>
       <div class="modal-body">
         <%= link_to activity.url do %>
-          <h2 class='modal-title' target='_blank'><%= activity.name(locale) %></h2>
+          <h2 class='modal-title' target='_blank'><%= activity.name %></h2>
         <% end %>
         <p id= 'modal-description'><%= activity.description(locale) %></p>
         <div class="d-flex justify-content-between">

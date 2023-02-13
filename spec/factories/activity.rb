@@ -2,6 +2,7 @@
 
 FactoryBot.define do
   factory :activity do
+    name { "Activity" }
     address { "Mnt de l'Emir Abd el Kader, 37400 Amboise, France" }
     longitude { 0.8 }
     latitude { 47.5 }

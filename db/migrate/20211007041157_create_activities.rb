@@ -5,7 +5,7 @@ class CreateActivities < ActiveRecord::Migration[6.1]
       t.string :address
       t.float :longitude
       t.float :latitude
-      t.string :price
+      t.integer :price
       t.text :description
       t.string :url
       t.string :phone

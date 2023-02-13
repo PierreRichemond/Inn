@@ -1,4 +1,7 @@
 fr:
+    time:
+      formats:
+        long: ""
     activerecord:
       errors:
         messages:

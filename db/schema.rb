@@ -58,10 +58,11 @@ ActiveRecord::Schema.define(version: 2023_02_13_105304) do
   end
 
   create_table "activities", force: :cascade do |t|
+    t.string "name"
     t.string "address"
     t.float "longitude"
     t.float "latitude"
-    t.string "price"
+    t.integer "price"
     t.string "url"
     t.string "phone"
     t.datetime "created_at", precision: 6, null: false
