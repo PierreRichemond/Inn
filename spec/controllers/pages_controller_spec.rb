@@ -6,7 +6,7 @@ RSpec.describe PagesController, type: :controller do
       get :home
     end
 
-    it { should respond_with :success }
+    it { expect(response).to have_http_status(200) }
     it { should render_template(:home) }
   end
 end

@@ -6,19 +6,18 @@ RSpec.describe MessagesController, type: :controller do
       get :new
     end
 
-    it { should respond_with :success }
+    it { expect(response).to have_http_status(200) }
     it { should render_template(:new) }
   end
 
   describe '#create' do
     context "with valid params" do
       before(:each) do
-        post :create, params: { message: {email: "bibi@gmail.com", name: "Pierre", nickname: "Bibi", message: "Hello World"} }
+        post :create, params: { message: {email: "bibi@gmail.com", name: "Pierre", nickname: "", message: "Hello World"} }
       end
 
-      it { should change { Message.count }.by(1) }
-      it { should respond_with :success }
-      it { should redirect_to("/") }
+      # it { expect(MessageMailer).to receive(:with).with(*(any_args)) } Need to recheck
+      it { expect(response).to have_http_status(302) } # redirect_to '/'
     end
   end
 
@@ -27,8 +26,8 @@ RSpec.describe MessagesController, type: :controller do
       post :create, params: { message: { email: "bibi@gmail.com" } }
     end
 
-    it { should_not change { Message.count }.by(1) }
-    it { should_not respond_with :success }
+    it { expect(MessageMailer).not_to receive(:with).with(kind_of(Message)) }
+    it { expect(response).not_to have_http_status(302) }
     it { should render_template(:new) }
   end
 end

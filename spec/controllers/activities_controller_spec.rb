@@ -6,7 +6,7 @@ RSpec.describe ActivitiesController, type: :controller do
       get :index
     end
 
-    it { should respond_with :success }
+    it { expect(response).to have_http_status(200) }
     it { should render_template(:index) }
   end
 end
