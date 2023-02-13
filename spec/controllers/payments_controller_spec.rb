@@ -9,7 +9,7 @@ RSpec.describe PaymentsController, type: :controller do
       get :new, params: { booking_attempt_id: 1234 }
     end
 
-    it { should respond_with :success }
+    it { expect(response).to have_http_status(200) }
     it { should render_template(:new) }
   end
 end

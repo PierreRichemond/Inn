@@ -5,6 +5,7 @@ class Message < MailForm::Base
   attribute :message
   attribute :nickname,  :captcha  => true
 
+  before_deliver :headers
   # Declare the e-mail headers. It accepts anything the mail method
   # in ActionMailer accepts.
   def headers

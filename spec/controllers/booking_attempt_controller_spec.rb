@@ -29,16 +29,13 @@ RSpec.describe BookingAttemptsController, type: :controller do
     end
   end
 
-
-  # FORMAT TO FIGURE OUT
-
-  # describe "#show" do
-  #   login_user
-  #   let!(:booking_attempt) { create(:booking_attempt, amount_cents: 4343, checkout_session_id: 1234) }
-  #   before(:each) do
-  #     get :show, params: { id: booking_attempt.id }
-  #   end
-  #   it { should respond_with :success }
-  #   it { should render_template(:show) }
-  # end
+  describe "#show" do
+    login_user
+    let!(:booking_attempt) { create(:booking_attempt, amount_cents: 4343, checkout_session_id: 1234) }
+    before(:each) do
+      get :show, params: { id: booking_attempt.id }
+    end
+    it { expect(response).to have_http_status(200) }
+    it { should render_template(:show) }
+  end
 end
