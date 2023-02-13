@@ -10,7 +10,7 @@ class Activity < ApplicationRecord
   accepts_nested_attributes_for :activities_translations
 
   def description(locale)
-    activities_translations.find_by(locale: locale, field_name: 'description').text
+    activities_translations.find_by(locale: locale, field_name: 'description')&.text
   end
 
   def set_description(locale, description)
