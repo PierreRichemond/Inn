@@ -6,6 +6,8 @@ class Room < ApplicationRecord
   monetize :price_cents
   validates :name, presence: true
 
+  accepts_nested_attributes_for :rooms_translations
+
   def ppl(locale)
     rooms_translations.find_by(locale: locale, field_name: 'ppl').text
   end

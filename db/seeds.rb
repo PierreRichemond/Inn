@@ -932,3 +932,6 @@ The company therefore naturally developed a reception caterer activity. Today, i
 #    # --------------------------------------------------------
 
     puts " #{Activity.count} activities were created"
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+
+    puts "Admin created email: 'admin@example.com', password: 'password'"

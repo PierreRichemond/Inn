@@ -7,6 +7,8 @@ class Activity < ApplicationRecord
   has_many :activities_translations
   TAGS = ["Culture", "Culture", "Restauration", "Catering", "Commerce", "Business", "Loisir", "Leisure", "Vignobles", "Vineyards", "Traiteur", "Caterer", "Station service", "Gaz station"]
 
+  accepts_nested_attributes_for :activities_translations
+
   def name(locale)
     activities_translations.find_by(locale: locale, field_name: 'name').text
   end
