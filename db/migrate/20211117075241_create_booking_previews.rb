@@ -1,4 +1,4 @@
-class BookingAttempt < ActiveRecord::Migration[6.1]
+class CreateBookingPreviews < ActiveRecord::Migration[6.1]
   def change
     create_table :booking_previews do |t|
       t.string :state

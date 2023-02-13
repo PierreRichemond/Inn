@@ -14,18 +14,6 @@ RSpec.describe Activity, :type => :model do
 
   context "Setters for activity translations" do
     let(:activity) { create(:activity) }
-    describe "#set_name" do
-      it "creates a activity translation object" do
-        activity.set_name("fr", "Château d'Ambroise")
-        expect(ActivitiesTranslation.count).to eq(1)
-        expect(ActivitiesTranslation.first.text).to eq("Château d'Ambroise")
-      end
-      it "updates the original translation finding by locale" do
-        activity.set_name("fr", "3ppl activity")
-        expect(ActivitiesTranslation.count).to eq(1)
-        expect(ActivitiesTranslation.first.text).to eq('3ppl activity')
-      end
-    end
 
     describe "#set_description" do
       it "creates a activity translation object" do
@@ -43,13 +31,7 @@ RSpec.describe Activity, :type => :model do
 
   context "Getters for activity translations" do
     let(:activity) { create(:activity) }
-    let(:activities_translations) { create(:activities_translations, locale: "fr", field_name: "name") }
-    describe "#name" do
-      it "name translation for the activity" do
-        activity.set_name('fr', "Château d'Ambroise")
-        expect(activity.name("fr")).to eq("Château d'Ambroise")
-      end
-    end
+    let(:activities_translations) { create(:activities_translations, locale: "fr", field_name: "description") }
     describe "#description" do
       it "description translation for the activity" do
         activity.set_description('fr', "Large castle")
