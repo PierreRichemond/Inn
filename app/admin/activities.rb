@@ -1,5 +1,5 @@
 ActiveAdmin.register Activity do
-  permit_params :name, :address, :price, :url, :distance
+  permit_params :name, :address, :longitude, :latitude, :phone, :price, :url, :distance, rooms_translations_attributes: [ :id, :locale, :field_name, :text, :_destroy ]
 
   index do
     selectable_column
@@ -21,20 +21,24 @@ ActiveAdmin.register Activity do
   form do |f|
     f.inputs do
       f.input :name
-      f.input :address
       f.input :price
       f.input :phone
       f.input :url
+
+      f.input :latitude
+      f.input :longitude
+      f.latlng lang: :fr, height: 500, loading_map: false, api_key_env: ENV["GOOGLE_API_KEY"]
+      f.input :address
       f.input :distance
     end
 
     f.inputs "activities_translations" do
-        f.has_many :activities_translations, heading: false, allow_destroy: true do |room_t|
-          room_t.input :locale, :as => :select, :collection => ActivitiesTranslation::LOCALES, null: false
-          room_t.input :field_name
-          room_t.input :text
-        end
+      f.has_many :activities_translations, heading: false, allow_destroy: true do |room_t|
+        room_t.input :locale, :as => :select, :collection => ActivitiesTranslation::LOCALES, null: false
+        room_t.input :field_name
+        room_t.input :text
       end
-    f.actions
+      f.actions
+    end
   end
 end
