@@ -10,8 +10,8 @@ class ActivitiesController < ApplicationController
   def set_markers(activities)
     activities.geocoded.map do |activity|
       {
-        lat: activity.latitude,
-        lng: activity.longitude,
+        lat: activity.lat,
+        lng: activity.lng,
         info_window: render_to_string(partial: "info_window", locals: { activity: activity })
       }
     end

@@ -1,13 +1,13 @@
 ActiveAdmin.register Activity do
-  permit_params :name, :address, :longitude, :latitude, :phone, :price, :url, :distance, rooms_translations_attributes: [ :id, :locale, :field_name, :text, :_destroy ]
+  permit_params :name, :address, :lng, :lat, :phone, :price, :url, :distance, rooms_translations_attributes: [ :id, :locale, :field_name, :text, :_destroy ]
 
   index do
     selectable_column
     id_column
     column :name
     column :address
-    column :longitude
-    column :latitude
+    column :lng
+    column :lat
     column :price
     column :phone
     column :url
@@ -25,10 +25,10 @@ ActiveAdmin.register Activity do
       f.input :phone
       f.input :url
 
-      f.latlng lang: :fr, height: 500, default_lng: activity.longitude, default_lat: activity.latitude, api_key: ENV["GOOGLE_API_KEY"]
-      f.input :latitude, value: "activity_lat", id: "activity_lat"
-      f.input :longitude, value: "activity_lng", id: "activity_lng"
-      f.input :address, id_address: :activities_address
+      f.latlng lang: :fr, height: 500, default_lng: activity.lng || 0.8190269000, default_lat: activity.lat || 47.5227350000, api_key: ENV["GOOGLE_API_KEY"]
+      f.input :lat
+      f.input :lng
+      f.input :address
       f.input :distance
     end
 

@@ -2,7 +2,8 @@ class Activity < ApplicationRecord
   has_one_attached :image
   validates :name, :address, presence: true
   geocoded_by :address
-  after_validation :geocode, if: :will_save_change_to_address?
+  reverse_geocoded_by :lat, :lng
+  after_validation :reverse_geocode
   acts_as_taggable_on :tags
   has_many :activities_translations
   TAGS = ["Culture", "Culture", "Restauration", "Catering", "Commerce", "Business", "Loisir", "Leisure", "Vignobles", "Vineyards", "Traiteur", "Caterer", "Station service", "Gaz station"]
