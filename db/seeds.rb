@@ -5,8 +5,8 @@ Room.delete_all
   puts "Rooms destroyed"
 Activity.delete_all
   puts "activities destroyed"
-AdminUser.delete_all
-puts "AdminUsers destroyed"
+# AdminUser.delete_all
+# puts "AdminUsers destroyed"
 room1 = Room.create(name: "Gîte Ronsard",
                   price: 210)
 room1.images.attach(io: File.open(Rails.root.join("app/assets/images/ronsard1.jpg")),

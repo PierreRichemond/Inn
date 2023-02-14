@@ -1,5 +1,5 @@
 ActiveAdmin.register Activity do
-  permit_params :name, :address, :lng, :lat, :phone, :price, :url, :distance, rooms_translations_attributes: [ :id, :locale, :field_name, :text, :_destroy ]
+  permit_params :name, :address, :lng, :lat, :phone, :price, :url, :distance, activities_translations_attributes: [ :id, :locale, :field_name, :text, :_destroy ]
 
   index do
     selectable_column
