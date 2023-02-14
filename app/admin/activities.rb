@@ -25,10 +25,10 @@ ActiveAdmin.register Activity do
       f.input :phone
       f.input :url
 
-      f.input :latitude
-      f.input :longitude
-      f.latlng lang: :fr, height: 500, loading_map: false, api_key_env: ENV["GOOGLE_API_KEY"]
-      f.input :address
+      f.latlng lang: :fr, height: 500, default_lng: activity.longitude, default_lat: activity.latitude, api_key: ENV["GOOGLE_API_KEY"]
+      f.input :latitude, value: "activity_lat", id: "activity_lat"
+      f.input :longitude, value: "activity_lng", id: "activity_lng"
+      f.input :address, id_address: :activities_address
       f.input :distance
     end
 

@@ -45,6 +45,7 @@ gem 'stripe_event'
 gem 'jquery-rails'
 gem 'friendly_id', '~> 5.4.0'
 gem 'activeadmin'
+gem 'activeadmin_latlng'
 
 group :development, :test do
   gem 'pry-byebug'
