@@ -1,9 +1,10 @@
 ActiveAdmin.register Activity do
-  permit_params :name, :address, :lng, :lat, :phone, :price, :url, :distance, :tag_ids => [], activities_translations_attributes: [ :id, :locale, :field_name, :text, :_destroy ]
+  permit_params :name, :address, :lng, :lat, :phone, :price, :url, :distance,  :image,:tag_ids => [], activities_translations_attributes: [ :id, :locale, :field_name, :text, :_destroy ]
 
   controller do
     def update
       super
+      activity.image.attach(params[:activity][:image])
       activity = Activity.find(params[:id])
       activity.set_tag(params[:activity][:tag_ids])
     end
@@ -34,9 +35,28 @@ ActiveAdmin.register Activity do
     actions
   end
 
+  show do
+    attributes_table do
+      row :name
+      row :address
+      row :lng
+      row :lat
+      row :price
+      row :phone
+      row :url
+      row :distance
+      row :tags
+      row :image do
+        div do
+          image_tag url_for(activity.image), size: "800x800"
+        end
+      end
+    end
+  end
+
   filter :price
 
-  form do |f|
+  form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs do
       f.input :name
       f.input :price
@@ -52,6 +72,8 @@ ActiveAdmin.register Activity do
         as: :select,
         multiple: :true,
         collection: ActsAsTaggableOn::Tag.select { |i| i.id.odd? }.pluck(:name, :id)
+
+      f.input :image, as: :file, :label => 'Activity image'
     end
 
     f.inputs "activities_translations" do
