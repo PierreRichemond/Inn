@@ -1,5 +1,5 @@
 ActiveAdmin.register Activity do
-  permit_params :name, :address, :lng, :lat, :phone, :price, :url, :distance,  :image,:tag_ids => [], activities_translations_attributes: [ :id, :locale, :field_name, :text, :_destroy ]
+  permit_params :name, :address, :lng, :lat, :phone, :price, :url, :distance, :image,:tag_ids => [], activities_translations_attributes: [ :id, :locale, :field_name, :text, :_destroy ]
 
   controller do
     def update
