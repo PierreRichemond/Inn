@@ -1,5 +1,22 @@
 ActiveAdmin.register Activity do
-  permit_params :name, :address, :lng, :lat, :phone, :price, :url, :distance, activities_translations_attributes: [ :id, :locale, :field_name, :text, :_destroy ]
+  permit_params :name, :address, :lng, :lat, :phone, :price, :url, :distance, :tag_ids => [], activities_translations_attributes: [ :id, :locale, :field_name, :text, :_destroy ]
+
+  controller do
+    def update
+      super
+      activity = Activity.find(params[:id])
+      activity.set_tag(params[:activity][:tag_ids])
+    end
+  end
+
+  scope :all
+  scope :culture
+  scope :catering
+  scope :business
+  scope :leisure
+  scope :vineyards
+  scope :caterer
+  scope :gaz_station
 
   index do
     selectable_column
@@ -12,6 +29,7 @@ ActiveAdmin.register Activity do
     column :phone
     column :url
     column :distance
+    column :tags
 
     actions
   end
@@ -30,15 +48,19 @@ ActiveAdmin.register Activity do
       f.input :lng
       f.input :address
       f.input :distance
+      f.input :tags,  # Show all tags AND checked already selected one (by relations through :tags - input must named :tags)
+        as: :select,
+        multiple: :true,
+        collection: ActsAsTaggableOn::Tag.select { |i| i.id.odd? }.pluck(:name, :id)
     end
 
     f.inputs "activities_translations" do
       f.has_many :activities_translations, heading: false, allow_destroy: true do |room_t|
         room_t.input :locale, :as => :select, :collection => ActivitiesTranslation::LOCALES, null: false
-        room_t.input :field_name
+        room_t.input :field_name, :as => :select, :collection => ActivitiesTranslation::FIELDS, null: false
         room_t.input :text
       end
-      f.actions
     end
+    f.actions
   end
 end
