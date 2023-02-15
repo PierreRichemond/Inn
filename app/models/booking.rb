@@ -5,6 +5,9 @@ class Booking < ApplicationRecord
   validates :end_date, presence: true
   monetize :amount_cents
 
+  scope :upcomming_booking, -> { Booking.all.where("end_date >= ?", Date.today) }
+  scope :past_booking, -> { Booking.all.all.where("end_date < ?", Date.today) }
+
   validate :cannot_overlap
   validate :end_date_past_start_date
 
