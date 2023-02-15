@@ -6,10 +6,10 @@ class Room < ApplicationRecord
   monetize :price_cents
   validates :name, presence: true
 
-  accepts_nested_attributes_for :rooms_translations
+  accepts_nested_attributes_for :rooms_translations, :allow_destroy => true
 
   def ppl(locale)
-    rooms_translations.find_by(locale: locale, field_name: 'ppl').text
+    rooms_translations.find_by(locale: locale, field_name: 'ppl')&.text
   end
 
   def set_ppl(locale, ppl)
@@ -18,7 +18,7 @@ class Room < ApplicationRecord
   end
 
   def description(locale)
-    rooms_translations.find_by(locale: locale, field_name: 'description').text
+    rooms_translations.find_by(locale: locale, field_name: 'description')&.text
   end
 
   def set_description(locale, description)
@@ -27,7 +27,7 @@ class Room < ApplicationRecord
   end
 
   def details(locale)
-    rooms_translations.find_by(locale: locale, field_name: 'details').text
+    rooms_translations.find_by(locale: locale, field_name: 'details')&.text
   end
 
   def set_details(locale, details)
@@ -36,7 +36,7 @@ class Room < ApplicationRecord
   end
 
   def detailz(locale)
-    rooms_translations.find_by(locale: locale, field_name: 'detailz').text
+    rooms_translations.find_by(locale: locale, field_name: 'detailz')&.text
   end
 
   def set_detailz(locale, detailz)
