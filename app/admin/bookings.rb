@@ -8,7 +8,9 @@ permit_params :start_date, :end_date, :room_id, :amount_cents
   index do
     selectable_column
     id_column
-    column :room_id
+    column "Room" do |rooms_translation|
+      link_to rooms_translation.room.name, admin_room_path(rooms_translation.room) if rooms_translation.room
+    end
     column :amount_cents
     column :start_date
     column :end_date
@@ -16,7 +18,8 @@ permit_params :start_date, :end_date, :room_id, :amount_cents
     actions
   end
 
-  filter :price
+  filter :start_date
+  filter :end_date
 
   form do |f|
     f.inputs do
