@@ -1,6 +1,10 @@
 ActiveAdmin.register Booking do
 permit_params :start_date, :end_date, :room_id, :amount_cents
 
+  scope :all
+  scope :past_booking
+  scope :upcomming_booking
+
   index do
     selectable_column
     id_column
