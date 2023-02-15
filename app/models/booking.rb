@@ -24,12 +24,12 @@ class Booking < ApplicationRecord
     if id
       return Booking.where("id != ?", id)
                     .where("room_id = ?", room.id)
-                    .where("end_date >= #{start_date} AND start_date <= #{end_date}")
+                    .where("end_date >= ? AND start_date <= ?", start_date, end_date)
                     .any?
     end
 
     Booking.where("room_id = ?", room.id)
-           .where("end_date >= #{start_date} AND start_date <= #{end_date}")
+           .where("end_date >= ? AND start_date <= ?", start_date, end_date)
            .any?
   end
 end
