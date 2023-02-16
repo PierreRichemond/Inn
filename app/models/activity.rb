@@ -44,7 +44,8 @@ class Activity < ApplicationRecord
     self.tag_list = []
     tag_ids.each do |tag_id|
       next if tag_id == ''
-      tag = ActsAsTaggableOn::Tag.find(tag_id).name
+      tags = ActsAsTaggableOn::Tag.all
+      tag = tags.find(tag_id).name
       if tag == "Culture"
         self.tag_list += "Culture"
       elsif tag == "Catering" || tag == "Restauration"

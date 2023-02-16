@@ -9,3 +9,11 @@ def login_user
     sign_in user
   end
 end
+
+def login_admin
+  before(:each) do
+    @request.env["devise.mapping"] = Devise.mappings[:user]
+    user = FactoryBot.create(:admin_user, email: "bot@test.com", password: "password", password_confirmation: 'password')
+    sign_in user
+  end
+end
