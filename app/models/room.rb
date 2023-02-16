@@ -8,6 +8,13 @@ class Room < ApplicationRecord
 
   accepts_nested_attributes_for :rooms_translations, :allow_destroy => true
 
+  # def images_attributes=(attributes)
+  #   # Marks the attachment for destruction on next save,
+  #   # if the attributes hash contains a _destroy flag
+  #   # and a new images was not uploaded at the same time:
+  #   images.clear if has_destroy_flag?(attributes) && !images.dirty?
+  # end
+
   def ppl(locale)
     rooms_translations.find_by(locale: locale, field_name: 'ppl')&.text
   end

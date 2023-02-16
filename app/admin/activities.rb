@@ -4,9 +4,9 @@ ActiveAdmin.register Activity do
   controller do
     def update
       super
-      activity.image.attach(params[:activity][:image])
-      activity = Activity.find(params[:id])
-      activity.set_tag(params[:activity][:tag_ids])
+      @activity.image.attach(params[:activity][:image]) if params[:activity][:image].present?
+      @activity = Activity.find(params[:id])
+      @activity.set_tag(params[:activity][:tag_ids])
     end
   end
 
@@ -46,9 +46,11 @@ ActiveAdmin.register Activity do
       row :url
       row :distance
       row :tags
-      row :image do
-        div do
-          image_tag url_for(activity.image), size: "800x800"
+      if activity.image.any?
+        row :image do
+          div do
+            image_tag url_for(activity.image), size: "800x800"
+          end
         end
       end
     end
