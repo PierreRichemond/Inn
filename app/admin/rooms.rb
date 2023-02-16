@@ -4,10 +4,9 @@ ActiveAdmin.register Room do
   controller do
     def update
       super
-      activity.image.attach(params[:room][:images])
+      @room.images.attach(params[:room][:images]) if params[:room][:images]
     end
   end
-
 
   index do
     selectable_column
@@ -16,7 +15,6 @@ ActiveAdmin.register Room do
     column :price_cents
     actions
   end
-
 
   show do
     attributes_table do
