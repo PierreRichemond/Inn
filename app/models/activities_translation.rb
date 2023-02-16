@@ -3,7 +3,7 @@ class ActivitiesTranslation < ApplicationRecord
   validates :locale, presence: true
   validates :field_name, presence: true
 
-  validate :one_field_for_specific_locale
+  before_validation :one_field_for_specific_locale
 
   LOCALES = ["fr", "en"]
   FIELDS = ['Description']
@@ -15,7 +15,13 @@ class ActivitiesTranslation < ApplicationRecord
   end
 
   def double_local_for_one_field
-    return false if ActivitiesTranslation.where("activity_id = #{activity.id}")
-                         .where("locale = #{locale} AND field_name = #{field_name}").empty?
+    if id
+      return ActivitiesTranslation.where("activity_id = ?", activity.id)
+                                          .where("id != ?", id)
+                                          .where("locale = ? AND field_name = ?", locale, field_name).empty?
+    end
+
+    ActivitiesTranslation.where("activity_id = ?", activity.id)
+                         .where("locale = ? AND field_name = ?", locale, field_name).empty?
   end
 end

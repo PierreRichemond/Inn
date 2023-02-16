@@ -15,7 +15,13 @@ class RoomsTranslation < ApplicationRecord
   end
 
   def double_local_for_one_field
-    return false if ActivitiesTranslation.where("activity_id = #{activity.id}")
-                         .where("locale = #{locale} AND field_name = #{field_name}").empty?
+    if id
+      return true if RoomsTranslation.where("room_id = ?", room.id)
+                                          .where("id != ?", id)
+                                          .where("locale = ? AND field_name = ?", locale, field_name).empty?
+    end
+
+    RoomsTranslation.where("room_id = ?", room.id)
+                    .where("locale = ? AND field_name = ?", locale, field_name).empty?
   end
 end

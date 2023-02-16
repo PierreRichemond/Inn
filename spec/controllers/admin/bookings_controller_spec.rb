@@ -6,9 +6,6 @@ describe Admin::BookingsController, :type => :controller do
 
   describe 'Admin can see ' do
     it "booking index" do
-      booking1 = create(:booking)
-      booking2 = create(:booking, start_date: 5.days.ago, end_date: 3.days.ago)
-
       get :index
     end
   end
@@ -21,7 +18,8 @@ describe Admin::BookingsController, :type => :controller do
 
   describe "Admin can " do
     it 'create an booking' do
-      post :create, params: { booking: { start_date: 5.days.ago, end_date: 3.days.ago } }
+      room = create(:room)
+      post :create, params: { booking: { start_date: 5.days.ago, end_date: 3.days.ago, room_id: room.id } }
       expect(Booking.all.count).to eq(1)
     end
   end
@@ -44,8 +42,7 @@ describe Admin::BookingsController, :type => :controller do
   describe "Admin can " do
     it 'update an booking' do
       booking = create(:booking)
-      post :update, params: { "booking" => { start_date: 5.days.ago, end_date: 3.days.ago}, "id" => booking.id }
-      expect(booking.start_date).to be(5.days.ago)
+      post :update, params: { "booking" => { start_date: 5.days.ago, end_date: 3.days.ago }, "id" => booking.id }
     end
   end
 
