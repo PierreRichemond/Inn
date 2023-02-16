@@ -6,7 +6,11 @@ class Booking < ApplicationRecord
   monetize :amount_cents
 
   scope :upcomming_booking, -> { Booking.all.where("end_date >= ?", Date.today) }
-  scope :past_booking, -> { Booking.all.all.where("end_date < ?", Date.today) }
+  scope :past_booking, -> { Booking.all.where("end_date < ?", Date.today) }
+  scope :this_month, -> {
+    Booking.where("start_date >= ?", Date.today.beginning_of_month.beginning_of_day)
+                .where("end_date <= ?", Date.today.end_of_month.end_of_day)
+  }
 
   validate :cannot_overlap
   validate :end_date_past_start_date
