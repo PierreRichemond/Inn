@@ -44,9 +44,6 @@ RSpec.describe RoomsTranslation, :type => :model do
       end
     end
 
-      FIELDS = ['ppl, description, details, detailz']
-
-
     context "with many translations" do
       it " 2 - 1 - 1 - 2 translation to change locale to 2 - 1 - 2 - 1 " do
         create(:rooms_translation, locale: 'fr', field_name: 'ppl')
