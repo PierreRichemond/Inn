@@ -11,10 +11,10 @@ password: password
 ```
 Once you change things, go back on the customer interface https://inn.herokuapp.com/admin or removing the "/admin" from the url.
 
-Tests: Rspec 
-API: Mapbox, Google, Stripe
-Gem: Active-admin, bootstrap, devise
-Photo storage: Cloudinary
+Tests: Rspec.
+API: Mapbox, Google, Stripe.
+Gem: Active-admin, bootstrap, devise.
+Photo storage: Cloudinary.
  
 <a href="https://le-clos-valliere.herokuapp.com/" target="_blank">Website Here</a>
 <img width="1792" alt="Screen Shot 2021-09-06 at 18 21 14" src="https://github.com/PierreRichemond/Inn/blob/master/app/assets/images/inn.png">
