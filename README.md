@@ -1,7 +1,20 @@
 # Inn
 
-An inn's website, you can check the inn's features and make a booking for specific dates. <br>
-Check what are the interesting things to do around.
+An inn's website.
+Admin interface to update datas and a customer interface to book and see the features of the Inn. 
 
+Feel free to login on the admin interface to change the website's content.
+=> https://inn.herokuapp.com/admin
+```
+email: admin@example.com
+password: password
+```
+Once you change things, go back on the customer interface https://inn.herokuapp.com/admin or removing the "/admin" from the url.
+
+Tests: Rspec 
+API: Mapbox, Google, Stripe
+Gem: Active-admin, bootstrap, devise
+Photo storage: Cloudinary
+ 
 <a href="https://le-clos-valliere.herokuapp.com/" target="_blank">Website Here</a>
 <img width="1792" alt="Screen Shot 2021-09-06 at 18 21 14" src="https://github.com/PierreRichemond/Inn/blob/master/app/assets/images/inn.png">
