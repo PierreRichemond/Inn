@@ -41,9 +41,15 @@ ActiveAdmin.register Room do
       f.input :price_cents
       f.input :images, as: :file, input_html: { multiple: true }, :label => 'Replace Room images'
       if room.images.attached?
-        room.images.each do |img|
-          div do
-            image_tag url_for(img.url), size: "400x400"
+        attributes_table_for :images do
+          row :images do
+            ul do
+              room.images.each do |img|
+                li do
+                  image_tag url_for(img), size: "400x400"
+                end
+              end
+            end
           end
         end
       end
