@@ -6,7 +6,7 @@ ActiveAdmin.register Activity do
       super
       @activity.image.attach(params[:activity][:image]) if params[:activity][:image]
       @activity = Activity.find(params[:id])
-      @activity.set_tag(params[:activity][:tag_ids]) if params[:activity][:image]
+      @activity.set_tag(params[:activity][:tag_ids]) if params[:activity][:tag_ids]
     end
   end
 
@@ -46,7 +46,7 @@ ActiveAdmin.register Activity do
       row :url
       row :distance
       row :tags
-      if activity.image.attach?
+      if activity.image.attached?
         row :image do
           div do
             image_tag url_for(activity.image), size: "800x800"
@@ -75,7 +75,12 @@ ActiveAdmin.register Activity do
         multiple: :true,
         collection: ActsAsTaggableOn::Tag.select { |i| i.id.odd? }.pluck(:name, :id)
 
-      f.input :image, as: :file, :label => 'Activity image'
+      f.input :image, as: :file, :label => 'Replace Activity image'
+      if activity.image.attached?
+        div do
+          image_tag url_for(activity.image), size: "400x400"
+        end
+      end
     end
 
     f.inputs "activities_translations" do

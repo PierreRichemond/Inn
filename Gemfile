@@ -17,8 +17,6 @@ gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -46,9 +44,11 @@ gem 'jquery-rails'
 gem 'friendly_id', '~> 5.4.0'
 gem 'activeadmin'
 gem 'activeadmin_latlng'
-gem 'sidekiq'
-gem "sidekiq-cron"
-gem 'redis'
+
+# Sidekiq to set up jobs
+# gem 'sidekiq'
+# gem "sidekiq-cron"
+# gem 'redis'
 
 group :development, :test do
   gem 'pry-byebug'

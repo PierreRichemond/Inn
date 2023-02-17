@@ -1,4 +1,6 @@
 
+if Rails.env.development?
+
 Booking.delete_all
 BookingAttempt.delete_all
 Room.delete_all
@@ -117,7 +119,7 @@ room3.images.attach(io: File.open(Rails.root.join("app/assets/images/jardin2.JPG
   puts "#{Room.count} rooms were created"
 
   amboise = Activity.create(
-                              name: "Château d’Amboise",
+                              name: "Château d'Amboise",
                               phone: "02 47 57 00 98",
                               url: "https://www.chateau-amboise.com",
                               address: "Mnt de l'Emir Abd el Kader, 37400 Amboise, France",
@@ -926,6 +928,7 @@ The company therefore naturally developed a reception caterer activity. Today, i
 #    # --------------------------------------------------------
 
     puts " #{Activity.count} activities were created"
-# AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+ AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 
     puts "Admin created email: 'admin@example.com', password: 'password'"
+  end

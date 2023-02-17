@@ -39,8 +39,14 @@ ActiveAdmin.register Room do
     f.inputs do
       f.input :name
       f.input :price_cents
-      f.input :images, as: :file, input_html: { multiple: true }, :label => 'Room images'
-
+      f.input :images, as: :file, input_html: { multiple: true }, :label => 'Replace Room images'
+      if room.images.attached?
+        room.images.each do |img|
+          div do
+            image_tag url_for(img.url), size: "400x400"
+          end
+        end
+      end
       f.inputs "rooms_translations" do
         f.has_many :rooms_translations, heading: false, allow_destroy: true do |room_t|
           room_t.input :locale, :as => :select, :collection => RoomsTranslation::LOCALES, null: false

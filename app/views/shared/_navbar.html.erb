@@ -3,6 +3,16 @@
   <div class="navbar-links">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
+        <%= link_to "/admin" do %>
+          <p class="pb-0 mb-0">Env Admin</p>
+        <% end %>
+        <div class= 'mt-1'>
+          admin@example.com /
+          password: password
+        </div>
+
+      </li>
+      <li class="nav-item">
         <%= link_to "/" do %>
           <p class="pb-0 mb-0"><%= t("nav_home") %></p>
         <% end %>
