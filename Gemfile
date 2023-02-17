@@ -46,9 +46,11 @@ gem 'jquery-rails'
 gem 'friendly_id', '~> 5.4.0'
 gem 'activeadmin'
 gem 'activeadmin_latlng'
-gem 'sidekiq'
-gem "sidekiq-cron"
-gem 'redis'
+
+# Sidekiq to set up jobs
+# gem 'sidekiq'
+# gem "sidekiq-cron"
+# gem 'redis'
 
 group :development, :test do
   gem 'pry-byebug'

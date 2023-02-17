@@ -29,7 +29,9 @@ module Inn
     config.i18n.fallbacks = true
     config.exceptions_app = self.routes
     config.assets.precompile << 'amp/application.scss'
-    config.active_job.queue_adapter = :sidekiq
+
+    # config.active_job.queue_adapter = :sidekiq
+
     # overrides = "#{Rails.root}/app/overrides"
     # Rails.autoloaders.main.ignore(overrides)
     # config.to_prepare do
