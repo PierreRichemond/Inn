@@ -1,4 +1,6 @@
 
+if Rails.env.development?
+
 Booking.delete_all
 BookingAttempt.delete_all
 Room.delete_all
@@ -926,6 +928,7 @@ The company therefore naturally developed a reception caterer activity. Today, i
 #    # --------------------------------------------------------
 
     puts " #{Activity.count} activities were created"
- AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+ AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 
     puts "Admin created email: 'admin@example.com', password: 'password'"
+  end

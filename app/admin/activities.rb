@@ -46,7 +46,7 @@ ActiveAdmin.register Activity do
       row :url
       row :distance
       row :tags
-      if activity.image.attach?
+      if activity.image.attached?
         row :image do
           div do
             image_tag url_for(activity.image), size: "800x800"
