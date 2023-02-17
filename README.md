@@ -16,5 +16,4 @@ API: Mapbox, Google, Stripe.<br>
 Gem: Active-admin, bootstrap, devise.<br>
 Photo storage: Cloudinary.<br>
  
-<a href="https://le-clos-valliere.herokuapp.com/" target="_blank">Website Here</a>
 <img width="1792" alt="Screen Shot 2021-09-06 at 18 21 14" src="https://github.com/PierreRichemond/Inn/blob/master/app/assets/images/inn.png">
