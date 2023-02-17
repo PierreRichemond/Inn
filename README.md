@@ -9,12 +9,12 @@ Feel free to login on the admin interface to change the website's content.
 email: admin@example.com
 password: password
 ```
-Once you change things, go back on the customer interface https://inn.herokuapp.com/admin or removing the "/admin" from the url.
+Once you change things, go back on the customer interface https://inn.herokuapp.com or removing the "/admin" from the url.
 
-Tests: Rspec.
-API: Mapbox, Google, Stripe.
-Gem: Active-admin, bootstrap, devise.
-Photo storage: Cloudinary.
+Tests: Rspec. <br>
+API: Mapbox, Google, Stripe.<br>
+Gem: Active-admin, bootstrap, devise.<br>
+Photo storage: Cloudinary.<br>
  
 <a href="https://le-clos-valliere.herokuapp.com/" target="_blank">Website Here</a>
 <img width="1792" alt="Screen Shot 2021-09-06 at 18 21 14" src="https://github.com/PierreRichemond/Inn/blob/master/app/assets/images/inn.png">
