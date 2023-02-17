@@ -56,6 +56,8 @@ class Activity < ApplicationRecord
         self.tag_list += "Loisir, Leisure"
       elsif tag == "Vignobles" || tag == "Vineyards"
         self.tag_list += "Vignobles, Vineyards"
+      elsif tag == "Caterer" || tag == "Traiteur"
+        self.tag_list += "Caterer, Traiteur"
       elsif tag == "Station service" || tag == "Gaz station"
         self.tag_list += "Station service, Gaz station"
       end
