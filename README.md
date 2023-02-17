@@ -1,6 +1,7 @@
 # Inn
 
-An inn's website.
+An inn's [website](https://inn.herokuapp.com).
+<br>
 Admin interface to update datas and a customer interface to book and see the features of the Inn. 
 
 Feel free to login on the admin interface to change the website's content.
