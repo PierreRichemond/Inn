@@ -25,10 +25,6 @@ jobs:
           PG_USER: postgres
           PG_PASSWORD: postgres
           RAILS_ENV: test
-        run: |
-          sudo apt-get -yqq install libpq-dev
-          bundle exec rake db:migrate
-          bundle exec rake test
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -42,11 +38,10 @@ jobs:
         run: bin/rails db:schema:load
       # Add or replace test runners here
       - name: Run tests
-        run: bin/rake
-      - name: bundle install 
-        run: bundle install
-      - name: migrate 
-        run: rails db:migrate
+        run: |
+          sudo apt-get -yqq install libpq-dev
+          bundle exec rake db:migrate
+          bundle exec rake test
 
   lint:
     runs-on: ubuntu-latest
