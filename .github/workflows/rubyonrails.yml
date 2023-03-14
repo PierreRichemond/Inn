@@ -39,6 +39,10 @@ jobs:
       # Add or replace test runners here
       - name: Run tests
         run: bin/rake
+      - name: bundle install 
+        run: bundle install
+      - name: migrate 
+        run: rails db:migrate
 
   lint:
     runs-on: ubuntu-latest
