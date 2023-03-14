@@ -14,7 +14,7 @@ on:
   pull_request:
     branches: [ master ]
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     services:
       postgres:
@@ -27,8 +27,6 @@ jobs:
           --health-interval 10s 
           --health-timeout 5s 
           --health-retries 5
-  test:
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Set up Ruby
