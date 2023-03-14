@@ -58,8 +58,8 @@ development:
 test:
   <<: *default
   database: Inn_test
-  adapter: postgresql
-  host: localhost
+  adapter: <%= ENV["PG_DATABASE"] %>
+  host: <%= ENV["PG_HOST"] %>
   encoding: unicode
   username: <%= ENV["POSTGRES_USER"] %>
   password: <%= ENV["POSTGRES_PASSWORD"] %>
