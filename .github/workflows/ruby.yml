@@ -21,11 +21,21 @@ jobs:
           --health-retries 5
     steps:
     - uses: actions/checkout@v3
+    - name: Install dependencies
+      run: |
+        sudo apt-get -yqq install libpq-dev
+        bundle exec rake db:migrate
+        bundle exec rake test
     - name: Set up Ruby
       uses: ruby/setup-ruby@359bebbc29cbe6c87da6bc9ea3bc930432750108
       with:
         ruby-version: '3.0.2'
-    - name: Install dependencies
-      run: bundle install
+      env:
+        PG_DATABASE: postgres
+        PG_HOST: localhost
+        PG_PORT: 5432
+        PG_USER: postgres
+        PG_PASSWORD: postgres
+        RAILS_ENV: test
     - name: Run tests
       run: bundle exec rake
