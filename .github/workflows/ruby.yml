@@ -33,8 +33,9 @@ jobs:
         uses: ruby/setup-ruby@359bebbc29cbe6c87da6bc9ea3bc930432750108
         with:
           ruby-version: '3.0.2'
-      - name: Install dependencies
+      - name: Install dependent libraries
         run: bundle install
+             sudo apt-get install libpq-dev
       - name: Run Tests
         env:
           PG_DATABASE: postgres
