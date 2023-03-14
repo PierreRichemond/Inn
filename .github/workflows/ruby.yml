@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Install dependencies
-      run: |
+      run: bundle install
         sudo apt-get -yqq install libpq-dev
         bundle exec rake db:migrate
         bundle exec rake test
