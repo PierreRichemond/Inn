@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-  services:
+    services:
       postgres:
         image: postgres:12
         ports: ["5432:5432"]
@@ -18,12 +18,12 @@ jobs:
           --health-interval 10s 
           --health-timeout 5s 
           --health-retries 5
-  steps:
+    steps:
       - uses: actions/checkout@v2
       - name: Set up Ruby
         uses: ruby/setup-ruby@ec106b438a1ff6ff109590de34ddc62c540232e0
         with:
-        ruby-version: 3.0.2
+          ruby-version: 3.0.2
       - name: Install PostgreSQL 12 client
         run: |
           sudo apt-get -yqq install libpq-dev
