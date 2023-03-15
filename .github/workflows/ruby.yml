@@ -13,20 +13,20 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-jobs:
-  test:
+runner-job:
+    # You must use a Linux environment when using service containers or container jobs
     runs-on: ubuntu-latest
-    services:
-      postgres:
-        image: postgres:12
-        ports: ["5432:5432"]
-        env:
-          POSTGRES_PASSWORD: password
-        options: >-
-          --health-cmd pg_isready 
-          --health-interval 10s 
-          --health-timeout 5s 
-          --health-retries 5
+      services:
+        postgres:
+          image: postgres:12
+          ports: ["5432:5432"]
+          env:
+            POSTGRES_PASSWORD: postgres
+          options: >-
+            --health-cmd pg_isready 
+            --health-interval 10s 
+            --health-timeout 5s 
+            --health-retries 5
     steps:
       - uses: actions/checkout@v3
       - name: Set up Ruby
