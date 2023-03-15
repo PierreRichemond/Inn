@@ -40,7 +40,7 @@ jobs:
           PG_DATABASE: postgresql
           PG_HOST: localhost
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
+          POSTGRES_PASSWORD: ''
           RAILS_ENV: test
           WITH_COVERAGE: true
           DISABLE_SPRING: 1
