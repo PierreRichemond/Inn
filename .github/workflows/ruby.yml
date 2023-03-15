@@ -44,6 +44,7 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PORT: 5432
         run: |
+          ps ax | grep postgres
           sudo service postgresql restart
           bin/rails db:schema:load
           bundle exec rake test
