@@ -6,3 +6,5 @@ class PagesController < ApplicationController
     respond_to :text
   end
 end
+
+# .
