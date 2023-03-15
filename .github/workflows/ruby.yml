@@ -37,7 +37,7 @@ jobs:
         run: bundle install
       - name: Run Tests
         env:
-          PG_DATABASE: postgres
+          PG_DATABASE: postgresql
           PG_HOST: localhost
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
